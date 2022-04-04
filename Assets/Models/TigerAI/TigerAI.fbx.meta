@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: 60f9f917253940341aa23df2f0b3f456
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Background
+  - first:
+      1: 100002
+    second: barrel-01
+  - first:
+      1: 100004
+    second: barrel-02
+  - first:
+      1: 100006
+    second: Bullet SpawnPoint
+  - first:
+      1: 100008
+    second: cadnav
+  - first:
+      1: 100010
+    second: Canvas
+  - first:
+      1: 100012
+    second: Fill
+  - first:
+      1: 100014
+    second: Fill Area
+  - first:
+      1: 100016
+    second: final
+  - first:
+      1: 100018
+    second: group
+  - first:
+      1: 100020
+    second: group1
+  - first:
+      1: 100022
+    second: gun001
+  - first:
+      1: 100024
+    second: gun002
+  - first:
+      1: 100026
+    second: GunBase
+  - first:
+      1: 100028
+    second: GunBase 1
+  - first:
+      1: 100030
+    second: Handle
+  - first:
+      1: 100032
+    second: Handle Slide Area
+  - first:
+      1: 100034
+    second: Head
+  - first:
+      1: 100036
+    second: Head 1
+  - first:
+      1: 100038
+    second: head1_head
+  - first:
+      1: 100040
+    second: head1_neck
+  - first:
+      1: 100042
+    second: HeadPart
+  - first:
+      1: 100044
+    second: HeadPart (1)
+  - first:
+      1: 100046
+    second: Jaw
+  - first:
+      1: 100048
+    second: leftLeg1_LoResFoot
+  - first:
+      1: 100050
+    second: leftLeg1_LoResLowerLeg
+  - first:
+      1: 100052
+    second: leftLeg1_LoResToe
+  - first:
+      1: 100054
+    second: leftLeg1_LoResUpperLeg
+  - first:
+      1: 100056
+    second: leftLeg2_LoResFoot
+  - first:
+      1: 100058
+    second: leftLeg2_LoResLowerLeg
+  - first:
+      1: 100060
+    second: leftLeg2_LoResToe
+  - first:
+      1: 100062
+    second: leftLeg2_LoResUpperLeg
+  - first:
+      1: 100064
+    second: Main Camera
+  - first:
+      1: 100066
+    second: Main Camera 1
+  - first:
+      1: 100068
+    second: minigun_part1
+  - first:
+      1: 100070
+    second: minigun_part1 1
+  - first:
+      1: 100072
+    second: missileouter
+  - first:
+      1: 100074
+    second: missileouter 1
+  - first:
+      1: 100076
+    second: Object007
+  - first:
+      1: 100078
+    second: Object009
+  - first:
+      1: 100080
+    second: Particle View 001
+  - first:
+      1: 100082
+    second: rightLeg1_LoResFoot
+  - first:
+      1: 100084
+    second: rightLeg1_LoResLowerLeg
+  - first:
+      1: 100086
+    second: rightLeg1_LoResToe
+  - first:
+      1: 100088
+    second: rightLeg1_LoResUpperLeg
+  - first:
+      1: 100090
+    second: rightLeg2_LoResFoot
+  - first:
+      1: 100092
+    second: rightLeg2_LoResLowerLeg
+  - first:
+      1: 100094
+    second: rightLeg2_LoResToe
+  - first:
+      1: 100096
+    second: rightLeg2_LoResUpperLeg
+  - first:
+      1: 100098
+    second: shellouter
+  - first:
+      1: 100100
+    second: shellouter 1
+  - first:
+      1: 100102
+    second: Sky001
+  - first:
+      1: 100104
+    second: Slider
+  - first:
+      1: 100106
+    second: spine1_loResPelvis
+  - first:
+      1: 100108
+    second: spine1_loResSpine1
+  - first:
+      1: 100110
+    second: spine1_loResSpine2
+  - first:
+      1: 100112
+    second: spine1_loResSpine3
+  - first:
+      1: 100114
+    second: Spotlight
+  - first:
+      1: 100116
+    second: Spotlight 1
+  - first:
+      1: 100118
+    second: tail1_Joint1
+  - first:
+      1: 100120
+    second: tail1_Joint2
+  - first:
+      1: 100122
+    second: tail1_Joint3
+  - first:
+      1: 100124
+    second: tail1_Joint4
+  - first:
+      1: 100126
+    second: tail1_Joint5
+  - first:
+      1: 100128
+    second: tail1_Joint6
+  - first:
+      1: 100130
+    second: tail1_Joint7
+  - first:
+      1: 100132
+    second: tail1_Joint8
+  - first:
+      1: 100134
+    second: tail1_Joint9
+  - first:
+      1: 100136
+    second: //RootNode
+  - first:
+      1: 100138
+    second: TRS
+  - first:
+      1: 100140
+    second: weapon_minigun
+  - first:
+      1: 100142
+    second: weapon_minigun 1
+  - first:
+      1: 100144
+    second: weapon_minirocket
+  - first:
+      1: 100146
+    second: weapon_minirocket 1
+  - first:
+      1: 100148
+    second: weapon_rocket
+  - first:
+      1: 100150
+    second: weapon_rocket 1
+  - first:
+      4: 400000
+    second: Background
+  - first:
+      4: 400002
+    second: barrel-01
+  - first:
+      4: 400004
+    second: barrel-02
+  - first:
+      4: 400006
+    second: Bullet SpawnPoint
+  - first:
+      4: 400008
+    second: cadnav
+  - first:
+      4: 400010
+    second: Canvas
+  - first:
+      4: 400012
+    second: Fill
+  - first:
+      4: 400014
+    second: Fill Area
+  - first:
+      4: 400016
+    second: final
+  - first:
+      4: 400018
+    second: group
+  - first:
+      4: 400020
+    second: group1
+  - first:
+      4: 400022
+    second: gun001
+  - first:
+      4: 400024
+    second: gun002
+  - first:
+      4: 400026
+    second: GunBase
+  - first:
+      4: 400028
+    second: GunBase 1
+  - first:
+      4: 400030
+    second: Handle
+  - first:
+      4: 400032
+    second: Handle Slide Area
+  - first:
+      4: 400034
+    second: Head
+  - first:
+      4: 400036
+    second: Head 1
+  - first:
+      4: 400038
+    second: head1_head
+  - first:
+      4: 400040
+    second: head1_neck
+  - first:
+      4: 400042
+    second: HeadPart
+  - first:
+      4: 400044
+    second: HeadPart (1)
+  - first:
+      4: 400046
+    second: Jaw
+  - first:
+      4: 400048
+    second: leftLeg1_LoResFoot
+  - first:
+      4: 400050
+    second: leftLeg1_LoResLowerLeg
+  - first:
+      4: 400052
+    second: leftLeg1_LoResToe
+  - first:
+      4: 400054
+    second: leftLeg1_LoResUpperLeg
+  - first:
+      4: 400056
+    second: leftLeg2_LoResFoot
+  - first:
+      4: 400058
+    second: leftLeg2_LoResLowerLeg
+  - first:
+      4: 400060
+    second: leftLeg2_LoResToe
+  - first:
+      4: 400062
+    second: leftLeg2_LoResUpperLeg
+  - first:
+      4: 400064
+    second: Main Camera
+  - first:
+      4: 400066
+    second: Main Camera 1
+  - first:
+      4: 400068
+    second: minigun_part1
+  - first:
+      4: 400070
+    second: minigun_part1 1
+  - first:
+      4: 400072
+    second: missileouter
+  - first:
+      4: 400074
+    second: missileouter 1
+  - first:
+      4: 400076
+    second: Object007
+  - first:
+      4: 400078
+    second: Object009
+  - first:
+      4: 400080
+    second: Particle View 001
+  - first:
+      4: 400082
+    second: rightLeg1_LoResFoot
+  - first:
+      4: 400084
+    second: rightLeg1_LoResLowerLeg
+  - first:
+      4: 400086
+    second: rightLeg1_LoResToe
+  - first:
+      4: 400088
+    second: rightLeg1_LoResUpperLeg
+  - first:
+      4: 400090
+    second: rightLeg2_LoResFoot
+  - first:
+      4: 400092
+    second: rightLeg2_LoResLowerLeg
+  - first:
+      4: 400094
+    second: rightLeg2_LoResToe
+  - first:
+      4: 400096
+    second: rightLeg2_LoResUpperLeg
+  - first:
+      4: 400098
+    second: shellouter
+  - first:
+      4: 400100
+    second: shellouter 1
+  - first:
+      4: 400102
+    second: Sky001
+  - first:
+      4: 400104
+    second: Slider
+  - first:
+      4: 400106
+    second: spine1_loResPelvis
+  - first:
+      4: 400108
+    second: spine1_loResSpine1
+  - first:
+      4: 400110
+    second: spine1_loResSpine2
+  - first:
+      4: 400112
+    second: spine1_loResSpine3
+  - first:
+      4: 400114
+    second: Spotlight
+  - first:
+      4: 400116
+    second: Spotlight 1
+  - first:
+      4: 400118
+    second: tail1_Joint1
+  - first:
+      4: 400120
+    second: tail1_Joint2
+  - first:
+      4: 400122
+    second: tail1_Joint3
+  - first:
+      4: 400124
+    second: tail1_Joint4
+  - first:
+      4: 400126
+    second: tail1_Joint5
+  - first:
+      4: 400128
+    second: tail1_Joint6
+  - first:
+      4: 400130
+    second: tail1_Joint7
+  - first:
+      4: 400132
+    second: tail1_Joint8
+  - first:
+      4: 400134
+    second: tail1_Joint9
+  - first:
+      4: 400136
+    second: //RootNode
+  - first:
+      4: 400138
+    second: TRS
+  - first:
+      4: 400140
+    second: weapon_minigun
+  - first:
+      4: 400142
+    second: weapon_minigun 1
+  - first:
+      4: 400144
+    second: weapon_minirocket
+  - first:
+      4: 400146
+    second: weapon_minirocket 1
+  - first:
+      4: 400148
+    second: weapon_rocket
+  - first:
+      4: 400150
+    second: weapon_rocket 1
+  - first:
+      21: 2100000
+    second: Default-Material
+  - first:
+      21: 2100002
+    second: minirocket_texture
+  - first:
+      21: 2100004
+    second: missile_texture
+  - first:
+      21: 2100006
+    second: turret01
+  - first:
+      21: 2100008
+    second: body
+  - first:
+      21: 2100010
+    second: tiger armor uv
+  - first:
+      23: 2300000
+    second: barrel-01
+  - first:
+      23: 2300002
+    second: barrel-02
+  - first:
+      23: 2300004
+    second: Bullet SpawnPoint
+  - first:
+      23: 2300006
+    second: gun001
+  - first:
+      23: 2300008
+    second: gun002
+  - first:
+      23: 2300010
+    second: weapon_minirocket
+  - first:
+      23: 2300012
+    second: weapon_minirocket 1
+  - first:
+      23: 2300014
+    second: weapon_rocket
+  - first:
+      23: 2300016
+    second: weapon_rocket 1
+  - first:
+      33: 3300000
+    second: barrel-01
+  - first:
+      33: 3300002
+    second: barrel-02
+  - first:
+      33: 3300004
+    second: Bullet SpawnPoint
+  - first:
+      33: 3300006
+    second: gun001
+  - first:
+      33: 3300008
+    second: gun002
+  - first:
+      33: 3300010
+    second: weapon_minirocket
+  - first:
+      33: 3300012
+    second: weapon_minirocket 1
+  - first:
+      33: 3300014
+    second: weapon_rocket
+  - first:
+      33: 3300016
+    second: weapon_rocket 1
+  - first:
+      43: 4300000
+    second: Bullet SpawnPoint
+  - first:
+      43: 4300002
+    second: weapon_minirocket
+  - first:
+      43: 4300004
+    second: weapon_rocket
+  - first:
+      43: 4300006
+    second: barrel-01
+  - first:
+      43: 4300008
+    second: barrel-02
+  - first:
+      43: 4300010
+    second: cadnav
+  - first:
+      43: 4300012
+    second: gun001
+  - first:
+      43: 4300014
+    second: gun002
+  - first:
+      43: 4300016
+    second: weapon_minirocket
+  - first:
+      43: 4300018
+    second: weapon_rocket
+  - first:
+      74: 7400000
+    second: walk
+  - first:
+      74: 7400002
+    second: Run
+  - first:
+      74: 7400004
+    second: TigerShootAnim
+  - first:
+      74: 7400006
+    second: idle
+  - first:
+      74: 7400008
+    second: attack
+  - first:
+      74: 7400010
+    second: die
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: cadnav
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  - first:
+      74: 7490887377711229557
+    second: idle
+  - first:
+      74: -6225252274419835018
+    second: attack
+  - first:
+      74: 3551403579758161483
+    second: die
+  - first:
+      74: -5612574342507634016
+    second: mid air
+  - first:
+      74: 393857517099109624
+    second: left
+  - first:
+      74: 6937921772212350291
+    second: right
+  - first:
+      74: -2993534804863918692
+    second: jump
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default-Material
+    second: {fileID: 2100000, guid: 8e66e646940a35b4f9629534f3a4893f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body
+    second: {fileID: 2100000, guid: f980da5c8dba89145ab02aba0ebd88f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: minirocket_texture
+    second: {fileID: 2100000, guid: f40d464c779c4bc43ab97164f0ed89a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: missile_texture
+    second: {fileID: 2100000, guid: ef02a624afd58f44ca3fb6092a94e24f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tiger armor uv
+    second: {fileID: 2100000, guid: 9ba9a0366a5995a4fbee22b8920b1927, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: turret01
+    second: {fileID: 2100000, guid: 6126cf2b6b47d164c97bd2573b55f271, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 1
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001_1
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 1
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: TigerShootAnim
+      takeName: TigerShootAnim
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001_2
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack
+      takeName: Take 001_3
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: die
+      takeName: Take 001_4
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: mid air
+      takeName: Take 001_1
+      internalID: 0
+      firstFrame: 7
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: left
+      takeName: Take 001_1
+      internalID: 0
+      firstFrame: 3
+      lastFrame: 3
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: right
+      takeName: Take 001_1
+      internalID: 0
+      firstFrame: 12
+      lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jump
+      takeName: Take 001_1
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: TigerAI(Clone)
+      parentName: 
+      position: {x: 1.029, y: -0.046343997, z: 0.66761}
+      rotation: {x: 0.0043720137, y: 0.9136735, z: 0.009831479, w: -0.40630642}
+      scale: {x: 0.8651999, y: 0.8651999, z: 0.8651999}
+    - name: Bullet SpawnPoint
+      parentName: TigerAI(Clone)
+      position: {x: 0.0025, y: 0.0162, z: 0.0253}
+      rotation: {x: -0.008464695, y: 0, z: -0, w: 0.9999642}
+      scale: {x: 0.02471684, y: 0.024716808, z: 0.024716811}
+    - name: Canvas
+      parentName: TigerAI(Clone)
+      position: {x: -0, y: 0.0235, z: 0}
+      rotation: {x: -6.0372717e-17, y: 0.99990284, z: -6.0372717e-17, w: 0.013941635}
+      scale: {x: 0.000837672, y: 0.0008376719, z: 0.0008376722}
+    - name: Slider
+      parentName: Canvas
+      position: {x: -0, y: 1.1999999, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 12.016339, y: 12.016354, z: 12.016354}
+    - name: Background
+      parentName: Slider
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fill Area
+      parentName: Slider
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Fill
+      parentName: Fill Area
+      position: {x: -0.75, y: -0.099999994, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Handle Slide Area
+      parentName: Slider
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Handle
+      parentName: Handle Slide Area
+      position: {x: -0.7, y: -0.19999999, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadPart
+      parentName: TigerAI(Clone)
+      position: {x: 0.00025398404, y: 0.012553902, z: -0.0029491484}
+      rotation: {x: 0.014447449, y: -0.019453362, z: 0.01378903, w: 0.99961126}
+      scale: {x: 0.7142889, y: 0.714286, z: 0.71428925}
+    - name: GunBase
+      parentName: HeadPart
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.4, y: 0.5, z: 0.4}
+    - name: Head 1
+      parentName: GunBase
+      position: {x: -0, y: 0.0024311456, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 2.0980678, y: 0.8079135, z: 5.201606}
+    - name: Spotlight 1
+      parentName: Head 1
+      position: {x: -0, y: -0.014305185, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.1915725, y: 2.4755127, z: 0.4806209}
+    - name: weapon_minigun 1
+      parentName: GunBase
+      position: {x: -0.02104268, y: 0.005536614, z: 0.010310865}
+      rotation: {x: 0.000000021855694, y: 0, z: 0, w: 1}
+      scale: {x: 20, y: 16, z: 20}
+    - name: minigun_part1 1
+      parentName: weapon_minigun 1
+      position: {x: 0.00016276396, y: 0.000008150863, z: 0.0012010831}
+      rotation: {x: -1.7763568e-15, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shellouter 1
+      parentName: weapon_minigun 1
+      position: {x: -0.0003124506, y: -2.7117824e-11, z: -0.0003970453}
+      rotation: {x: 0.7290038, y: 0.030554092, z: -0.6832276, w: 0.02863555}
+      scale: {x: 0.10758982, y: 0.1344873, z: 0.10758981}
+    - name: missileouter 1
+      parentName: weapon_minigun 1
+      position: {x: 0.00018413305, y: 0.00021321785, z: 0.002362759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.10758988, y: 0.13448738, z: 0.107589886}
+    - name: weapon_minirocket 1
+      parentName: GunBase
+      position: {x: -0.038691282, y: 0.00080486253, z: -0.01708075}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 12.5, y: 10, z: 12.500002}
+    - name: weapon_rocket 1
+      parentName: GunBase
+      position: {x: 0.02344923, y: 0.012773823, z: -0.028482838}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 16, y: 20, z: 20}
+    - name: Main Camera
+      parentName: HeadPart
+      position: {x: -0, y: 0.038211413, z: -0.10073805}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: final
+      parentName: TigerAI(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: barrel-01
+      parentName: final
+      position: {x: -0.004285273, y: 0.010365803, z: 0.0055150613}
+      rotation: {x: -0.7071068, y: -0.0000001236345, z: -0.0000001236345, w: 0.7071068}
+      scale: {x: 13.357921, y: 13.357921, z: 13.357921}
+    - name: barrel-02
+      parentName: final
+      position: {x: 0.0060139624, y: 0.010365803, z: 0.0055919387}
+      rotation: {x: -0.7071068, y: -0.0000001236345, z: -0.0000001236345, w: 0.7071068}
+      scale: {x: 13.357921, y: 13.357921, z: 13.357921}
+    - name: group
+      parentName: final
+      position: {x: -0.022686033, y: 0.009362487, z: 0.0013347388}
+      rotation: {x: 0.00000006657903, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TRS
+      parentName: group
+      position: {x: 0.023665717, y: -0.009176859, z: -0.0006576992}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000006}
+    - name: spine1_loResSpine1
+      parentName: TRS
+      position: {x: 0.22234596, y: 0.030825412, z: 1.4005433}
+      rotation: {x: 0.6516303, y: -0.63938904, z: 0.25959146, w: -0.3149159}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000005}
+    - name: spine1_loResPelvis
+      parentName: spine1_loResSpine1
+      position: {x: 0.0011241413, y: 0.000023692925, z: 0.00002293915}
+      rotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
+      scale: {x: 1.0000008, y: 1.0000004, z: 1.0000007}
+    - name: tail1_Joint1
+      parentName: spine1_loResPelvis
+      position: {x: -1.850603e-17, y: -0.0010469548, z: -0.00015240349}
+      rotation: {x: 0.6889766, y: 0.15446143, z: -0.6916261, w: -0.1520079}
+      scale: {x: 1.0000006, y: 0.99999994, z: 1.0000005}
+    - name: tail1_Joint2
+      parentName: tail1_Joint1
+      position: {x: -0.001590888, y: 0, z: 2.255973e-20}
+      rotation: {x: -0.0063790744, y: 0.006603443, z: -0.02605519, w: 0.99961835}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999997}
+    - name: tail1_Joint3
+      parentName: tail1_Joint2
+      position: {x: -0.0015897211, y: -1.4438228e-18, z: 2.7071678e-19}
+      rotation: {x: -0.0063794856, y: 0.011752011, z: -0.020032704, w: 0.9997099}
+      scale: {x: 0.9999999, y: 1.0000004, z: 0.99999976}
+    - name: tail1_Joint4
+      parentName: tail1_Joint3
+      position: {x: -0.0015904239, y: -1.4438228e-18, z: 9.023892e-20}
+      rotation: {x: -0.00633651, y: 0.00807932, z: -0.117946744, w: 0.9929669}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: tail1_Joint5
+      parentName: tail1_Joint4
+      position: {x: -0.0015720193, y: 5.775291e-18, z: -9.023892e-20}
+      rotation: {x: -0.00632488, y: 0.010237336, z: -0.13210456, w: 0.9911628}
+      scale: {x: 1.0000001, y: 0.9999995, z: 0.9999997}
+    - name: tail1_Joint6
+      parentName: tail1_Joint5
+      position: {x: -0.0015854631, y: -2.8876455e-18, z: 2.7071678e-19}
+      rotation: {x: -0.0063328813, y: 0.0037037898, z: -0.122926526, w: 0.9923887}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: tail1_Joint7
+      parentName: tail1_Joint6
+      position: {x: -0.001579494, y: -1.4438228e-18, z: -1.8047785e-19}
+      rotation: {x: -0.0062688766, y: 0.006575781, z: -0.18675968, w: 0.98236364}
+      scale: {x: 1.0000007, y: 0.9999995, z: 1.0000002}
+    - name: tail1_Joint8
+      parentName: tail1_Joint7
+      position: {x: -0.0015746383, y: 2.1657342e-18, z: 2.7071678e-19}
+      rotation: {x: -0.006338541, y: 0.016384555, z: -0.114357226, w: 0.99328434}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
+    - name: tail1_Joint9
+      parentName: tail1_Joint8
+      position: {x: -0.0015843576, y: 0, z: 1.8047785e-19}
+      rotation: {x: -0.0063812328, y: -0.00000022538003, z: 0.000000010601069, w: 0.9999796}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: spine1_loResSpine2
+      parentName: spine1_loResSpine1
+      position: {x: -0.0075391196, y: -5.188738e-19, z: 1.4438228e-18}
+      rotation: {x: -0.00000011920929, y: -0.07369432, z: 0.000000029802322, w: 0.99728096}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000006}
+    - name: spine1_loResSpine3
+      parentName: spine1_loResSpine2
+      position: {x: -0.0060181073, y: -2.255973e-19, z: 0}
+      rotation: {x: 0.000000059604638, y: -0.000000014901159, z: 0.000000029802319,
+        w: 1}
+      scale: {x: 0.9999996, y: 0.9999992, z: 0.99999905}
+    - name: head1_neck
+      parentName: spine1_loResSpine3
+      position: {x: -0.001459984, y: -3.086625e-19, z: 0.00016426494}
+      rotation: {x: -0, y: -0.06626815, z: -0.000000014901163, w: 0.99780184}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
+    - name: head1_head
+      parentName: head1_neck
+      position: {x: -0.0035672365, y: 5.0759396e-17, z: -1.1550582e-17}
+      rotation: {x: 0.000000056463985, y: 0.29900137, z: 0.000000017967789, w: 0.9542528}
+      scale: {x: 0.99999946, y: 1, z: 1.0000004}
+    - name: Jaw
+      parentName: head1_head
+      position: {x: -0.0016725047, y: -3.0333654e-18, z: 0.0010109147}
+      rotation: {x: 0.62584794, y: 0.63286537, z: -0.32250175, w: -0.32216224}
+      scale: {x: 1.0000005, y: 0.9999995, z: 0.99999976}
+    - name: leftLeg1_LoResUpperLeg
+      parentName: spine1_loResSpine3
+      position: {x: -0.0006355529, y: -0.0021926127, z: 0.0023402437}
+      rotation: {x: 0.6283806, y: 0.6297004, z: 0.32260427, w: 0.3233291}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000007}
+    - name: leftLeg1_LoResLowerLeg
+      parentName: leftLeg1_LoResUpperLeg
+      position: {x: -0.0029723963, y: 0, z: 0}
+      rotation: {x: -0.00032812342, y: -0.027386578, z: 0.0009778435, w: 0.9996244}
+      scale: {x: 1.0000008, y: 0.9999997, z: 0.99999994}
+    - name: leftLeg1_LoResFoot
+      parentName: leftLeg1_LoResLowerLeg
+      position: {x: -0.0052225874, y: 0, z: 0}
+      rotation: {x: 0.9957699, y: 0.054465633, z: 0.065570585, w: -0.034297682}
+      scale: {x: 1.0000002, y: 0.99999976, z: 1.0000005}
+    - name: leftLeg1_LoResToe
+      parentName: leftLeg1_LoResFoot
+      position: {x: -0.0017268664, y: 0, z: 0}
+      rotation: {x: 0.000000055879347, y: -0.45151854, z: 0.00000008940696, w: -0.89226174}
+      scale: {x: 1, y: 1.0000006, z: 1}
+    - name: rightLeg1_LoResUpperLeg
+      parentName: spine1_loResSpine3
+      position: {x: -0.0006355529, y: 0.0021926127, z: 0.0023402437}
+      rotation: {x: -0.6283797, y: 0.6297023, z: -0.3226053, w: 0.32332608}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000005}
+    - name: rightLeg1_LoResLowerLeg
+      parentName: rightLeg1_LoResUpperLeg
+      position: {x: -0.0029723963, y: 0, z: 0}
+      rotation: {x: 0.000328496, y: -0.027387656, z: -0.0009776053, w: 0.99962443}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: rightLeg1_LoResFoot
+      parentName: rightLeg1_LoResLowerLeg
+      position: {x: -0.0052225874, y: 0, z: 0}
+      rotation: {x: 0.9957708, y: -0.0544606, z: 0.06556009, w: 0.03429808}
+      scale: {x: 1.0000002, y: 0.9999993, z: 1.0000002}
+    - name: rightLeg1_LoResToe
+      parentName: rightLeg1_LoResFoot
+      position: {x: -0.0017268664, y: 0, z: 0}
+      rotation: {x: 0.000000029802319, y: -0.4515186, z: 0.00000008940696, w: -0.89226174}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.99999994}
+    - name: leftLeg2_LoResUpperLeg
+      parentName: spine1_loResSpine1
+      position: {x: -0.0001620776, y: -0.0021714435, z: 0.00041830074}
+      rotation: {x: 0.050516777, y: 0.03469084, z: -0.9978165, w: -0.02463555}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000008}
+    - name: leftLeg2_LoResLowerLeg
+      parentName: leftLeg2_LoResUpperLeg
+      position: {x: -0.0044411863, y: 0, z: 0}
+      rotation: {x: 0.0023592832, y: -0.30933142, z: -0.004645296, w: 0.95094}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: leftLeg2_LoResFoot
+      parentName: leftLeg2_LoResLowerLeg
+      position: {x: -0.0049738395, y: 0, z: 0}
+      rotation: {x: 0.008066948, y: 0.9372976, z: 0.041484, w: 0.34595862}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000006}
+    - name: leftLeg2_LoResToe
+      parentName: leftLeg2_LoResFoot
+      position: {x: -0.003262177, y: 0, z: 0}
+      rotation: {x: 0.0000000028751188, y: -0.49767435, z: -0.000000045123333, w: -0.86736405}
+      scale: {x: 0.9999998, y: 0.9999996, z: 0.9999997}
+    - name: rightLeg2_LoResUpperLeg
+      parentName: spine1_loResSpine1
+      position: {x: -0.0001620776, y: 0.0021714435, z: 0.00041830074}
+      rotation: {x: 0.05051554, y: -0.034667533, z: -0.9978171, w: 0.024645831}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.000001}
+    - name: rightLeg2_LoResLowerLeg
+      parentName: rightLeg2_LoResUpperLeg
+      position: {x: -0.0044411863, y: 0, z: 0}
+      rotation: {x: -0.0023550403, y: -0.30933368, z: 0.0046365876, w: 0.95093936}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1}
+    - name: rightLeg2_LoResFoot
+      parentName: rightLeg2_LoResLowerLeg
+      position: {x: -0.0049738395, y: 0, z: 0}
+      rotation: {x: -0.008051737, y: 0.937299, z: -0.041476212, w: 0.3459559}
+      scale: {x: 1.0000001, y: 1, z: 1.0000004}
+    - name: rightLeg2_LoResToe
+      parentName: rightLeg2_LoResFoot
+      position: {x: -0.003262177, y: 0, z: 0}
+      rotation: {x: 0.00000011437649, y: -0.49767447, z: -0.00000007036059, w: -0.867364}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: group1
+      parentName: final
+      position: {x: 0.00097576756, y: 0.00018312757, z: 0.0012896599}
+      rotation: {x: 0.00000006657903, y: -0, z: -0, w: 1}
+      scale: {x: 0.6862225, y: 0.6862225, z: 0.6862225}
+    - name: cadnav
+      parentName: group1
+      position: {x: 0.000003918365, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: gun001
+      parentName: final
+      position: {x: 0.0064614457, y: 0.01377102, z: -0.0025487253}
+      rotation: {x: -0.70710254, y: 0.0024466962, z: 0.0024466962, w: 0.70710254}
+      scale: {x: 6.9355016, y: 6.9355016, z: 6.9355016}
+    - name: gun002
+      parentName: final
+      position: {x: -0.004774174, y: 0.013739874, z: -0.0026360308}
+      rotation: {x: -0.7071068, y: 0.00007172736, z: 0.00007172736, w: 0.7071068}
+      scale: {x: 6.9355016, y: 6.9355016, z: 6.9355016}
+    - name: Object007
+      parentName: final
+      position: {x: 0.0009796859, y: -0.000028446326, z: 0.0012805432}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.737489, y: 0.76700675, z: 0.76700675}
+    - name: Object009
+      parentName: final
+      position: {x: 0.0009784565, y: -0.0004263538, z: 0.0012720564}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.6862225, y: 0.6862225, z: 0.6862225}
+    - name: Particle View 001
+      parentName: final
+      position: {x: 0.0009796859, y: 0.00020846556, z: 0.00041237375}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sky001
+      parentName: final
+      position: {x: 0.0062678545, y: 0.0001686463, z: 0.0017910523}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadPart (1)
+      parentName: TigerAI(Clone)
+      position: {x: 0.01228, y: 0.012879999, z: -0.0024799998}
+      rotation: {x: 0.014447449, y: -0.019453362, z: 0.01378903, w: 0.99961126}
+      scale: {x: 0.7142944, y: 0.7142857, z: 0.7142945}
+    - name: GunBase 1
+      parentName: HeadPart (1)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.4, y: 0.5, z: 0.4}
+    - name: Head
+      parentName: GunBase 1
+      position: {x: -0, y: 0.0024311456, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 2.0980678, y: 0.8079135, z: 5.201606}
+    - name: Spotlight
+      parentName: Head
+      position: {x: -0, y: -0.014305185, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.1915725, y: 2.4755127, z: 0.4806209}
+    - name: weapon_minigun
+      parentName: GunBase 1
+      position: {x: -0.02104268, y: 0.005536614, z: 0.010310865}
+      rotation: {x: 0.000000021855694, y: 0, z: 0, w: 1}
+      scale: {x: 20, y: 16, z: 20}
+    - name: minigun_part1
+      parentName: weapon_minigun
+      position: {x: 0.00016276396, y: 0.000008150863, z: 0.0012010831}
+      rotation: {x: -1.7763568e-15, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shellouter
+      parentName: weapon_minigun
+      position: {x: -0.0003124506, y: -2.7117824e-11, z: -0.0003970453}
+      rotation: {x: 0.7290038, y: 0.030554092, z: -0.6832276, w: 0.02863555}
+      scale: {x: 0.10758982, y: 0.1344873, z: 0.10758981}
+    - name: missileouter
+      parentName: weapon_minigun
+      position: {x: 0.00018413305, y: 0.00021321785, z: 0.002362759}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.10758988, y: 0.13448738, z: 0.107589886}
+    - name: weapon_minirocket
+      parentName: GunBase 1
+      position: {x: -0.038691282, y: 0.00080486253, z: -0.01708075}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 12.5, y: 10, z: 12.500002}
+    - name: weapon_rocket
+      parentName: GunBase 1
+      position: {x: 0.02344923, y: 0.012773823, z: -0.028482838}
+      rotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+      scale: {x: 16, y: 20, z: 20}
+    - name: Main Camera 1
+      parentName: HeadPart (1)
+      position: {x: -0, y: 0.038211413, z: -0.10073805}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

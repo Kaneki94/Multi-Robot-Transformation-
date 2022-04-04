@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: df6cd79058797dc498a9f3ae33f9249a
+timeCreated: 1512640677
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BigNoodleTitling
+  fontNames:
+  - BigNoodleTitling
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a2ee88e3506e5264a8aa8409d6d92966, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
