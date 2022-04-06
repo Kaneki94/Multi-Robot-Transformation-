@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 93120f52208e76c4c948a6ce6c2eccd3
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: elephant_animations_backup___Copy:elephant_animations:A2_10
+  - first:
+      1: 100004
+    second: elephant_animations_backup___Copy:elephant_animations:A2_11
+  - first:
+      1: 100006
+    second: elephant_animations_backup___Copy:elephant_animations:A2_12
+  - first:
+      1: 100008
+    second: elephant_animations_backup___Copy:elephant_animations:A2_13
+  - first:
+      1: 100010
+    second: elephant_animations_backup___Copy:elephant_animations:A2_14
+  - first:
+      1: 100012
+    second: elephant_animations_backup___Copy:elephant_animations:A2_15
+  - first:
+      1: 100014
+    second: elephant_animations_backup___Copy:elephant_animations:A2_16
+  - first:
+      1: 100016
+    second: elephant_animations_backup___Copy:elephant_animations:A2_17
+  - first:
+      1: 100018
+    second: elephant_animations_backup___Copy:elephant_animations:A2_18
+  - first:
+      1: 100020
+    second: elephant_animations_backup___Copy:elephant_animations:A2_19
+  - first:
+      1: 100022
+    second: elephant_animations_backup___Copy:elephant_animations:A2_2
+  - first:
+      1: 100024
+    second: elephant_animations_backup___Copy:elephant_animations:A2_20
+  - first:
+      1: 100026
+    second: elephant_animations_backup___Copy:elephant_animations:A2_21
+  - first:
+      1: 100028
+    second: elephant_animations_backup___Copy:elephant_animations:A2_22
+  - first:
+      1: 100030
+    second: elephant_animations_backup___Copy:elephant_animations:A2_23
+  - first:
+      1: 100032
+    second: elephant_animations_backup___Copy:elephant_animations:A2_24
+  - first:
+      1: 100034
+    second: elephant_animations_backup___Copy:elephant_animations:A2_25
+  - first:
+      1: 100036
+    second: elephant_animations_backup___Copy:elephant_animations:A2_26
+  - first:
+      1: 100038
+    second: elephant_animations_backup___Copy:elephant_animations:A2_27
+  - first:
+      1: 100040
+    second: elephant_animations_backup___Copy:elephant_animations:A2_28
+  - first:
+      1: 100042
+    second: elephant_animations_backup___Copy:elephant_animations:A2_29
+  - first:
+      1: 100044
+    second: elephant_animations_backup___Copy:elephant_animations:A2_3
+  - first:
+      1: 100046
+    second: elephant_animations_backup___Copy:elephant_animations:A2_30
+  - first:
+      1: 100048
+    second: elephant_animations_backup___Copy:elephant_animations:A2_31
+  - first:
+      1: 100050
+    second: elephant_animations_backup___Copy:elephant_animations:A2_32
+  - first:
+      1: 100052
+    second: elephant_animations_backup___Copy:elephant_animations:A2_33
+  - first:
+      1: 100054
+    second: elephant_animations_backup___Copy:elephant_animations:A2_34
+  - first:
+      1: 100056
+    second: elephant_animations_backup___Copy:elephant_animations:A2_35
+  - first:
+      1: 100058
+    second: elephant_animations_backup___Copy:elephant_animations:A2_36
+  - first:
+      1: 100060
+    second: elephant_animations_backup___Copy:elephant_animations:A2_37
+  - first:
+      1: 100062
+    second: elephant_animations_backup___Copy:elephant_animations:A2_38
+  - first:
+      1: 100064
+    second: elephant_animations_backup___Copy:elephant_animations:A2_39
+  - first:
+      1: 100066
+    second: elephant_animations_backup___Copy:elephant_animations:A2_4
+  - first:
+      1: 100068
+    second: elephant_animations_backup___Copy:elephant_animations:A2_40
+  - first:
+      1: 100070
+    second: elephant_animations_backup___Copy:elephant_animations:A2_5
+  - first:
+      1: 100072
+    second: elephant_animations_backup___Copy:elephant_animations:A2_6
+  - first:
+      1: 100074
+    second: elephant_animations_backup___Copy:elephant_animations:A2_7
+  - first:
+      1: 100076
+    second: elephant_animations_backup___Copy:elephant_animations:A2_8
+  - first:
+      1: 100078
+    second: elephant_animations_backup___Copy:elephant_animations:A2_9
+  - first:
+      1: 100080
+    second: elephant_animations_backup___Copy:elephant_animations:Elephant
+  - first:
+      1: 100082
+    second: elephant_animations_backup___Copy:elephant_animations:Elephant_rig
+  - first:
+      1: 100084
+    second: elephant_animations_backup___Copy:group1
+  - first:
+      1: 100086
+    second: footSource
+  - first:
+      1: 100088
+    second: Lightning aura
+  - first:
+      1: 100090
+    second: MInigun
+  - first:
+      1: 100092
+    second: Minigun
+  - first:
+      1: 100094
+    second: MInigun 1
+  - first:
+      1: 100096
+    second: Minigun 1
+  - first:
+      1: 100098
+    second: Minigun Armature
+  - first:
+      1: 100100
+    second: Minigun Armature 1
+  - first:
+      1: 100102
+    second: Minigun gattling
+  - first:
+      1: 100104
+    second: Minigun gattling 1
+  - first:
+      1: 100106
+    second: Minigun HOlder
+  - first:
+      1: 100108
+    second: Minigun HOlder 1
+  - first:
+      1: 100110
+    second: minigun_part1
+  - first:
+      1: 100112
+    second: minigun_part1 1
+  - first:
+      1: 100114
+    second: missileouter
+  - first:
+      1: 100116
+    second: missileouter 1
+  - first:
+      1: 100118
+    second: New Ele
+  - first:
+      1: 100120
+    second: shellouter
+  - first:
+      1: 100122
+    second: shellouter 1
+  - first:
+      1: 100124
+    second: Smoke
+  - first:
+      1: 100126
+    second: Sparks
+  - first:
+      1: 100128
+    second: weapon_minigun (1)
+  - first:
+      1: 100130
+    second: weapon_minigun (3)
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: elephant_animations_backup___Copy:elephant_animations:A2_10
+  - first:
+      4: 400004
+    second: elephant_animations_backup___Copy:elephant_animations:A2_11
+  - first:
+      4: 400006
+    second: elephant_animations_backup___Copy:elephant_animations:A2_12
+  - first:
+      4: 400008
+    second: elephant_animations_backup___Copy:elephant_animations:A2_13
+  - first:
+      4: 400010
+    second: elephant_animations_backup___Copy:elephant_animations:A2_14
+  - first:
+      4: 400012
+    second: elephant_animations_backup___Copy:elephant_animations:A2_15
+  - first:
+      4: 400014
+    second: elephant_animations_backup___Copy:elephant_animations:A2_16
+  - first:
+      4: 400016
+    second: elephant_animations_backup___Copy:elephant_animations:A2_17
+  - first:
+      4: 400018
+    second: elephant_animations_backup___Copy:elephant_animations:A2_18
+  - first:
+      4: 400020
+    second: elephant_animations_backup___Copy:elephant_animations:A2_19
+  - first:
+      4: 400022
+    second: elephant_animations_backup___Copy:elephant_animations:A2_2
+  - first:
+      4: 400024
+    second: elephant_animations_backup___Copy:elephant_animations:A2_20
+  - first:
+      4: 400026
+    second: elephant_animations_backup___Copy:elephant_animations:A2_21
+  - first:
+      4: 400028
+    second: elephant_animations_backup___Copy:elephant_animations:A2_22
+  - first:
+      4: 400030
+    second: elephant_animations_backup___Copy:elephant_animations:A2_23
+  - first:
+      4: 400032
+    second: elephant_animations_backup___Copy:elephant_animations:A2_24
+  - first:
+      4: 400034
+    second: elephant_animations_backup___Copy:elephant_animations:A2_25
+  - first:
+      4: 400036
+    second: elephant_animations_backup___Copy:elephant_animations:A2_26
+  - first:
+      4: 400038
+    second: elephant_animations_backup___Copy:elephant_animations:A2_27
+  - first:
+      4: 400040
+    second: elephant_animations_backup___Copy:elephant_animations:A2_28
+  - first:
+      4: 400042
+    second: elephant_animations_backup___Copy:elephant_animations:A2_29
+  - first:
+      4: 400044
+    second: elephant_animations_backup___Copy:elephant_animations:A2_3
+  - first:
+      4: 400046
+    second: elephant_animations_backup___Copy:elephant_animations:A2_30
+  - first:
+      4: 400048
+    second: elephant_animations_backup___Copy:elephant_animations:A2_31
+  - first:
+      4: 400050
+    second: elephant_animations_backup___Copy:elephant_animations:A2_32
+  - first:
+      4: 400052
+    second: elephant_animations_backup___Copy:elephant_animations:A2_33
+  - first:
+      4: 400054
+    second: elephant_animations_backup___Copy:elephant_animations:A2_34
+  - first:
+      4: 400056
+    second: elephant_animations_backup___Copy:elephant_animations:A2_35
+  - first:
+      4: 400058
+    second: elephant_animations_backup___Copy:elephant_animations:A2_36
+  - first:
+      4: 400060
+    second: elephant_animations_backup___Copy:elephant_animations:A2_37
+  - first:
+      4: 400062
+    second: elephant_animations_backup___Copy:elephant_animations:A2_38
+  - first:
+      4: 400064
+    second: elephant_animations_backup___Copy:elephant_animations:A2_39
+  - first:
+      4: 400066
+    second: elephant_animations_backup___Copy:elephant_animations:A2_4
+  - first:
+      4: 400068
+    second: elephant_animations_backup___Copy:elephant_animations:A2_40
+  - first:
+      4: 400070
+    second: elephant_animations_backup___Copy:elephant_animations:A2_5
+  - first:
+      4: 400072
+    second: elephant_animations_backup___Copy:elephant_animations:A2_6
+  - first:
+      4: 400074
+    second: elephant_animations_backup___Copy:elephant_animations:A2_7
+  - first:
+      4: 400076
+    second: elephant_animations_backup___Copy:elephant_animations:A2_8
+  - first:
+      4: 400078
+    second: elephant_animations_backup___Copy:elephant_animations:A2_9
+  - first:
+      4: 400080
+    second: elephant_animations_backup___Copy:elephant_animations:Elephant
+  - first:
+      4: 400082
+    second: elephant_animations_backup___Copy:elephant_animations:Elephant_rig
+  - first:
+      4: 400084
+    second: elephant_animations_backup___Copy:group1
+  - first:
+      4: 400086
+    second: footSource
+  - first:
+      4: 400088
+    second: Lightning aura
+  - first:
+      4: 400090
+    second: MInigun
+  - first:
+      4: 400092
+    second: Minigun
+  - first:
+      4: 400094
+    second: MInigun 1
+  - first:
+      4: 400096
+    second: Minigun 1
+  - first:
+      4: 400098
+    second: Minigun Armature
+  - first:
+      4: 400100
+    second: Minigun Armature 1
+  - first:
+      4: 400102
+    second: Minigun gattling
+  - first:
+      4: 400104
+    second: Minigun gattling 1
+  - first:
+      4: 400106
+    second: Minigun HOlder
+  - first:
+      4: 400108
+    second: Minigun HOlder 1
+  - first:
+      4: 400110
+    second: minigun_part1
+  - first:
+      4: 400112
+    second: minigun_part1 1
+  - first:
+      4: 400114
+    second: missileouter
+  - first:
+      4: 400116
+    second: missileouter 1
+  - first:
+      4: 400118
+    second: New Ele
+  - first:
+      4: 400120
+    second: shellouter
+  - first:
+      4: 400122
+    second: shellouter 1
+  - first:
+      4: 400124
+    second: Smoke
+  - first:
+      4: 400126
+    second: Sparks
+  - first:
+      4: 400128
+    second: weapon_minigun (1)
+  - first:
+      4: 400130
+    second: weapon_minigun (3)
+  - first:
+      21: 2100000
+    second: Elephant_Body_2D_View
+  - first:
+      21: 2100002
+    second: Plates
+  - first:
+      21: 2100004
+    second: No Name
+  - first:
+      21: 2100006
+    second: Minigun
+  - first:
+      23: 2300000
+    second: minigun_part1
+  - first:
+      23: 2300002
+    second: minigun_part1 1
+  - first:
+      23: 2300004
+    second: weapon_minigun (1)
+  - first:
+      23: 2300006
+    second: weapon_minigun (3)
+  - first:
+      33: 3300000
+    second: minigun_part1
+  - first:
+      33: 3300002
+    second: minigun_part1 1
+  - first:
+      33: 3300004
+    second: weapon_minigun (1)
+  - first:
+      33: 3300006
+    second: weapon_minigun (3)
+  - first:
+      43: 4300000
+    second: elephant_animations_backup___Copy:elephant_animations:Elephant
+  - first:
+      43: 4300002
+    second: weapon_minigun (1)
+  - first:
+      43: 4300004
+    second: minigun_part1
+  - first:
+      43: 4300006
+    second: MInigun
+  - first:
+      43: 4300008
+    second: weapon_minigun (3)
+  - first:
+      43: 4300010
+    second: minigun_part1
+  - first:
+      43: 4300012
+    second: MInigun
+  - first:
+      74: 7400000
+    second: anim_Clip1
+  - first:
+      74: 7400002
+    second: idle1
+  - first:
+      74: 7400004
+    second: run
+  - first:
+      74: 7400006
+    second: anim_Clip11
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: elephant_animations_backup___Copy:elephant_animations:Elephant
+  - first:
+      137: 13700002
+    second: MInigun
+  - first:
+      137: 13700004
+    second: MInigun 1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elephant_Body_2D_View
+    second: {fileID: 2100000, guid: 6cb1b24ea0c1e6c4caaad8114173bc4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Minigun
+    second: {fileID: 2100000, guid: f21448f5db001d0459eef4359ab9ce23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: a19e00efca205b742b88638108f5e141, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plates
+    second: {fileID: 2100000, guid: 3c0f6d52256d14c46afb646028e21422, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: anim_Clip1
+      takeName: anim_Clip1
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 71
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle1
+      takeName: idle1
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 133
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: run
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 133
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: anim_Clip11
+      takeName: anim_Clip11
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 133
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
