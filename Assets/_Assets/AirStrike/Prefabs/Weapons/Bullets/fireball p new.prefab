@@ -39564,7 +39564,6 @@ GameObject:
   - component: {fileID: 8030250830245057018}
   - component: {fileID: 8030250830254131802}
   - component: {fileID: 8030250830260422522}
-  - component: {fileID: 7536179769691445724}
   m_Layer: 2
   m_Name: fireball p new
   m_TagString: Bullet
@@ -39608,8 +39607,8 @@ MonoBehaviour:
   TorqueSpeedAxis: {x: 0, y: 0, z: 0}
   TorqueObject: {fileID: 0}
   Damping: 6
-  Speed: 2000
-  SpeedMax: 4000
+  Speed: 1000
+  SpeedMax: 3000
   SpeedMult: 1000
   Noise: {x: 0, y: 0, z: 0}
   TargetLockDirection: 0.5
@@ -39625,10 +39624,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8030250830250193562}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -39658,7 +39657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6590ee8ee91865a489cca49961c0a4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 100000, guid: bc69029cb72a71849bc4d3644a31635f, type: 3}
+  Effect: {fileID: 0}
   LifeTimeEffect: 2
   Owner: {fileID: 0}
   Damage: 300
@@ -39672,27 +39671,3 @@ MonoBehaviour:
   RandomTimeActive: 0
   DestroyAfterObject: {fileID: 0}
   DestryAfterDuration: 4
---- !u!114 &7536179769691445724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8030250830250193562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13a2260124482ed4aac2c705989354dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoType: 0
-  sphereRadius: 2
-  boxSize: {x: 2.34, y: 4.92, z: 1.6}
-  type: 0
-  delay: 0
-  demolishCluster: 0
-  duration: 0.1
-  scaleAnimation: 1
-  positionAnimation: 0
-  line: {fileID: 0}
-  positionList: []
-  showGizmo: 1

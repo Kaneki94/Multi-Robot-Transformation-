@@ -75,6 +75,7 @@ public class WeaponLauncher : WeaponBase
 			if (Missile != null && hit.collider.tag != Missile.tag) {
 				AimPoint = hit.point;
 				AimObject = hit.collider.gameObject;
+				print("Missile");
 			}
 		} else {
 			AimPoint = this.transform.position + (this.transform.forward * MaxAimRange);
@@ -311,6 +312,7 @@ public class WeaponLauncher : WeaponBase
 					
 					
 						GameObject bullet = (GameObject)Instantiate (Missile, missileposition, missilerotate);
+						print("instantiate");
 						DamageBase damangeBase = bullet.GetComponent<DamageBase> ();
 						if (damangeBase) {
 							damangeBase.Owner = Owner;

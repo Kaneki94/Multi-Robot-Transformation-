@@ -1,10 +1,9 @@
+using SWS;
 /// <summary>
 /// Damage manager. 
 /// </summary>
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-using SWS;
 
 public class DamageManager : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class DamageManager : MonoBehaviour
     public bool trafficspawner = false;
     public int rewardcoins = 500;
     public GameObject coinsimage;
+
 
     float temp;
 
@@ -126,6 +126,7 @@ public class DamageManager : MonoBehaviour
         if (Effect)
         {
             GameObject obj = (GameObject)GameObject.Instantiate(Effect, transform.position, transform.rotation);
+
             if (this.GetComponent<Rigidbody>())
             {
                 if (obj.GetComponent<Rigidbody>())
@@ -216,12 +217,9 @@ public class DamageManager : MonoBehaviour
                 this.gameObject.SetActive(false);
                 Destroy(this.gameObject);
             }
-
-
-
-
             //levelmanager.instance.countfunt();
         }
+        SpawnPiggyandchicken();
     }
 
     void coinshow()
@@ -280,4 +278,17 @@ public class DamageManager : MonoBehaviour
 
     }
 
+    #region pets
+    public GameObject[] pets;
+    private void SpawnPiggyandchicken()
+    {
+        int ran = Random.Range(0, pets.Length);
+        GameObject ch;
+        if (pets.Length > 0)
+        {
+            ch = Instantiate(pets[ran], transform.position, transform.rotation);
+            Destroy(ch,10f);
+        }
+    }
+    #endregion
 }

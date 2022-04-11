@@ -54,7 +54,7 @@ MonoBehaviour:
   RigidbodyProjectile: 1
   TorqueSpeedAxis: {x: 0, y: 0, z: 0}
   TorqueObject: {fileID: 0}
-  Lifetime: 1
+  Lifetime: 500
   Speed: 50
   SpeedMax: 100
   SpeedMult: 10

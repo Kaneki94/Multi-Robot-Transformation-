@@ -13,7 +13,7 @@ public class levelmanager : MonoBehaviour
     public int remaintargets, seasonnum = 0, coinsearned;
     public int[] targets, targetcoins;
     public GameObject[] players, controls, cameras, Trans, playerpos, pickups;
-    public GameObject minimap, currentplayer, env, buildings1, buildings2, trees, windance, currentpickup, videobtn;
+    public GameObject minimap, currentplayer, env, buildings1, buildings2, trees,Poles, windance, currentpickup, videobtn;
     public Text enemies_remain, coinstext, novideotext;
     public GameObject currentlevelz, othercanvas, story;
     public GameObject enemycoinsprefab, enemycoins;
@@ -343,9 +343,9 @@ public class levelmanager : MonoBehaviour
 
         }
 
-        currentplayer.transform.localPosition = playerpos[selectedlevel - 1].transform.localPosition;
-        currentplayer.transform.localRotation = playerpos[selectedlevel - 1].transform.localRotation;
-
+        currentplayer.transform.localPosition = playerpos[selectedlevel - 1].transform.position;
+        currentplayer.transform.localRotation = playerpos[selectedlevel - 1].transform.rotation;
+        print("currentplayer :" + currentplayer + "pos :" + playerpos[selectedlevel - 1].name);
         GetComponent<missions>().skipstartstatement();
 
 
@@ -668,7 +668,6 @@ public class levelmanager : MonoBehaviour
 
         Invoke("rc", 4f);
     }
-
     void rc()
     {
 
@@ -681,6 +680,63 @@ public class levelmanager : MonoBehaviour
         currentplayer = players[2].gameObject;
 
         minimap.GetComponent<MapCanvasController>().playerTransform = players[2].transform;
+    }
+    public void RobotoRikshaw()
+    {
+
+        controls[0].SetActive(false);
+        players[0].SetActive(false);
+
+        Trans[6].transform.localPosition = players[0].transform.localPosition;
+        Trans[6].transform.localRotation = players[0].transform.localRotation;
+        Trans[6].SetActive(true);
+        players[6].transform.localPosition = players[0].transform.localPosition;
+        players[6].transform.localRotation = players[0].transform.localRotation;
+        players[6].transform.localPosition = new Vector3(players[6].transform.localPosition.x, players[6].transform.localPosition.y + 2f, players[6].transform.localPosition.z);
+        cameras[0].SetActive(false);
+        Invoke("rcrikshaw", 2f);
+    }
+    public void Rikshaw_to_Robot()
+    {
+
+        for(int i=0;i<players.Length;i++)
+        {
+            players[i].SetActive(false);
+            controls[i].SetActive(false);
+            cameras[i].SetActive(false);
+        }
+
+
+        Trans[6].transform.localPosition = players[6].transform.localPosition;
+        Trans[6].transform.localRotation = players[6].transform.localRotation;
+        Trans[6].SetActive(true);
+        players[0].transform.localPosition = players[6].transform.localPosition;
+        players[0].transform.localRotation = players[6].transform.localRotation;
+        players[0].transform.localPosition = new Vector3(players[6].transform.localPosition.x, players[6].transform.localPosition.y + 2f, players[6].transform.localPosition.z);
+        Invoke("robot", 1.5f);
+    }
+    void robot()
+    {
+
+        cameras[0].SetActive(true);
+        Trans[6].SetActive(false);
+        controls[0].SetActive(true);
+        players[0].SetActive(true);
+        currentplayer = players[0].gameObject;
+        minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+    }
+    void rcrikshaw()
+    {
+
+        cameras[6].SetActive(true);
+
+        Trans[6].SetActive(false);
+
+        controls[6].SetActive(true);
+        players[6].SetActive(true);
+        currentplayer = players[6].gameObject;
+
+        minimap.GetComponent<MapCanvasController>().playerTransform = players[6].transform;
     }
 
     /// ////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,277 @@
+{
+  "project_info": {
+    "project_number": "379219021407",
+    "firebase_url": "https://play-zee.firebaseio.com",
+    "project_id": "play-zee",
+    "storage_bucket": "play-zee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:3b4463ff5f1d5d88f5d5ea",
+        "android_client_info": {
+          "package_name": "com.Impossible.bottle.shooting.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:0960502af3147782f5d5ea",
+        "android_client_info": {
+          "package_name": "com.army.vehicle.transporter.truck.simulator.army.car.games"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:3145f8708b11c80ef5d5ea",
+        "android_client_info": {
+          "package_name": "com.army.vehicles.transport.simulator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:73bea35dc11574a8f5d5ea",
+        "android_client_info": {
+          "package_name": "com.city.construction.fork.lift.truck.driving.games"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:2d0337f4a4f88251f5d5ea",
+        "android_client_info": {
+          "package_name": "com.extreme.deer.hunting.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:f05733ee09ca6400f5d5ea",
+        "android_client_info": {
+          "package_name": "com.extreme.zombie.shooting.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:c3d3672c097cbbdaf5d5ea",
+        "android_client_info": {
+          "package_name": "com.grand.army.shooting.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:d561dd5cb33917a3f5d5ea",
+        "android_client_info": {
+          "package_name": "com.grand.gangster.crime.city"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:bd4addce6a1e0ce3f5d5ea",
+        "android_client_info": {
+          "package_name": "com.grand.shooting.strike"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:83cbf86851dcb720f5d5ea",
+        "android_client_info": {
+          "package_name": "com.grand.tank.jet.mission"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:0e25cdaae10ff877f5d5ea",
+        "android_client_info": {
+          "package_name": "com.mega.shooting.gun.strike"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:021d5b4f246e9098f5d5ea",
+        "android_client_info": {
+          "package_name": "com.police.prison.ring.fighting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:1d719af557ab10b2f5d5ea",
+        "android_client_info": {
+          "package_name": "com.real.truck.driving"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379219021407:android:7186b55fb0c4059af5d5ea",
+        "android_client_info": {
+          "package_name": "com.ship.sniper.shooting.mission"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf1__YT9-N8i1S2DAMqieYFcby5ppLYgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

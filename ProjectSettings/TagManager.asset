@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Stair
+  - Climb
+  - Fly
+  - finish
+  - player
+  - arrow
+  - Water
+  - Road
+  - hurdle
+  - Tarren
+  - Fire
+  - Bullet
+  - safezone
+  - Enemy
+  - Animal
+  - coin
+  - TrafficCar
+  - health
+  - FxTemporaire
+  - HitBox
+  - Cover
+  - AI Controller
+  - Level Parts
+  - Target
+  - Extra
+  - nitroboostparticle
+  - ramp
+  - manager
+  - monster
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - RCC
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Animal
+  - 
+  - 
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Item
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

@@ -21,7 +21,7 @@ public class Story : MonoBehaviour
 
     public void StoryCutscene()
     {
-        flyObject.DOLocalMoveX(-40f, 10f).OnComplete(() =>
+        flyObject.DOLocalMoveX(-82.4f, 15f).OnComplete(() =>
         {
             flyObject.DOLocalMoveY(-35f, 7f).OnComplete(() =>
             {
@@ -43,6 +43,8 @@ public class Story : MonoBehaviour
     {
         storyPanel.SetActive(false);
         skipPanel.SetActive(true);
+        storyCamera.DOLocalMoveY(33f,0.1f);
+        storyCamera.DOLocalMoveX(3.38f, 0.1f);
         storyCamera.DOLocalRotate(cameraRot, 2f).OnComplete(() =>
         {
             foreach (var r in staticRobots)
