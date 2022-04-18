@@ -11,7 +11,7 @@ public class gunselection : MonoBehaviour
     public int[] cost;
     public Text guncost;
     public GameObject selectedgun;
-    public GameObject buybutton, nocash;
+    public GameObject buybutton,selectbutton, nocash;
     public AudioClip buttonSound;
     int i;
 
@@ -59,6 +59,7 @@ public class gunselection : MonoBehaviour
             cost[y] = PlayerPrefs.GetInt("costgun" + y.ToString());
         }
         buybutton.SetActive(false);
+        selectbutton.SetActive(true);
     }
 
     void OnEnable()
@@ -104,11 +105,14 @@ public class gunselection : MonoBehaviour
             PlayerPrefs.SetInt("Gun", index);
             guncost.text = "";
             buybutton.SetActive(false);
+            selectbutton.SetActive(true);
         }
         else
         {
             guncost.text = "" + cost[index].ToString();
             buybutton.SetActive(true);
+            selectbutton.SetActive(false);
+
         }
         i = index;
         selectedgun = Guns[index].gameObject;

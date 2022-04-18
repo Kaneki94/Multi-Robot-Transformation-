@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Assets/A gamez/Scenes/LifeGame.unity
     guid: c6bb61da30dfb7244ac9b2ac6cd5dc92
+  - enabled: 1
+    path: Assets/3rdPartyPlugin/Highway Racer/Scenes/HighwaySunny.unity
+    guid: e782fc90b8a83a4499fec195e7b9d3fa
+  - enabled: 1
+    path: Assets/3rdPartyPlugin/Highway Racer/Scenes/HighwayNight.unity
+    guid: 21e8f7e0027e0244a955a195b6bf757e
+  - enabled: 1
+    path: Assets/3rdPartyPlugin/Highway Racer/Scenes/HighwayRainy.unity
+    guid: 22c937ede75f7b6418d6779885986081
   m_configObjects: {}

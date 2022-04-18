@@ -253,8 +253,8 @@ public class Noscontrol : MonoBehaviour
         // boost = true;
         // enablezoom = true;
         // disablezoom = false;
-        if (RCC_SceneManager.Instance.activePlayerVehicle.direction != -1)
-            RCC_SceneManager.Instance.activePlayerVehicle.nos_IsActive = true;
+        //if (RCC_SceneManager.Instance.activePlayerVehicle.direction != -1)
+        //    RCC_SceneManager.Instance.activePlayerVehicle.nos_IsActive = true;
     }
     public void Spdup1()
     {
@@ -266,8 +266,8 @@ public class Noscontrol : MonoBehaviour
         // enablezoom = false;
         // disablezoom = true;
 
-        RCC_SceneManager.Instance.activePlayerVehicle.nos_IsActive = false;
-        RCC_SceneManager.Instance.activePlayerVehicle.Nos_stop();
+        //RCC_SceneManager.Instance.activePlayerVehicle.nos_IsActive = false;
+        //RCC_SceneManager.Instance.activePlayerVehicle.Nos_stop();
 
     }
     public void Spdup2()

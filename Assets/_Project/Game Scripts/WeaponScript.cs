@@ -24,7 +24,7 @@ public class WeaponScript : MonoBehaviour
     {
        // if (collision.gameObject.layer == 11)
        // {
-            print(collision.gameObject.name);
+            //print(collision.gameObject.name);
             GetComponent<Rigidbody>().Sleep();
             GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
           //  GetComponent<Rigidbody>().isKinematic = true;

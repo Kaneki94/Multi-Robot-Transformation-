@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     Camera maincamera;
     [Header("UI Panels")]
     public GameObject settingp;
-    public GameObject quitp, mainmenu, gunselection, levelselection, selectionbar, back, exit, loadingpanel;
+    public GameObject quitp, mainmenu, gunselection,modeselection,chapterselection ,levelselection, selectionbar, back, exit, loadingpanel;
     [Header("SoundFX")]
     public GameObject MainMenuSFX;
     public AudioClip buttonSound;
@@ -28,6 +28,9 @@ public class MainMenu : MonoBehaviour
     public string rateUsLink;
     public string moreAppsLink;
     public string privacyLink;
+
+    private AsyncOperation async;
+
 
 
     void Start()
@@ -184,6 +187,15 @@ public class MainMenu : MonoBehaviour
             maincamera.enabled = true;
             back.SetActive(true);
         }
+        else if (modeselection.activeInHierarchy)
+        {
+            gunselection.SetActive(true);
+
+            modeselection.SetActive(false);
+
+            maincamera.enabled = true;
+            back.SetActive(true);
+        }
     }
 
 
@@ -194,7 +206,7 @@ public class MainMenu : MonoBehaviour
 
         maincamera.enabled = true;
 
-        levelselection.SetActive(true);
+        modeselection.SetActive(true);
     }
 
     public void startmission()
@@ -215,18 +227,34 @@ public class MainMenu : MonoBehaviour
         StartCoroutine("LoadLifeScene", 3f);
     }
 
+
+    public void SelectScene(int levelIndex)
+    {
+
+        async = SceneManager.LoadSceneAsync(levelIndex+3);
+
+    }
+
+    public void SelectMode(int _modeIndex)
+    {
+
+        PlayerPrefs.SetInt("SelectedModeIndex", _modeIndex);
+        
+
+    }
+
     IEnumerator LoadLifeScene()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("LifeGame");
+         async = SceneManager.LoadSceneAsync("LifeGame");
 
-        asyncLoad.allowSceneActivation = false;
+        async.allowSceneActivation = false;
 
-        while (!asyncLoad.isDone)
+        while (!async.isDone)
         {
-            if (asyncLoad.progress >= 0.9f)
+            if (async.progress >= 0.9f)
             {
 
-                asyncLoad.allowSceneActivation = true;
+                async.allowSceneActivation = true;
             }
 
             yield return null;

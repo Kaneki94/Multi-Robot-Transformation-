@@ -84,17 +84,21 @@ public class levelselection : MonoBehaviour
             if (i < selectedlevel)
             {
                 levels[i].GetComponent<Button>().interactable = true;
+                //levels[i].GetComponent<Image>().sprite = levelImg;
+                levels[i].transform.GetChild(0).gameObject.SetActive(false);
+            }
+           else if (i == selectedlevel)
+            {
                 levels[i].GetComponent<Image>().sprite = levelImg;
-                levels[i].transform.GetChild(1).gameObject.SetActive(false);
             }
             else
             {
                 levels[i].GetComponent<Button>().interactable = false;
                 levels[i].GetComponent<Image>().sprite = levelImg;
-                levels[i].transform.GetChild(1).gameObject.SetActive(true);
+                levels[i].transform.GetChild(0).gameObject.SetActive(true);
             }
             levels[i].gameObject.GetComponent<TweenScale>().enabled = false;
-            levels[i].transform.GetChild(0).gameObject.SetActive(true);
+           // levels[i].transform.GetChild(0).gameObject.SetActive(true);
         }
         levels[n].gameObject.GetComponent<TweenScale>().enabled = true;
         levels[n].GetComponent<Image>().sprite = selectImg;
