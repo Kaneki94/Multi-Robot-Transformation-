@@ -187,7 +187,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
                 case SpeedType.KPH:
                     speed *= 50.6f;
-                    print("speed :"+speed);
+                   // print("speed :"+speed);
                     if (speed > m_Topspeed)
                         m_Rigidbody.velocity = (m_Topspeed/3.6f) * m_Rigidbody.velocity.normalized;
                     break;
@@ -205,7 +205,7 @@ namespace UnityStandardAssets.Vehicles.Car
                     thrustTorque = accel * (m_CurrentTorque / 4f);
                     for (int i = 0; i < 4; i++)
                     {
-                        m_WheelColliders[i].motorTorque = thrustTorque*50;
+                        m_WheelColliders[i].motorTorque = thrustTorque*20;
                     }
                     break;
 
