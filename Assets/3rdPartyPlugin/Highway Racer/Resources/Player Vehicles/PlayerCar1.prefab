@@ -10432,7 +10432,7 @@ MonoBehaviour:
   - {fileID: 5947646779519745868}
   - {fileID: 8550440586121954650}
   CurrentWeapon: 0
-  ShowCrosshair: 1
+  ShowCrosshair: 0
   shootchk: 0
   guntorotate: []
   mechwing: {fileID: 0}
@@ -10897,12 +10897,12 @@ MonoBehaviour:
   DistanceLock: 200
   TimeToLock: 2
   AimDirection: 0.8
-  Seeker: 1
+  Seeker: 0
   Shell: {fileID: 0}
   ShellLifeTime: 4
   ShellOuter: []
   ShellOutForce: 30
-  Muzzle: {fileID: 100000, guid: 3c32a110402beb64bbaef2faa032e063, type: 3}
+  Muzzle: {fileID: 0}
   MuzzleLifeTime: 0
   SoundGun:
   - {fileID: 8300000, guid: c074d4c90bdb36b4caa0677b433f7f15, type: 3}
@@ -11912,7 +11912,7 @@ MonoBehaviour:
   DistanceLock: 600
   TimeToLock: 0
   AimDirection: 0.95
-  Seeker: 1
+  Seeker: 0
   Shell: {fileID: 0}
   ShellLifeTime: 4
   ShellOuter: []

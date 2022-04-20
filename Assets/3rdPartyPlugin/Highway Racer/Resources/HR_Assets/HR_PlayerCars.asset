@@ -16,61 +16,10 @@ MonoBehaviour:
     type: 3}
   cars:
   - vehicleName: Sport
-    playerCar: {fileID: 195016, guid: aefbfdf86788c6c4d861350fc743e098, type: 3}
+    playerCar: {fileID: 3105923653969828754, guid: f2e72784ea7fa3f4ca8a06803f2d5c8a,
+      type: 3}
     maxSpeed: 200
     maxHandling: 13
     maxBraking: 5000
     unlocked: 1
     price: 0
-  - vehicleName: Tuned
-    playerCar: {fileID: 152206, guid: a7ac29648089bde449f912a3c4af594a, type: 3}
-    maxSpeed: 221.8
-    maxHandling: 13
-    maxBraking: 5250
-    unlocked: 0
-    price: 10000
-  - vehicleName: Muscle
-    playerCar: {fileID: 129418, guid: 687877e5b8c2cf241b222e380d440d7f, type: 3}
-    maxSpeed: 0
-    maxHandling: 0
-    maxBraking: 0
-    unlocked: 0
-    price: 15000
-  - vehicleName: Coupe
-    playerCar: {fileID: 7240133617491632623, guid: 2aabc99d01350194d8f010853703a5d3,
-      type: 3}
-    maxSpeed: 200
-    maxHandling: 4
-    maxBraking: 4
-    unlocked: 0
-    price: 25000
-  - vehicleName: Van
-    playerCar: {fileID: 155084, guid: 5e0316711e6616f4184a26509f736f4d, type: 3}
-    maxSpeed: 0
-    maxHandling: 0
-    maxBraking: 0
-    unlocked: 0
-    price: 35000
-  - vehicleName: Pickup
-    playerCar: {fileID: 5890108012975241724, guid: b21d15153c3cb91498ca91d782c2e551,
-      type: 3}
-    maxSpeed: 200
-    maxHandling: 4
-    maxBraking: 4
-    unlocked: 0
-    price: 50000
-  - vehicleName: Jeep
-    playerCar: {fileID: 117643036368134791, guid: ddedb19c5a9b61047b96e6e04a8e8e77,
-      type: 3}
-    maxSpeed: 200
-    maxHandling: 4
-    maxBraking: 4
-    unlocked: 0
-    price: 55000
-  - vehicleName: Super Sport
-    playerCar: {fileID: 145288, guid: ad475df4d0d6c874aac6fa4563abe6fc, type: 3}
-    maxSpeed: 0
-    maxHandling: 0
-    maxBraking: 0
-    unlocked: 0
-    price: 100000

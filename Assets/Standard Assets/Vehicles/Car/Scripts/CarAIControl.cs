@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 #pragma warning disable 649
 namespace UnityStandardAssets.Vehicles.Car
 {
-    [RequireComponent(typeof (CarController))]
+   // [RequireComponent(typeof (CarController))]
     public class CarAIControl : MonoBehaviour
     {
         public enum BrakeCondition

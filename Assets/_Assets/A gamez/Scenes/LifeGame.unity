@@ -4365,7 +4365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.78431374}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15271,7 +15271,6 @@ GameObject:
   - component: {fileID: 1023667184}
   - component: {fileID: 1023667183}
   - component: {fileID: 1023667182}
-  - component: {fileID: 1023667181}
   - component: {fileID: 1023667180}
   m_Layer: 5
   m_Name: Success Panel (1)
@@ -15313,18 +15312,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyAds: 0
---- !u!114 &1023667181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1023667178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528520a93c0fb474bb217a46ac6c2f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1023667182
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15546,7 +15533,6 @@ GameObject:
   - component: {fileID: 1025783915}
   - component: {fileID: 1025783914}
   - component: {fileID: 1025783913}
-  - component: {fileID: 1025783912}
   - component: {fileID: 1025783911}
   m_Layer: 5
   m_Name: Fail Panel (1)
@@ -15588,18 +15574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyAds: 0
---- !u!114 &1025783912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025783909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528520a93c0fb474bb217a46ac6c2f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1025783913
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15722,7 +15696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18680,7 +18654,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1214013481}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -21072,7 +21046,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1394041986}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -27618,7 +27592,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1788207381}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:

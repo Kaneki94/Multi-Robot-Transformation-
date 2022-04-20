@@ -4,7 +4,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
-    [RequireComponent(typeof (CarController))]
+   // [RequireComponent(typeof (CarController))]
     public class CarUserControl : MonoBehaviour
     {
         public bool IsControlEnable = false;

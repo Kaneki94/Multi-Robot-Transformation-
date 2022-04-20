@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class mygamemanager : MonoBehaviour
 {
-    public GameObject successpanel, failpanel, pausedpanel, missionpanel, gameplaycontrols, timeuppanel, loading;
+    public GameObject mapcanvas , successpanel, failpanel, pausedpanel, missionpanel, gameplaycontrols, timeuppanel, loading;
     public AudioClip buttonSound;
     public bool soundchk = true;
     void Start()
@@ -147,6 +147,12 @@ public class mygamemanager : MonoBehaviour
             levelmanager.instance.powerupchk();
 
         missionpanel.SetActive(false);
+        gameplaycontrols.SetActive(true);
 
+    }
+
+    public void statusgameplaycanvas(int val)
+    {
+        mapcanvas.GetComponent<CanvasGroup>().alpha = val;
     }
 }

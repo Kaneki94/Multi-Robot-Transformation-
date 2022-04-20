@@ -65,7 +65,7 @@ public class RCC_MobileButtons : RCC_Core {
 	private float horizontalInput;
 	private float verticalInput;
 	private bool canUseNos = false;
-
+	private WeaponController weaponcontroller;
 	private Vector3 orgBrakeButtonPos;
 
 	void Start(){
@@ -74,9 +74,14 @@ public class RCC_MobileButtons : RCC_Core {
 			orgBrakeButtonPos = brakeButton.transform.position;
 
 		CheckController ();
-
+		Invoke(nameof(getcar),1f);
 	}
 
+	void getcar()
+	{
+        weaponcontroller = RCC_SceneManager.Instance.activePlayerVehicle.GetComponent<WeaponController>();
+		CancelInvoke(nameof(getcar));   
+	}
 	void OnEnable(){
 
 		RCC_SceneManager.OnControllerChanged += CheckController;
@@ -326,5 +331,16 @@ public class RCC_MobileButtons : RCC_Core {
 		RCC_SceneManager.OnVehicleChanged -= CheckController;
 
 	}
-
+	public void Fire(int index)
+	{
+		weaponcontroller.weaponch(index);
+	}
+	public void wstart(bool val)
+	{
+		weaponcontroller.WStart(val);
+	}
+	public void wexit(bool val)
+	{
+		weaponcontroller.WExit(val);
+	}
 }

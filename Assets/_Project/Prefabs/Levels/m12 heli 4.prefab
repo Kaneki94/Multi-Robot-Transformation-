@@ -1132,6 +1132,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &356043097487885828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,6 +1333,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &356043097490811437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3351,6 +3353,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &356043098702228243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,7 +3433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &356043098709980289
 Transform:
   m_ObjectHideFlags: 0
@@ -3687,6 +3690,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &356043098849784940
 MonoBehaviour:
   m_ObjectHideFlags: 0

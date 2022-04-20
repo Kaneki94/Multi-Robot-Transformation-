@@ -19,7 +19,7 @@
 
     <!-- Game App id  -->
     <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
-	  android:value="ca-app-pub-9100117594995202~5195252980"/>
+	  android:value="ca-app-pub-6650525513625641~6238457059"/>
     
     <activity android:name="com.vtnm.uactivity.PluginActivity" android:label="@string/app_name">
 			<intent-filter>

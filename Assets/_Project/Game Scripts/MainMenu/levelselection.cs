@@ -7,24 +7,23 @@ using DG.Tweening;
 public class levelselection : MonoBehaviour
 {
     public GameObject[] levels;
-    public Sprite levelImg, selectImg;
+    public Sprite/* levelImg,*/ selectImg;
     public int selectedlevel;
     public AudioClip buttonSound;
-    public GameObject lvlselection, daynightselection, seasonselection, mainmode;
+    public GameObject lvlselection, seasonselection/*, mainmode*/;
     public GameObject[] modes, modelocks;
     int n;
 
     void OnEnable()
     {
         Time.timeScale = 1f;
-        mainmode.SetActive(true);
+       // mainmode.SetActive(true);
         CheckLevels();
     }
 
     private void OnDisable()
     {
-        mainmode.SetActive(false);
-        daynightselection.SetActive(false);
+       // mainmode.SetActive(false);
         seasonselection.SetActive(false);
         lvlselection.SetActive(false);
     }
@@ -89,12 +88,12 @@ public class levelselection : MonoBehaviour
             }
            else if (i == selectedlevel)
             {
-                levels[i].GetComponent<Image>().sprite = levelImg;
+                levels[i].GetComponent<Image>().sprite = selectImg;
             }
             else
             {
                 levels[i].GetComponent<Button>().interactable = false;
-                levels[i].GetComponent<Image>().sprite = levelImg;
+                //levels[i].GetComponent<Image>().sprite = levelImg;
                 levels[i].transform.GetChild(0).gameObject.SetActive(true);
             }
             levels[i].gameObject.GetComponent<TweenScale>().enabled = false;

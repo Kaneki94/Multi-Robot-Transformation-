@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     Camera maincamera;
     [Header("UI Panels")]
     public GameObject settingp;
-    public GameObject quitp, mainmenu, gunselection,modeselection,chapterselection ,levelselection, selectionbar, back, exit, loadingpanel;
+    public GameObject quitp, mainmenu, gunselection,modeselection,chapterselection ,levelselection/*, selectionbar*//*, back*/, exit, loadingpanel;
     [Header("SoundFX")]
     public GameObject MainMenuSFX;
     public AudioClip buttonSound;
@@ -47,14 +47,14 @@ public class MainMenu : MonoBehaviour
         if (gameplayback == false)
         {
             mainmenu.SetActive(true);
-            back.SetActive(false);
-            exit.SetActive(true);
+            //back.SetActive(false);
+           // exit.SetActive(true);
         }
         else if (gameplayback == true)
         {
             levelselection.SetActive(true);
-            back.SetActive(true);
-            exit.SetActive(false);
+            //back.SetActive(true);
+           // exit.SetActive(false);
         }
 
         //Invoke("forwardanim", 3f);
@@ -88,7 +88,7 @@ public class MainMenu : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         mainmenu.SetActive(false);
         gunselection.SetActive(true);
-        back.SetActive(true);
+        //back.SetActive(true);
         exit.SetActive(false);
         if (dino)
         {
@@ -170,7 +170,7 @@ public class MainMenu : MonoBehaviour
             gunselection.SetActive(false);
 
             maincamera.enabled = true;
-            back.SetActive(false);
+           // back.SetActive(false);
             exit.SetActive(true);
             mainmenu.SetActive(true);
             if (dino)
@@ -185,7 +185,7 @@ public class MainMenu : MonoBehaviour
             levelselection.SetActive(false);
 
             maincamera.enabled = true;
-            back.SetActive(true);
+            //back.SetActive(true);
         }
         else if (modeselection.activeInHierarchy)
         {
@@ -194,7 +194,7 @@ public class MainMenu : MonoBehaviour
             modeselection.SetActive(false);
 
             maincamera.enabled = true;
-            back.SetActive(true);
+           //wi back.SetActive(true);
         }
     }
 

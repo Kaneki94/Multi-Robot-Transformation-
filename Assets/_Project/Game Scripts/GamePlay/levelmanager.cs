@@ -264,11 +264,16 @@ public class levelmanager : MonoBehaviour
     public void delaystartup()
     {
         story.SetActive(false);
-        othercanvas.SetActive(true);
+        if (GetComponent<mygamemanager>())
+        {
+            GetComponent<mygamemanager>().missionpanel.SetActive(true);
+            GetComponent<mygamemanager>().statusgameplaycanvas(1);
+        }
+
         switch (selectedlevel)
         {
             case 1:
-                minimap.GetComponent<MapCanvasController>().playerTransform = players[5].transform;
+                minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[5].transform;
                 controls[5].SetActive(true);
                 cameras[5].SetActive(true);
                 players[5].SetActive(true);
@@ -282,7 +287,7 @@ public class levelmanager : MonoBehaviour
             case 31:
             case 34:
             case 37:
-                minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+                minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
                 controls[0].SetActive(true);
                 cameras[0].SetActive(true);
                 players[0].SetActive(true);
@@ -298,7 +303,7 @@ public class levelmanager : MonoBehaviour
             case 27:
             case 33:
             case 39:
-                minimap.GetComponent<MapCanvasController>().playerTransform = players[1].transform;
+                minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[1].transform;
                 controls[1].SetActive(true);
                 cameras[1].SetActive(true);
                 players[1].SetActive(true);
@@ -313,7 +318,7 @@ public class levelmanager : MonoBehaviour
             case 24:
             case 29:
             case 36:
-                minimap.GetComponent<MapCanvasController>().playerTransform = players[2].transform;
+                minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[2].transform;
                 controls[2].SetActive(true);
                 cameras[2].SetActive(true);
                 players[2].SetActive(true);
@@ -334,7 +339,7 @@ public class levelmanager : MonoBehaviour
             case 35:
             case 38:
             case 40:
-                minimap.GetComponent<MapCanvasController>().playerTransform = players[3].transform;
+                minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[3].transform;
                 controls[3].SetActive(true);
                 cameras[3].SetActive(true);
                 players[3].SetActive(true);
@@ -347,7 +352,7 @@ public class levelmanager : MonoBehaviour
         currentplayer.transform.localRotation = playerpos[selectedlevel - 1].transform.rotation;
         print("currentplayer :" + currentplayer + "pos :" + playerpos[selectedlevel - 1].name);
         GetComponent<missions>().skipstartstatement();
-
+       
 
 
     }
@@ -525,7 +530,7 @@ public class levelmanager : MonoBehaviour
         players[1].SetActive(true);
         currentplayer = players[1].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[1].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[1].transform;
 
     }
 
@@ -564,7 +569,7 @@ public class levelmanager : MonoBehaviour
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
 
     public void RobotoToy()
@@ -602,7 +607,7 @@ public class levelmanager : MonoBehaviour
         players[4].SetActive(true);
         currentplayer = players[4].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[4].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[4].transform;
 
     }
 
@@ -641,7 +646,7 @@ public class levelmanager : MonoBehaviour
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
 
     /////////////////////////////////////////////////////////////////////////////////////
@@ -679,7 +684,7 @@ public class levelmanager : MonoBehaviour
         players[2].SetActive(true);
         currentplayer = players[2].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[2].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[2].transform;
     }
     public void RobotoRikshaw()
     {
@@ -723,7 +728,7 @@ public class levelmanager : MonoBehaviour
         controls[0].SetActive(true);
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
     void rcrikshaw()
     {
@@ -736,7 +741,7 @@ public class levelmanager : MonoBehaviour
         players[6].SetActive(true);
         currentplayer = players[6].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[6].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[6].transform;
     }
 
     /// ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -775,7 +780,7 @@ public class levelmanager : MonoBehaviour
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -814,7 +819,7 @@ public class levelmanager : MonoBehaviour
         players[5].SetActive(true);
         currentplayer = players[5].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[5].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[5].transform;
 
     }
 
@@ -854,7 +859,7 @@ public class levelmanager : MonoBehaviour
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[0].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
 
 
@@ -879,7 +884,7 @@ public class levelmanager : MonoBehaviour
         players[3].SetActive(true);
         currentplayer = players[3].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[3].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[3].transform;
 
     }
 
@@ -900,7 +905,7 @@ public class levelmanager : MonoBehaviour
         players[2].SetActive(true);
         currentplayer = players[2].gameObject;
 
-        minimap.GetComponent<MapCanvasController>().playerTransform = players[2].transform;
+        minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[2].transform;
 
     }
 }

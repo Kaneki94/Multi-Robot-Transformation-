@@ -40,12 +40,12 @@ public class HR_UIDashboardDisplay : MonoBehaviour {
 
 	void Awake () {
 
-		comboMImage = combo.GetComponentInParent<Image>();
-		comboDefPos = comboMImage.rectTransform.anchoredPosition;
+		//comboMImage = combo.GetComponentInParent<Image>();
+		//comboDefPos = comboMImage.rectTransform.anchoredPosition;
 		highSpeedImage = highSpeed.GetComponentInParent<Image>();
 		highSpeedDefPos = highSpeedImage.rectTransform.anchoredPosition;
-		oppositeDirectionImage = oppositeDirection.GetComponentInParent<Image>();
-		oppositeDirectionDefPos = oppositeDirectionImage.rectTransform.anchoredPosition;
+		//oppositeDirectionImage = oppositeDirection.GetComponentInParent<Image>();
+		//oppositeDirectionDefPos = oppositeDirectionImage.rectTransform.anchoredPosition;
 		timeAttackImage = timeLeft.GetComponentInParent<Image>();
 		bombRect = bombSlider.GetComponent<RectTransform>();
 		bombDefPos = bombRect.anchoredPosition;
@@ -69,11 +69,11 @@ public class HR_UIDashboardDisplay : MonoBehaviour {
 		if(!player)
 			return;
 
-		if(player.combo > 1){
-			comboMImage.rectTransform.anchoredPosition = Vector2.Lerp(comboMImage.rectTransform.anchoredPosition, comboDefPos, Time.deltaTime * 5f);
-		}else{
-			comboMImage.rectTransform.anchoredPosition = Vector2.Lerp(comboMImage.rectTransform.anchoredPosition, new Vector2(comboDefPos.x - 500, comboDefPos.y), Time.deltaTime * 5f);
-		}
+		//if(player.combo > 1){
+		//	comboMImage.rectTransform.anchoredPosition = Vector2.Lerp(comboMImage.rectTransform.anchoredPosition, comboDefPos, Time.deltaTime * 5f);
+		//}else{
+		//	comboMImage.rectTransform.anchoredPosition = Vector2.Lerp(comboMImage.rectTransform.anchoredPosition, new Vector2(comboDefPos.x - 500, comboDefPos.y), Time.deltaTime * 5f);
+		//}
 
 		if(player.highSpeedCurrent > .1f){
 			highSpeedImage.rectTransform.anchoredPosition = Vector2.Lerp(highSpeedImage.rectTransform.anchoredPosition, highSpeedDefPos, Time.deltaTime * 5f);
@@ -81,11 +81,11 @@ public class HR_UIDashboardDisplay : MonoBehaviour {
 			highSpeedImage.rectTransform.anchoredPosition = Vector2.Lerp(highSpeedImage.rectTransform.anchoredPosition, new Vector2(highSpeedDefPos.x + 500, highSpeedDefPos.y), Time.deltaTime * 5f);
 		}
 
-		if(player.opposideDirectionCurrent > .1f){
-			oppositeDirectionImage.rectTransform.anchoredPosition = Vector2.Lerp(oppositeDirectionImage.rectTransform.anchoredPosition, oppositeDirectionDefPos, Time.deltaTime * 5f);
-		}else{ 
-			oppositeDirectionImage.rectTransform.anchoredPosition = Vector2.Lerp(oppositeDirectionImage.rectTransform.anchoredPosition, new Vector2(oppositeDirectionDefPos.x - 500, oppositeDirectionDefPos.y), Time.deltaTime * 5f);
-		}
+		//if(player.opposideDirectionCurrent > .1f){
+		//	oppositeDirectionImage.rectTransform.anchoredPosition = Vector2.Lerp(oppositeDirectionImage.rectTransform.anchoredPosition, oppositeDirectionDefPos, Time.deltaTime * 5f);
+		//}else{ 
+		//	oppositeDirectionImage.rectTransform.anchoredPosition = Vector2.Lerp(oppositeDirectionImage.rectTransform.anchoredPosition, new Vector2(oppositeDirectionDefPos.x - 500, oppositeDirectionDefPos.y), Time.deltaTime * 5f);
+		//}
 
 		if(HR_GamePlayHandler.Instance.mode == HR_GamePlayHandler.Mode.TimeAttack){
 			if(!timeLeft.gameObject.activeSelf)
@@ -122,7 +122,7 @@ public class HR_UIDashboardDisplay : MonoBehaviour {
 		highSpeed.text = player.highSpeedCurrent.ToString("F1");
 		oppositeDirection.text = player.opposideDirectionCurrent.ToString("F1");
 		timeLeft.text = player.timeLeft.ToString("F1");
-		combo.text = player.combo.ToString();
+		//combo.text = player.combo.ToString();
 
 		if(HR_GamePlayHandler.Instance.mode == HR_GamePlayHandler.Mode.Bomb)
 			bombSlider.value = player.bombHealth / 100f;

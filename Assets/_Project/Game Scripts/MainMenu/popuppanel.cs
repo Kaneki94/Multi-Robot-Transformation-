@@ -12,7 +12,7 @@ public class popuppanel : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("AllInApp") != 1)
         {
-            inapppanel.SetActive(true);
+           // inapppanel.SetActive(true);
             if (titlesound)
                 titlesound.GetComponent<AudioSource>().enabled = false;
             Invoke("crosson", 3f);
