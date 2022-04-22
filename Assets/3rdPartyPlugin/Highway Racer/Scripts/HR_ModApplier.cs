@@ -144,8 +144,8 @@ public class HR_ModApplier : MonoBehaviour {
 
 		if(bodyRenderer)
 			bodyRenderer.sharedMaterials[materialIndex].color = bodyColor;
-		else
-			Debug.LogError("Missing Body Renderer On ModApllier Component");
+		//else
+		//	Debug.LogError("Missing Body Renderer On ModApllier Component");
 
 		if(isSirenPurchased && !attachedFrontSiren){
 			CreateSiren();

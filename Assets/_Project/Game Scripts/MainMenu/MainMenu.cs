@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     Camera maincamera;
     [Header("UI Panels")]
     public GameObject settingp;
-    public GameObject quitp, mainmenu, gunselection,modeselection,chapterselection ,levelselection/*, selectionbar*//*, back*/, exit, loadingpanel;
+    public GameObject quitp, mainmenu, gunselection,modeselection,chapterselection ,levelselection/*, selectionbar*//*, back*//*, exit*/, loadingpanel;
     [Header("SoundFX")]
     public GameObject MainMenuSFX;
     public AudioClip buttonSound;
@@ -89,7 +89,7 @@ public class MainMenu : MonoBehaviour
         mainmenu.SetActive(false);
         gunselection.SetActive(true);
         //back.SetActive(true);
-        exit.SetActive(false);
+        //exit.SetActive(false);
         if (dino)
         {
             dino.SetActive(false);
@@ -171,7 +171,7 @@ public class MainMenu : MonoBehaviour
 
             maincamera.enabled = true;
            // back.SetActive(false);
-            exit.SetActive(true);
+            //exit.SetActive(true);
             mainmenu.SetActive(true);
             if (dino)
             {

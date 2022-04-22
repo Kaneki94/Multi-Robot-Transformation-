@@ -9,6 +9,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent (typeof(Rigidbody))]
 [RequireComponent (typeof(RCC_CarControllerV3))]
@@ -32,8 +33,10 @@ public class HR_PlayerHandler : MonoBehaviour {
 	internal float highSpeedTotal = 0f;
 	internal float opposideDirectionCurrent = 0f;
 	internal float opposideDirectionTotal = 0f;
+	//public GameObject PlayerswitchTrigger;
 
-	private int minimumSpeedForGainScore
+
+    private int minimumSpeedForGainScore
 	{
 		get
 		{
@@ -95,7 +98,7 @@ public class HR_PlayerHandler : MonoBehaviour {
             carController.StartEngine();
 
         hornSource = HR_CreateAudioSource.NewAudioSource(gameObject, "Horn", 10f, 100f, 1f, HR_HighwayRacerProperties.Instance.hornClip, true, false, false);
-
+		//Invoke(nameof(set_StatusPlayerswitcher),10f);
 	}
 
 	void Update () {
@@ -133,6 +136,8 @@ public class HR_PlayerHandler : MonoBehaviour {
 				OnGameOver(0f);
 			}
 		}
+
+
 
 		comboTime += Time.deltaTime;
 
@@ -315,11 +320,10 @@ public class HR_PlayerHandler : MonoBehaviour {
 		carController.engineRunning = false;
 
 	}
-
-	void OnDisable(){
-
-
-
-	}
-
+ //  private void set_StatusPlayerswitcher()
+ //   {
+	//	PlayerswitchTrigger.SetActive(true);
+	//	CancelInvoke(nameof(set_StatusPlayerswitcher));
+	////	Invoke(nameof(set_StatusPlayerswitcher), 10f);
+	//}
 }

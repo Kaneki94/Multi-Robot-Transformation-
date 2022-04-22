@@ -120,7 +120,7 @@ public class HR_UIDashboardDisplay : MonoBehaviour {
 		speed.text = player.speed.ToString("F0");
 		distance.text = (player.distance).ToString("F2");
 		highSpeed.text = player.highSpeedCurrent.ToString("F1");
-		oppositeDirection.text = player.opposideDirectionCurrent.ToString("F1");
+		//oppositeDirection.text = player.opposideDirectionCurrent.ToString("F1");
 		timeLeft.text = player.timeLeft.ToString("F1");
 		//combo.text = player.combo.ToString();
 

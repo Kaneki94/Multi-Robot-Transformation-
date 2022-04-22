@@ -21,7 +21,7 @@ public class HR_RoadPooling : MonoBehaviour {
 	}
 	
 	public int roadAmountInPool = 10;
-	private float[] roadLength;
+	public float[] roadLength;
 
 	public bool automaticRoadLength = true;
 	public float manualRoadLength = 60f;
@@ -29,10 +29,11 @@ public class HR_RoadPooling : MonoBehaviour {
 	[Header("Use This Layer On Road For Calculating Road Length")] public LayerMask asphaltLayer;
 	
 	[Header("Pooling Road Objects. Select Them While They Are On Your Scene")] public RoadObjects[] roadObjects;
-	internal List<GameObject> roads = new List<GameObject>();
+	public List<GameObject> roads = new List<GameObject>();
 
 	public float roadWidth = 13.5f;
-	private int index = 0;
+	public int index = 0;
+	public Transform Playerswitcherspawnpoint;
 	
 	void Awake () {
 
@@ -51,7 +52,11 @@ public class HR_RoadPooling : MonoBehaviour {
 		CreateRoads();
 		
 	}
-	
+    private void Start()
+    {
+        Invoke(nameof(set_StatusPlayerswitcher), 10f);
+    }
+
 	protected float GetRoadLength (int roadIndex){
 		
 		GameObject roadReference = (GameObject)GameObject.Instantiate(roadObjects[roadIndex].roadObject, Vector3.zero, Quaternion.identity);
@@ -74,7 +79,7 @@ public class HR_RoadPooling : MonoBehaviour {
 		GameObject allRoads = new GameObject("All Roads");
 		allRoads.transform.position = Vector3.zero;
 		allRoads.transform.rotation = Quaternion.identity;
-		
+		Playerswitcherspawnpoint.SetParent(allRoads.transform);
 		for (int i = 0; i < roadAmountInPool; i++) {
 			
 			for (int k = 0; k < roadObjects.Length; k++) {
@@ -125,6 +130,7 @@ public class HR_RoadPooling : MonoBehaviour {
 			
 			if(reference.transform.position.z > (roads[i].transform.position.z + (roadLength[index] * 2f))){
 				roads[i].transform.position = new Vector3(0f, roads[i].transform.position.y, (roads[i].transform.position.z + (roadLength[index] * roads.Count)));
+				Playerswitcherspawnpoint.transform.position = roads[i].transform.position;  
 			}
 			
 			index ++;
@@ -142,5 +148,10 @@ public class HR_RoadPooling : MonoBehaviour {
 		Gizmos.DrawCube(Vector3.zero, new Vector3(roadWidth * 3f, 1f, 10f));
 		
 	}
-	
+    private void set_StatusPlayerswitcher()
+    {
+        Playerswitcherspawnpoint.gameObject.SetActive(true);
+        CancelInvoke(nameof(set_StatusPlayerswitcher));
+        Invoke(nameof(set_StatusPlayerswitcher), 10f);
+    }
 }

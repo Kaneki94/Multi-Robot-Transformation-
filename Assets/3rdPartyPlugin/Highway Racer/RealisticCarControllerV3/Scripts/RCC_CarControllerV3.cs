@@ -971,7 +971,7 @@ public class RCC_CarControllerV3 : RCC_Core {
 	
 	void Update (){
 
-		print("Gasinput :"+boostInput +"Brake :"+brakeInput + "throttleInput :" + throttleInput);
+		//print("Gasinput :"+boostInput +"Brake :"+brakeInput + "throttleInput :" + throttleInput);
 		Inputs();
 
 		//Reversing Bool.
