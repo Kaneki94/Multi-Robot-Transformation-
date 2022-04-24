@@ -108,7 +108,7 @@ public class RCC_SceneManager : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.Locked;
 
 		#if ENABLE_VR
-		UnityEngine.XR.XRSettings.enabled = RCC_Settings.Instance.useVR;
+		//UnityEngine.XR.XRSettings.enabled = RCC_Settings.Instance.useVR;
 		#endif
 		
 	}

@@ -7,7 +7,7 @@ public class RFX4_CollisionPropertyDeactiavtion : MonoBehaviour
     public float DeactivateTimeDelay = 1;
 
     private float startTime;
-    private WindZone windZone;
+    //private WindZone windZone;
     ParticleSystem ps;
     ParticleSystem.CollisionModule collisionModule;
 

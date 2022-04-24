@@ -14,11 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wheels:
   - wheel: {fileID: 1000010383167818, guid: 0cac135d1378f7a48a4f5cf7c7b502e9, type: 3}
-  - wheel: {fileID: 1000010017674812, guid: aa33a36521bd79e4cb3d15b758afbb7f, type: 3}
-  - wheel: {fileID: 6307307469376413810, guid: c3b7712cdfb400545a470f212696de06, type: 3}
-  - wheel: {fileID: 6934504623486576908, guid: 1dc9743f0c318e949ab29234866fa3ad, type: 3}
-  - wheel: {fileID: 5045318561743571993, guid: 7b8fe473a5e423443be9e9cf17b711c6, type: 3}
-  - wheel: {fileID: 5475378457128350021, guid: 44e5c9efd6b799b4796689ad60b68853, type: 3}
-  - wheel: {fileID: 3942090787526392910, guid: 91002d79acc84884ea61032e20ba93ca, type: 3}
-  - wheel: {fileID: 1748909468840590964, guid: 4b23f27f31abc8741bb27bf8d38fbd59, type: 3}
-  - wheel: {fileID: 7737908276474627723, guid: b621b6ef343eea1468d4446e1e420638, type: 3}

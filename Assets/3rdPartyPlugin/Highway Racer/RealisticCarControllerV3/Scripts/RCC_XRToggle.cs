@@ -28,8 +28,8 @@ public class RCC_XRToggle : MonoBehaviour {
 
 	void ToggleXR(){
 
-		UnityEngine.XR.XRSettings.enabled = !UnityEngine.XR.XRSettings.enabled;
-		XREnabled = UnityEngine.XR.XRSettings.enabled;
+		//UnityEngine.XR.XRSettings.enabled = !UnityEngine.XR.XRSettings.enabled;
+		//XREnabled = UnityEngine.XR.XRSettings.enabled;
 
 	}
 

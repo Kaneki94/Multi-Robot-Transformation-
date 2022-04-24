@@ -9,12 +9,12 @@ public class RFX4_WindCurves : MonoBehaviour
 
     private bool canUpdate;
     private float startTime;
-    private WindZone windZone;
+    //private WindZone windZone;
 
     private void Awake()
     {
-        windZone = GetComponent<WindZone>();
-        windZone.windMain = WindCurve.Evaluate(0);
+        //windZone = GetComponent<WindZone>();
+        //windZone.windMain = WindCurve.Evaluate(0);
     }
 
     private void OnEnable()
@@ -28,7 +28,7 @@ public class RFX4_WindCurves : MonoBehaviour
         var time = Time.time - startTime;
         if (canUpdate) {
             var eval = WindCurve.Evaluate(time / GraphTimeMultiplier) * GraphIntensityMultiplier;
-            windZone.windMain = eval;
+           //windZone.windMain = eval;
         }
         if (time >= GraphTimeMultiplier) {
             if (IsLoop) startTime = Time.time;
