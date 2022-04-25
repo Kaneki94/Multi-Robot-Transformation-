@@ -33,7 +33,7 @@ public class HR_PlayerHandler : MonoBehaviour {
 	internal float highSpeedTotal = 0f;
 	internal float opposideDirectionCurrent = 0f;
 	internal float opposideDirectionTotal = 0f;
-	//public GameObject PlayerswitchTrigger;
+ 
 
 
     private int minimumSpeedForGainScore

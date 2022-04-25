@@ -360,6 +360,7 @@ MonoBehaviour:
     handbrakeInput: 0
     boostInput: 0
     gearInput: 0
+  weaponcontroller: {fileID: 0}
 --- !u!114 &11467138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,7 +1333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22489730
 RectTransform:
   m_ObjectHideFlags: 0

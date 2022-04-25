@@ -52,7 +52,7 @@ MonoBehaviour:
   countingPointsAudioClip: {fileID: 8300000, guid: bdd05b44c83ffc847a96e8ff8d1f1c6c,
     type: 3}
   bombTimerAudioClip: {fileID: 8300000, guid: 8460f6456256ff643b5da2fabdc6ae1d, type: 3}
-  hornClip: {fileID: 8300000, guid: 194cc906333203c4d9673e6850435642, type: 3}
+  hornClip: {fileID: 0}
   sirenAudioClip: {fileID: 8300000, guid: b2e843118f443d24698830d1a2ebdfa3, type: 3}
   trafficCarsLayer:
     serializedVersion: 2

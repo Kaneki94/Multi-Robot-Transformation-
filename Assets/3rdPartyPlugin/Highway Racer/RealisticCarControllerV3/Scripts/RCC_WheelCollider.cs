@@ -146,7 +146,7 @@ public class RCC_WheelCollider : RCC_Core {
 	private float maxSidewaysStiffness = 1f;
 
 	//	Terrain data.
-	//private TerrainData mTerrainData;
+	private TerrainData mTerrainData;
 	private int alphamapWidth;
 	private int alphamapHeight;
 
@@ -783,15 +783,15 @@ public class RCC_WheelCollider : RCC_Core {
 	/// </summary>
 	private void GetTerrainData(){
 
-		//if (!Terrain.activeTerrain)
-		//	return;
-		
-		//mTerrainData = Terrain.activeTerrain.terrainData;
-		//alphamapWidth = mTerrainData.alphamapWidth;
-		//alphamapHeight = mTerrainData.alphamapHeight;
+        if (!Terrain.activeTerrain)
+            return;
 
-		//mSplatmapData = mTerrainData.GetAlphamaps(0, 0, alphamapWidth, alphamapHeight);
-		mNumTextures = mSplatmapData.Length / (alphamapWidth * alphamapHeight);
+        mTerrainData = Terrain.activeTerrain.terrainData;
+        alphamapWidth = mTerrainData.alphamapWidth;
+        alphamapHeight = mTerrainData.alphamapHeight;
+
+        mSplatmapData = mTerrainData.GetAlphamaps(0, 0, alphamapWidth, alphamapHeight);
+        mNumTextures = mSplatmapData.Length / (alphamapWidth * alphamapHeight);
 
 	}
 
@@ -803,11 +803,11 @@ public class RCC_WheelCollider : RCC_Core {
 	private Vector3 ConvertToSplatMapCoordinate(Vector3 playerPos){
 		
 		Vector3 vecRet = new Vector3();
-		//Terrain ter = Terrain.activeTerrain;
-		//Vector3 terPosition = ter.transform.position;
-		//vecRet.x = ((playerPos.x - terPosition.x) / ter.terrainData.size.x) * ter.terrainData.alphamapWidth;
-		//vecRet.z = ((playerPos.z - terPosition.z) / ter.terrainData.size.z) * ter.terrainData.alphamapHeight;
-		return vecRet;
+        Terrain ter = Terrain.activeTerrain;
+        Vector3 terPosition = ter.transform.position;
+        vecRet.x = ((playerPos.x - terPosition.x) / ter.terrainData.size.x) * ter.terrainData.alphamapWidth;
+        vecRet.z = ((playerPos.z - terPosition.z) / ter.terrainData.size.z) * ter.terrainData.alphamapHeight;
+        return vecRet;
 
 	}
 

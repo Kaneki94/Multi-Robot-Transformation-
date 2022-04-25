@@ -8,7 +8,7 @@ public class PlayersHandler : MonoBehaviour
     public List<GameObject> Players;
     public RCC_MobileButtons Mobilebutton;
     #endregion
-    public static int currentplayerindex = 0;
+    public int currentplayerindex = 0;
     // Start is called before the first frame update
     private void Awake()
     {

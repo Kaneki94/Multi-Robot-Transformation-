@@ -354,8 +354,8 @@ MonoBehaviour:
   RCCCanvas: {fileID: 105884, guid: 3c49455ff7757444fa4b466c3250f423, type: 3}
   RCCTelemetry: {fileID: 6059275310813240883, guid: 65802e5058ade584d99e0fba314f4a68,
     type: 3}
-  dontUseAnyParticleEffects: 0
-  dontUseSkidmarks: 0
+  dontUseAnyParticleEffects: 1
+  dontUseSkidmarks: 1
   audioMixer: {fileID: 24300002, guid: a97addf01f8029040bb6ea53d3c8e62d, type: 2}
   gearShiftingClips:
   - {fileID: 8300000, guid: fd92e514f75331e4085d0846a166fef8, type: 3}
@@ -370,7 +370,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 370cb2e9c8bccfe48bdec70db08e4644, type: 3}
   reversingClip: {fileID: 8300000, guid: 504366e8a8a713b43b676259cd5a7b58, type: 3}
   windClip: {fileID: 8300000, guid: 6c7312d1af74e3f4599722894161fafc, type: 3}
-  brakeClip: {fileID: 8300000, guid: 4b6a38decd073724fb0aebb87b9ae8ee, type: 3}
+  brakeClip: {fileID: 0}
   indicatorClip: {fileID: 8300000, guid: 64545518873b33e49b90fdf05c6ea7a6, type: 3}
   bumpClip: {fileID: 8300000, guid: 948b55abd80345b4aab96053dbe0c2ba, type: 3}
   NOSClip: {fileID: 8300000, guid: 671ef8e2c38263640974ec49dc696f10, type: 3}
