@@ -288,7 +288,7 @@ public class HR_PlayerHandler : MonoBehaviour {
 		}
 
 		rigid.isKinematic = true;
-		OnGameOver(1f);
+	OnGameOver(1f);
 
 	}
 

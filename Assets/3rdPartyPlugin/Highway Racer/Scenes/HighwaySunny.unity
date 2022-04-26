@@ -4249,7 +4249,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2201800821340635557}
-  - component: {fileID: 1568816738309266208}
   m_Layer: 0
   m_Name: HighwayNightForest
   m_TagString: Untagged
@@ -4257,19 +4256,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1568816738309266208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568816738309266207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacb94daeb5ff2841afba5c9b7cdd6b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 315325764}
 --- !u!1 &1751200141920232119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1751200142809957910, guid: 46c9680919d86034181ca860220858c9,
