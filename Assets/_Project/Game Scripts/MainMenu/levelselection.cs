@@ -7,7 +7,7 @@ using DG.Tweening;
 public class levelselection : MonoBehaviour
 {
     public GameObject[] levels;
-    public Sprite/* levelImg,*/ selectImg;
+    //public Sprite/* levelImg,*/ selectImg;
     public int selectedlevel;
     public AudioClip buttonSound;
     public GameObject lvlselection, seasonselection/*, mainmode*/;
@@ -18,7 +18,7 @@ public class levelselection : MonoBehaviour
     {
         Time.timeScale = 1f;
        // mainmode.SetActive(true);
-        PlayerPrefs.SetInt("unlockedlevels", 20);
+        //PlayerPrefs.SetInt("unlockedlevels", 20);
         CheckLevels();
     }
 
@@ -89,7 +89,7 @@ public class levelselection : MonoBehaviour
             }
            else if (i == selectedlevel)
             {
-                levels[i].GetComponent<Image>().sprite = selectImg;
+               // levels[i].GetComponent<Image>().sprite = selectImg;
             }
             else
             {
@@ -101,25 +101,25 @@ public class levelselection : MonoBehaviour
            // levels[i].transform.GetChild(0).gameObject.SetActive(true);
         }
         levels[n].gameObject.GetComponent<TweenScale>().enabled = true;
-        levels[n].GetComponent<Image>().sprite = selectImg;
+     //  levels[n].GetComponent<Image>().sprite = selectImg;
         levels[n].transform.GetChild(0).gameObject.SetActive(false);
 
         if (PlayerPrefs.GetInt("unlockedlevels") >= 10)
         {
             levels[9].gameObject.GetComponent<TweenScale>().enabled = true;
-            levels[9].GetComponent<Image>().sprite = selectImg;
+          //  levels[9].GetComponent<Image>().sprite = selectImg;
             levels[9].transform.GetChild(0).gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("unlockedlevels") >= 20)
         {
             levels[19].gameObject.GetComponent<TweenScale>().enabled = true;
-            levels[19].GetComponent<Image>().sprite = selectImg;
+         //   levels[19].GetComponent<Image>().sprite = selectImg;
             levels[19].transform.GetChild(0).gameObject.SetActive(false);
         }
         if (PlayerPrefs.GetInt("unlockedlevels") >= 30)
         {
             levels[29].gameObject.GetComponent<TweenScale>().enabled = true;
-            levels[29].GetComponent<Image>().sprite = selectImg;
+           // levels[29].GetComponent<Image>().sprite = selectImg;
             levels[29].transform.GetChild(0).gameObject.SetActive(false);
         }
     }

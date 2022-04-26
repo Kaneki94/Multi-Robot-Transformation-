@@ -508,8 +508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -227.59889, y: 161.77481}
-  m_SizeDelta: {x: 274.9504, y: 76.1162}
+  m_AnchoredPosition: {x: -227.59889, y: 130.99997}
+  m_SizeDelta: {x: 279, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &22287186
 CanvasRenderer:
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6746879318047643663, guid: e4e5c71f26f685146bf54a5b6179e6a0,
+  m_Sprite: {fileID: -5094145254827848568, guid: 58bc33af6a20e494abd1d91e3b2c8626,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1749,8 +1749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -97, y: -70}
-  m_SizeDelta: {x: 81, y: 81}
+  m_AnchoredPosition: {x: -89.25104, y: -62.251022}
+  m_SizeDelta: {x: 96.498, y: 96.498}
   m_Pivot: {x: 0.4999994, y: 0.5000001}
 --- !u!222 &22246576
 CanvasRenderer:
@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7917026422967827155, guid: e4e5c71f26f685146bf54a5b6179e6a0,
+  m_Sprite: {fileID: 6204763401029824715, guid: 58bc33af6a20e494abd1d91e3b2c8626,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3244,8 +3244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 285.02054, y: 161.77481}
-  m_SizeDelta: {x: 274.9504, y: 76.1162}
+  m_AnchoredPosition: {x: 257, y: 131}
+  m_SizeDelta: {x: 279, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &22225638
 CanvasRenderer:
@@ -3275,7 +3275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6746879318047643663, guid: e4e5c71f26f685146bf54a5b6179e6a0,
+  m_Sprite: {fileID: 4324385569283855704, guid: 58bc33af6a20e494abd1d91e3b2c8626,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3578,7 +3578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224491403930340956
 RectTransform:
   m_ObjectHideFlags: 0

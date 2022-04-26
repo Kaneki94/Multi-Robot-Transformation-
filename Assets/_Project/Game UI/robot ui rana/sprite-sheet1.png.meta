@@ -7,25 +7,25 @@ TextureImporter:
     second: sprite-sheet1_0
   - first:
       213: 7022410973338056172
-    second: sprite-sheet1_1
+    second: healthbg
   - first:
       213: -8814040899003844231
     second: sprite-sheet1_2
   - first:
       213: 8954712907881333158
-    second: sprite-sheet1_3
+    second: no
   - first:
       213: 5371963471471333889
-    second: sprite-sheet1_4
+    second: timebar
   - first:
       213: 4583167873186425799
-    second: sprite-sheet1_5
+    second: sanke
   - first:
       213: -2612038055743589702
-    second: sprite-sheet1_6
+    second: robot
   - first:
       213: 3632223887717467370
-    second: sprite-sheet1_7
+    second: flying
   - first:
       213: 7455876106102651786
     second: sprite-sheet1_8
@@ -43,58 +43,58 @@ TextureImporter:
     second: sprite-sheet1_12
   - first:
       213: -7302363257527528260
-    second: sprite-sheet1_13
+    second: tank
   - first:
       213: -4694542559958909427
-    second: sprite-sheet1_14
+    second: dino
   - first:
       213: 379824935566908014
     second: sprite-sheet1_15
   - first:
       213: -8104308820302021964
-    second: sprite-sheet1_16
+    second: car
   - first:
       213: -1757578868505608508
-    second: sprite-sheet1_17
+    second: camera
   - first:
       213: -6827040558693863519
-    second: sprite-sheet1_18
+    second: hammer
   - first:
       213: -6146420583252648295
-    second: sprite-sheet1_19
+    second: healthfillbg
   - first:
       213: -6167919715841117555
     second: sprite-sheet1_20
   - first:
       213: 1688891813730433859
-    second: sprite-sheet1_21
+    second: right
   - first:
       213: -2347508363849610604
     second: sprite-sheet1_22
   - first:
       213: -292089847598263596
-    second: sprite-sheet1_23
+    second: machinegun
   - first:
       213: -7801133471052720888
-    second: sprite-sheet1_24
+    second: fir
   - first:
       213: 1049767580498220195
-    second: sprite-sheet1_25
+    second: jump
   - first:
       213: 5172425884046072014
-    second: sprite-sheet1_26
+    second: reset
   - first:
       213: -3092815137987885064
-    second: sprite-sheet1_27
+    second: healthbar
   - first:
       213: -1404047971647690843
-    second: sprite-sheet1_28
+    second: left
   - first:
       213: -3557838598207694551
-    second: sprite-sheet1_29
+    second: pause
   - first:
       213: -7485721956186461822
-    second: sprite-sheet1_30
+    second: nob
   - first:
       213: -141370223523762220
     second: sprite-sheet1_31
@@ -106,25 +106,25 @@ TextureImporter:
     second: sprite-sheet1_33
   - first:
       213: 5497001075018825274
-    second: sprite-sheet1_34
+    second: coinbar
   - first:
       213: -3532074409304041342
-    second: sprite-sheet1_35
+    second: camer
   - first:
       213: 508911455513030361
-    second: sprite-sheet1_36
+    second: fire
   - first:
       213: 1502756187409900494
     second: sprite-sheet1_37
   - first:
       213: 7269766307142130727
-    second: sprite-sheet1_38
+    second: bullet
   - first:
       213: 8717527741805364125
-    second: sprite-sheet1_39
+    second: race
   - first:
       213: -7768619293237412880
-    second: sprite-sheet1_40
+    second: brake
   - first:
       213: 591066972983952106
     second: sprite-sheet1_41
@@ -238,10 +238,10 @@ TextureImporter:
     second: sprite-sheet1_77
   - first:
       213: 6204763401029824715
-    second: sprite-sheet1_78
+    second: coins
   - first:
       213: 5841469202712608292
-    second: sprite-sheet1_79
+    second: emptybar
   - first:
       213: -7946944383507463821
     second: exiticon
@@ -451,7 +451,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_1
+      name: healthbg
       rect:
         serializedVersion: 2
         x: 507
@@ -493,7 +493,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_3
+      name: no
       rect:
         serializedVersion: 2
         x: 884
@@ -514,7 +514,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_4
+      name: timebar
       rect:
         serializedVersion: 2
         x: 1008
@@ -535,13 +535,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_5
+      name: sanke
       rect:
         serializedVersion: 2
-        x: 1327
-        y: 2026
+        x: 1325
+        y: 2029
         width: 125
-        height: 126
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,7 +556,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_6
+      name: robot
       rect:
         serializedVersion: 2
         x: 1488
@@ -577,7 +577,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_7
+      name: flying
       rect:
         serializedVersion: 2
         x: 1651
@@ -685,7 +685,7 @@ TextureImporter:
       name: sprite-sheet1_12
       rect:
         serializedVersion: 2
-        x: 2318
+        x: 2316
         y: 2026
         width: 126
         height: 127
@@ -703,7 +703,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_13
+      name: tank
       rect:
         serializedVersion: 2
         x: 2502
@@ -724,7 +724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_14
+      name: dino
       rect:
         serializedVersion: 2
         x: 2708
@@ -766,7 +766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_16
+      name: car
       rect:
         serializedVersion: 2
         x: 3198
@@ -787,7 +787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_17
+      name: camera
       rect:
         serializedVersion: 2
         x: 3359
@@ -808,7 +808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_18
+      name: hammer
       rect:
         serializedVersion: 2
         x: 3524
@@ -829,7 +829,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_19
+      name: healthfillbg
       rect:
         serializedVersion: 2
         x: 509
@@ -871,7 +871,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_21
+      name: right
       rect:
         serializedVersion: 2
         x: 537
@@ -913,7 +913,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_23
+      name: machinegun
       rect:
         serializedVersion: 2
         x: 886
@@ -934,7 +934,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_24
+      name: fir
       rect:
         serializedVersion: 2
         x: 1057
@@ -955,7 +955,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_25
+      name: jump
       rect:
         serializedVersion: 2
         x: 1223
@@ -976,7 +976,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_26
+      name: reset
       rect:
         serializedVersion: 2
         x: 1415
@@ -997,7 +997,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_27
+      name: healthbar
       rect:
         serializedVersion: 2
         x: 1582
@@ -1018,7 +1018,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_28
+      name: left
       rect:
         serializedVersion: 2
         x: 1917
@@ -1039,7 +1039,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_29
+      name: pause
       rect:
         serializedVersion: 2
         x: 2084
@@ -1060,7 +1060,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_30
+      name: nob
       rect:
         serializedVersion: 2
         x: 2277
@@ -1144,7 +1144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_34
+      name: coinbar
       rect:
         serializedVersion: 2
         x: 2888
@@ -1165,7 +1165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_35
+      name: camer
       rect:
         serializedVersion: 2
         x: 3213
@@ -1186,7 +1186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_36
+      name: fire
       rect:
         serializedVersion: 2
         x: 3382
@@ -1228,7 +1228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_38
+      name: bullet
       rect:
         serializedVersion: 2
         x: 3695
@@ -1249,7 +1249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_39
+      name: race
       rect:
         serializedVersion: 2
         x: 33
@@ -1270,7 +1270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_40
+      name: brake
       rect:
         serializedVersion: 2
         x: 233
@@ -2047,7 +2047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite-sheet1_78
+      name: coins
       rect:
         serializedVersion: 2
         x: 2647
@@ -2693,6 +2693,27 @@ TextureImporter:
       bones: []
       spriteID: 66cf9b68d01c9aed0800000000000000
       internalID: -2402176662386377626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emptybar
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 1041
+        width: 276
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42eb11a5a41111150800000000000000
+      internalID: 5841469202712608292
       vertices: []
       indices: 
       edges: []
