@@ -41,7 +41,7 @@ public class HR_TrafficPooling : MonoBehaviour {
 		public int frequence = 1;
 	}
 	
-	private List<HR_TrafficCar> _trafficCars = new List<HR_TrafficCar>();
+	public List<HR_TrafficCar> _trafficCars = new List<HR_TrafficCar>();
 
 	void Start () {
 
@@ -87,7 +87,10 @@ public class HR_TrafficPooling : MonoBehaviour {
 
 	void ReAlignTraffic(HR_TrafficCar realignableObject){
 
-		if(!realignableObject.gameObject.activeSelf)
+        if (realignableObject.enabled == false)
+            realignableObject.enabled = true;
+        realignableObject.Respawn();
+        if (!realignableObject.gameObject.activeSelf)
 			realignableObject.gameObject.SetActive(true);
 
 		int randomLine = Random.Range(0, lines.Length );

@@ -79,7 +79,7 @@ public class HR_TrafficCar : MonoBehaviour
     private enum SignalsOn { Off, Right, Left, All }
     private float signalTimer = 0f;
     private float spawnProtection = 0f;
-
+    private float mass;
     [Space(10)]
 
     public AudioClip engineSound;
@@ -92,6 +92,7 @@ public class HR_TrafficCar : MonoBehaviour
         rigid.drag = 1f;
         rigid.angularDrag = 4f;
         rigid.maxAngularVelocity = 2.5f;
+        mass = rigid.mass;
 
         Light[] allLights = GetComponentsInChildren<Light>();
 
@@ -438,6 +439,16 @@ public class HR_TrafficCar : MonoBehaviour
 
     }
 
+
+    public void Respawn()
+    {
+        
+        this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX;
+        this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationZ;
+        this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+        this.gameObject.GetComponent<Rigidbody>().mass = mass;
+        
+    }
 
     public GameObject Effect;
     public int HP = 1000;

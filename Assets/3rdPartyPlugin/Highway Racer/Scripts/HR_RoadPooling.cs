@@ -152,6 +152,6 @@ public class HR_RoadPooling : MonoBehaviour {
     {
         Playerswitcherspawnpoint.gameObject.SetActive(true);
         CancelInvoke(nameof(set_StatusPlayerswitcher));
-        Invoke(nameof(set_StatusPlayerswitcher), 10f);
+        Invoke(nameof(set_StatusPlayerswitcher), 15f);
     }
 }

@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class playertriggerhandler : MonoBehaviour
 {
+    public GameObject[] TransformPlayer;
+
+
     // Start is called before the first frame update
     private void OnEnable()
     {
-       // this.gameObject.transform.SetParent(null);
+        foreach (GameObject g in TransformPlayer)
+            g.SetActive(false);
+        TransformPlayer[PlayersHandler.currentplayerindex].SetActive(true);
     }
    
     private void OnTriggerEnter(Collider other)
@@ -18,6 +23,8 @@ public class playertriggerhandler : MonoBehaviour
             //this.gameObject.transform.SetParent(other.gameObject.transform.root.transform);
             PlayersHandler._instance.switchplayer(other.gameObject.transform.root.gameObject);
            
+
+
         }
     }
 }

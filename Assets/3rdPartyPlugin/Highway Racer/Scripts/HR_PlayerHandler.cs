@@ -274,6 +274,18 @@ public class HR_PlayerHandler : MonoBehaviour {
 		float cos = Mathf.Abs (Vector3.Dot (col.contacts [col.contacts.Length - 1].normal, colRelVel.normalized));
 		float cos2 = Mathf.Abs (Vector3.Dot (col.contacts [0].normal, colRelVel.normalized));
 
+
+		//if (col.transform.root.gameObject.GetComponent<Rigidbody>() /*&& this.gameObject.GetComponent<RCC_CarControllerV3>().speed>= 80f*/)
+		//{
+		//	col.transform.root.gameObject.GetComponent<HR_TrafficCar>().enabled = false;
+		//	col.transform.root.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+		//	col.transform.root.gameObject.GetComponent<Rigidbody>().mass = 10f;
+		//	col.transform.root.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 500*rigid.velocity.magnitude,ForceMode.Acceleration);
+		//	col.transform.root.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * 500 * rigid.velocity.magnitude, ForceMode.Acceleration);
+
+		//	print("Name :"+ col.transform.root.gameObject.name);
+		//}
+
 		if (colRelVel.magnitude * cos < HR_HighwayRacerProperties.Instance._minimumCollisionForGameOver && colRelVel.magnitude * cos2 < HR_HighwayRacerProperties.Instance._minimumCollisionForGameOver)
 			return;
 
@@ -287,11 +299,29 @@ public class HR_PlayerHandler : MonoBehaviour {
 			return;
 		}
 
-		rigid.isKinematic = true;
-	OnGameOver(1f);
+		//rigid.isKinematic = true;
+	   //OnGameOver(1f);
 
 	}
+	void OnTriggerEnter(Collider col)
+	{
 
+		
+		if (col.transform.root.gameObject.GetComponent<Rigidbody>() /*&& this.gameObject.GetComponent<RCC_CarControllerV3>().speed>= 80f*/)
+		{
+			col.transform.root.gameObject.GetComponent<HR_TrafficCar>().enabled = false;
+			col.transform.root.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+			col.transform.root.gameObject.GetComponent<Rigidbody>().mass = 10f;
+			col.transform.root.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 100 * rigid.velocity.magnitude, ForceMode.Acceleration);
+			col.transform.root.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * 100 * rigid.velocity.magnitude, ForceMode.Acceleration);
+			col.transform.root.gameObject.GetComponent<AudioSource>().Play();
+
+			print("Name :" + col.transform.root.gameObject.name);
+		}
+
+		
+
+	}
 	void CheckStatus(){
 
 		if(!roadPooling || rigid.isKinematic)

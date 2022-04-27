@@ -851,8 +851,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1149748258893877697, guid: 346765a7c8ab389439acb17fde5bb19d,
         type: 3}
+      propertyPath: UnityAdID
+      value: 12345
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149748258893877697, guid: 346765a7c8ab389439acb17fde5bb19d,
+        type: 3}
       propertyPath: InterstitalID
       value: ca-app-pub-6650525513625641/9986130376
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149748258893877697, guid: 346765a7c8ab389439acb17fde5bb19d,
+        type: 3}
+      propertyPath: MediumRectangleID
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149748258893877697, guid: 346765a7c8ab389439acb17fde5bb19d,
+        type: 3}
+      propertyPath: RewardedInterstitialID
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1149748259001079728, guid: 346765a7c8ab389439acb17fde5bb19d,
         type: 3}

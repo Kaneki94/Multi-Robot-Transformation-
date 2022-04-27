@@ -685,24 +685,24 @@ public class RCC_Camera : MonoBehaviour{
 	public void Collision(Collision collision){
 
 		// If it's not enable or camera mode is TPS, return.
-		if(!enabled || !isRendering || cameraMode != CameraMode.TPS || !TPSCollision)
-			return;
+		//if(!enabled || !isRendering || cameraMode != CameraMode.TPS || !TPSCollision)
+		//	return;
 
-		// Local relative velocity.
-		Vector3 colRelVel = collision.relativeVelocity;
-		colRelVel *= 1f - Mathf.Abs(Vector3.Dot(transform.up, collision.contacts[0].normal));
+		//// Local relative velocity.
+		//Vector3 colRelVel = collision.relativeVelocity;
+		//colRelVel *= 1f - Mathf.Abs(Vector3.Dot(transform.up, collision.contacts[0].normal));
 
-		float cos = Mathf.Abs(Vector3.Dot(collision.contacts[0].normal, colRelVel.normalized));
+		//float cos = Mathf.Abs(Vector3.Dot(collision.contacts[0].normal, colRelVel.normalized));
 
-		if (colRelVel.magnitude * cos >= 5f){
+		//if (colRelVel.magnitude * cos >= 5f){
 
-			collisionVector = transform.InverseTransformDirection(colRelVel) / (30f);
+		//	collisionVector = transform.InverseTransformDirection(colRelVel) / (30f);
 
-			collisionPos -= collisionVector * 5f;
-			collisionRot = Quaternion.Euler(new Vector3(-collisionVector.z * 10f, -collisionVector.y * 10f, -collisionVector.x * 10f));
-			targetFieldOfView = thisCam.fieldOfView - Mathf.Clamp(collision.relativeVelocity.magnitude, 0f, 15f);
+		//	collisionPos -= collisionVector * 5f;
+		//	collisionRot = Quaternion.Euler(new Vector3(-collisionVector.z * 10f, -collisionVector.y * 10f, -collisionVector.x * 10f));
+		//	targetFieldOfView = thisCam.fieldOfView - Mathf.Clamp(collision.relativeVelocity.magnitude, 0f, 15f);
 
-		}
+		//}
 
 	}
 

@@ -8,7 +8,9 @@ public class PlayersHandler : MonoBehaviour
     public List<GameObject> Players;
     public RCC_MobileButtons Mobilebutton;
     #endregion
-    public int currentplayerindex = 0;
+    public static int currentplayerindex = 0;
+    public GameObject Effect;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -31,8 +33,11 @@ public class PlayersHandler : MonoBehaviour
             currentplayer.SetActive(false);
             Players[currentplayerindex].transform.position = currentplayer.transform.position;
             Players[currentplayerindex].transform.rotation = currentplayer.transform.rotation;
+            Effect.SetActive(false);
+            Effect.SetActive(true);
             Players[currentplayerindex].SetActive(true);
-
+            Effect.transform.position = new Vector3(Players[currentplayerindex].transform.position.x, Players[currentplayerindex].transform.position.y, Players[currentplayerindex].transform.position.z + 12f);
+            Effect.transform.rotation = Players[currentplayerindex].transform.rotation;
             Players[currentplayerindex].GetComponent<Rigidbody>().velocity = currentplayer.GetComponent<Rigidbody>().velocity;
             Players[currentplayerindex].GetComponent<Rigidbody>().angularVelocity = currentplayer.GetComponent<Rigidbody>().angularVelocity;
             Players[currentplayerindex].GetComponent<RCC_CarControllerV3>().speed = currentplayer.GetComponent<RCC_CarControllerV3>().speed;
