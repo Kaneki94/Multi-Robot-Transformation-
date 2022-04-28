@@ -124,9 +124,9 @@ public class AdsManager : MonoBehaviour
                     }
                 }
             });
-            LoadMediumRectangle();
-            if (ShowDefaultBanner)
-                ShowBanner("Default");
+         //   LoadMediumRectangle();
+            //if (ShowDefaultBanner)
+            //    ShowBanner("Default");
 
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
