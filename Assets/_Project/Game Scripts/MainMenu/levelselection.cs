@@ -18,7 +18,7 @@ public class levelselection : MonoBehaviour
     {
         Time.timeScale = 1f;
        // mainmode.SetActive(true);
-        //PlayerPrefs.SetInt("unlockedlevels", 20);
+      //  PlayerPrefs.SetInt("unlockedlevels", 30);
         CheckLevels();
     }
 
