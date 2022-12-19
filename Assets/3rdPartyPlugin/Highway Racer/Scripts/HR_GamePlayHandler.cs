@@ -28,7 +28,7 @@ public class HR_GamePlayHandler : MonoBehaviour {
 		}
 	}
 	#endregion
-
+	public static HR_GamePlayHandler ins;
 	[Header("Time Of The Scene")]
 	public DayOrNight dayOrNight;
 	public enum DayOrNight{Day, Night, Rainy, Snowy}
@@ -40,11 +40,14 @@ public class HR_GamePlayHandler : MonoBehaviour {
 	[Header("UI Canvases For GamePlay and GameOver")]
 	public Canvas gameplayCanvas;
 	public Canvas gameoverCanvas;
-
+	public GameObject missionCanvas;
+	public GameObject gameplayCanvasObj;
+	public Text HighwayMission;
+	public GameObject gameoverContent;
 	[Header("Spawn Location Of The Cars")]
 	public Transform spawnLocation;
 
-	[HideInInspector]public GameObject player;
+	/*[HideInInspector]*/public GameObject player;
 
 	private int selectedCarIndex = 0;
 	private int selectedModeIndex = 0;
@@ -69,6 +72,7 @@ public class HR_GamePlayHandler : MonoBehaviour {
 		Time.timeScale = 1f;
 		AudioListener.volume = 0f;
 		AudioListener.pause = false;
+		ins = this;
 
 		if (HR_HighwayRacerProperties.Instance.gameplayClips != null && HR_HighwayRacerProperties.Instance.gameplayClips.Length > 0) {
 			gameplaySoundtrack = HR_CreateAudioSource.NewAudioSource (gameObject, "GamePlay Soundtrack", 0f, 0f, .35f, HR_HighwayRacerProperties.Instance.gameplayClips [UnityEngine.Random.Range (0, HR_HighwayRacerProperties.Instance.gameplayClips.Length)], true, true, false);
@@ -99,15 +103,45 @@ public class HR_GamePlayHandler : MonoBehaviour {
 
 	}
 
-	void Start () {
+	void Start() {
+		if (missionCanvas)
+		{
+			gameplayCanvasObj.SetActive(false);
+			missionCanvas.SetActive(true);
+			if (AdmobAdsManager.Instance)
+				AdmobAdsManager.Instance.ShowSmallBanner(GoogleMobileAds.Api.AdPosition.TopRight);
+			if (PlayerPrefs.GetInt("HighwayScore") != 0)
+			{
+				HighwayMission.text = "HighScore: \t" + PlayerPrefs.GetInt("HighwayScore") + "\n\n Your Mission is to beat the Score..\n\n Shoot the Traffic and Avoid Hurdles..";
 
+			}
+			else
+			{
+				HighwayMission.text = " Your Mission is to set a High Score..";
+			}
+		}
+		else
+        {
+			gameplayCanvasObj.SetActive(true);
+			gameplayCanvas.enabled = true;
+			SpawnCar();
+			StartCoroutine(WaitForGameStart());
+			if (AdmobAdsManager.Instance)
+				AdmobAdsManager.Instance.ShowSmallBanner(GoogleMobileAds.Api.AdPosition.TopRight);
+		}
+
+		
+	}
+	public void StartGameplay()
+    {
+		gameplayCanvasObj.SetActive(true);
+		missionCanvas.SetActive(false);
 		gameplayCanvas.enabled = true;
-
 		SpawnCar();
 		StartCoroutine(WaitForGameStart());
-	
+		if (AdmobAdsManager.Instance)
+			AdmobAdsManager.Instance.ShowSmallBanner(GoogleMobileAds.Api.AdPosition.TopRight);
 	}
-
 	void OnEnable(){
 
 		SceneManager.sceneLoaded += SceneManager_sceneLoaded;
@@ -146,11 +180,21 @@ public class HR_GamePlayHandler : MonoBehaviour {
 	}
 
 	IEnumerator WaitForGameStart(){
+		
+		if (PlayerPrefs.GetInt("PlayerCarOne") == 0)
+        {
+			yield return new WaitForSeconds(4);
+			PlayerPrefs.SetInt("PlayerCarOne", 1);
+			RCC.SetControl(player.GetComponent<RCC_CarControllerV3>(), true);
+			gameStarted = true;
+		}
+        else
+        {
+			RCC.SetControl(player.GetComponent<RCC_CarControllerV3>(), true);
+			gameStarted = true;
+		}
 
-		yield return new WaitForSeconds(4);
 
-		RCC.SetControl (player.GetComponent<RCC_CarControllerV3> (), true);
-		gameStarted = true;
 
 	}
 
@@ -169,7 +213,7 @@ public class HR_GamePlayHandler : MonoBehaviour {
 		player = (RCC.SpawnRCC(HR_PlayerCars.Instance.cars[selectedCarIndex].playerCar.GetComponent<RCC_CarControllerV3>(), spawnLocation.position, spawnLocation.rotation, true, false, true)).gameObject;
 		player.transform.position = spawnLocation.transform.position;
 		player.transform.rotation = Quaternion.identity;
-		
+		PlayerPrefs.SetInt("PlayerCarOne", 0);
 		player.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, minimumSpeed / 1.75f);
 
 		if(dayOrNight == DayOrNight.Night || dayOrNight == DayOrNight.Rainy)
@@ -212,7 +256,7 @@ public class HR_GamePlayHandler : MonoBehaviour {
 	}
 
 	public void RestartGame(){
-		
+		PlayerPrefs.SetInt("PlayerCarOne", 0);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		
 	}
@@ -237,7 +281,17 @@ public class HR_GamePlayHandler : MonoBehaviour {
 		HR_PlayerHandler.OnPlayerDied -= HR_PlayerHandler_OnPlayerDied;
 
 	}
-
+	public void SaveButton()
+    {
+		//gameStarted = true;
+		//HR_PlayerHandler.OnPlayerDied -= HR_PlayerHandler_OnPlayerDied;
+		//PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + sbs);
+		RCC_SceneManager.Instance.activePlayerVehicle.GetComponent<HR_PlayerHandler>().OnGameSave(1f);
+		gameoverContent.SetActive(false);
+		HR_OptionsHandler.ins.pausedMenu.SetActive(false);
+		gameplayCanvas.enabled = true;
+		Time.timeScale = 1;
+	}
 	//public void Fire(int index)
 	//{
 	//	weaponcontroller.weaponch(index);

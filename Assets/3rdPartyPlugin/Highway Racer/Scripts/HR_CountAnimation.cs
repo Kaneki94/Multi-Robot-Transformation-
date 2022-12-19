@@ -11,7 +11,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class HR_CountAnimation : MonoBehaviour {
-
+	
 	private Text text;
 	public string originalText;
 
@@ -22,7 +22,7 @@ public class HR_CountAnimation : MonoBehaviour {
 	public bool endedAnimation = false;
 
 	private AudioSource countingAudioSource;
-
+	
 	void Awake () {
 
 		text = GetComponent<Text>();
@@ -73,12 +73,12 @@ public class HR_CountAnimation : MonoBehaviour {
 			if(GetComponentInParent<HR_ButtonSlideAnimation>())
 				GetComponentInParent<HR_ButtonSlideAnimation>().endedAnimation = true;
 			
-			endedAnimation = true;
+			//endedAnimation = true;
 
 		}
 
-		if(endedAnimation)
-			enabled = false;
+		//if(endedAnimation)
+		//	enabled = false;
 	
 	}
 

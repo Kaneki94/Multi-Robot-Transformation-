@@ -162,7 +162,7 @@ public class DamageManager : MonoBehaviour
         }
         else if (this.gameObject.tag == "Extra")
         {
-
+            levelmanager.instance.coinscount(rewardcoins);
             enemycounter.instance.deadcounterextra();
             for (int i = 0; i < robo.Length; i++)
             {

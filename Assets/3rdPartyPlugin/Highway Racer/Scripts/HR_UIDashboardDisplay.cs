@@ -108,26 +108,39 @@ public class HR_UIDashboardDisplay : MonoBehaviour {
 		}else{
 			bombRect.anchoredPosition = Vector2.Lerp(bombRect.anchoredPosition, new Vector2(bombDefPos.x - 500, bombDefPos.y), Time.deltaTime * 5f);
 		}
-
-	}
-
-	void LateUpdate(){
-
 		if (!player)
 			return;
-		
+
 		score.text = player.score.ToString("F0");
-		speed.text = player.speed.ToString("F0");
-		distance.text = (player.distance).ToString("F2");
+		speed.text = player.speed.ToString("F0") + " KM/H";
+		distance.text = (player.distance).ToString("F2") + " KM";
 		highSpeed.text = player.highSpeedCurrent.ToString("F1");
 		//oppositeDirection.text = player.opposideDirectionCurrent.ToString("F1");
 		timeLeft.text = player.timeLeft.ToString("F1");
 		//combo.text = player.combo.ToString();
 
-		if(HR_GamePlayHandler.Instance.mode == HR_GamePlayHandler.Mode.Bomb)
+		if (HR_GamePlayHandler.Instance.mode == HR_GamePlayHandler.Mode.Bomb)
 			bombSlider.value = player.bombHealth / 100f;
 
 	}
+
+	//void LateUpdate(){
+
+	//	if (!player)
+	//		return;
+		
+	//	score.text = player.score.ToString("F0");
+	//	speed.text = player.speed.ToString("F0");
+	//	distance.text = (player.distance).ToString("F2");
+	//	highSpeed.text = player.highSpeedCurrent.ToString("F1");
+	//	//oppositeDirection.text = player.opposideDirectionCurrent.ToString("F1");
+	//	timeLeft.text = player.timeLeft.ToString("F1");
+	//	//combo.text = player.combo.ToString();
+
+	//	if(HR_GamePlayHandler.Instance.mode == HR_GamePlayHandler.Mode.Bomb)
+	//		bombSlider.value = player.bombHealth / 100f;
+
+	//}
 
 	void OnDisable(){
 

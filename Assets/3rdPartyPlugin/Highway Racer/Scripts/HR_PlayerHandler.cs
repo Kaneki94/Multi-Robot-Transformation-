@@ -22,12 +22,12 @@ public class HR_PlayerHandler : MonoBehaviour {
 	private bool gameOver = false;
 	private bool gameStarted{get{return HR_GamePlayHandler.Instance.gameStarted;}}
 
-	internal float score;
+	public float score;
 	internal float timeLeft = 100f;
 	internal int combo;
 	internal int maxCombo;
-	
-	internal float speed = 0f;
+	public GameObject PowerupParticle;
+	public float speed = 0f;
 	internal float distance = 0f;
 	internal float highSpeedCurrent = 0f;
 	internal float highSpeedTotal = 0f;
@@ -107,7 +107,6 @@ public class HR_PlayerHandler : MonoBehaviour {
 			return;
 		
 		speed = carController.speed;
-
 		distance += Vector3.Distance(previousPosition, transform.position) / 1000f;
 		previousPosition = transform.position;
 
@@ -133,10 +132,17 @@ public class HR_PlayerHandler : MonoBehaviour {
 			timeLeft -= Time.deltaTime;
 			if(timeLeft < 0){
 				timeLeft = 0;
-				OnGameOver(0f);
+				OnGameOver(0.2f);
 			}
 		}
-
+		if(this.gameObject.transform.rotation.y > 15)
+        {
+			this.gameObject.transform.localRotation = Quaternion.Euler(this.transform.localRotation.x, 15, this.transform.localRotation.z);
+        }
+		else if (this.gameObject.transform.rotation.y < -15)
+		{
+			this.gameObject.transform.localRotation = Quaternion.Euler(this.transform.localRotation.x, -15, this.transform.localRotation.z);
+		}
 
 
 		comboTime += Time.deltaTime;
@@ -169,7 +175,7 @@ public class HR_PlayerHandler : MonoBehaviour {
 		CheckStatus ();
 
 	}
-
+	
 	void FixedUpdate(){
 
 		if (!gameOver && gameStarted) {
@@ -177,7 +183,6 @@ public class HR_PlayerHandler : MonoBehaviour {
 		}
 			
 	}
-
 	void CheckNearMiss(){
 		
 		RaycastHit hit;
@@ -307,7 +312,7 @@ public class HR_PlayerHandler : MonoBehaviour {
 	{
 
 		
-		if (col.transform.root.gameObject.GetComponent<Rigidbody>() /*&& this.gameObject.GetComponent<RCC_CarControllerV3>().speed>= 80f*/)
+		if (col.transform.root.gameObject.GetComponent<Rigidbody>() && col.CompareTag("TrafficCar")) /*&& this.gameObject.GetComponent<RCC_CarControllerV3>().speed>= 80f*/
 		{
 			col.transform.root.gameObject.GetComponent<HR_TrafficCar>().enabled = false;
 			col.transform.root.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
@@ -318,10 +323,36 @@ public class HR_PlayerHandler : MonoBehaviour {
 
 			print("Name :" + col.transform.root.gameObject.name);
 		}
-
-		
+		//if (col.tag == "CompleteTrigger")
+		//{
+		//	rigid.isKinematic = true;
+		//	OnGameOver(1f);
+		//}
+		else if(col.tag == "health")
+        {
+			if(PowerupParticle)
+            {
+				PowerupParticle.SetActive(true);
+				Invoke("PowerupOff", 4f);
+			}
+			
+        }
+		else if(col.tag == "Hurdle")
+        {
+			if(PowerupParticle!=null && !PowerupParticle.activeInHierarchy)
+            {
+				this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+				OnGameOver(0.2f);
+			}
+			
+		}
 
 	}
+	void PowerupOff()
+    {
+		if(PowerupParticle)
+			PowerupParticle.SetActive(false);
+    }
 	void CheckStatus(){
 
 		if(!roadPooling || rigid.isKinematic)
@@ -344,14 +375,22 @@ public class HR_PlayerHandler : MonoBehaviour {
 	void OnGameOver(float delayTime){
 
 		OnPlayerDied (this);
-
 		gameOver = true;
 		carController.canControl = false;
 		carController.engineRunning = false;
-
+		PlayerPrefs.SetInt("PlayerCarOne", 0);
 	}
- //  private void set_StatusPlayerswitcher()
- //   {
+	public void OnGameSave(float delayTime)
+	{
+
+		this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+		gameOver = false;
+		carController.canControl = true;
+		carController.engineRunning = true;
+		PlayerPrefs.SetInt("PlayerCarOne", 0);
+	}
+	//  private void set_StatusPlayerswitcher()
+	//   {
 	//	PlayerswitchTrigger.SetActive(true);
 	//	CancelInvoke(nameof(set_StatusPlayerswitcher));
 	////	Invoke(nameof(set_StatusPlayerswitcher), 10f);

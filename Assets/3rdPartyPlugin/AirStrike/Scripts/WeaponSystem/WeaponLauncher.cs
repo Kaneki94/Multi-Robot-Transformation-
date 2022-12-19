@@ -201,11 +201,11 @@ public class WeaponLauncher : WeaponBase
 				float distance = Vector3.Distance (transform.position, aimtarget.transform.position);
 				if (locked) {
 					if (TargetLockedTexture)
-						GUI.DrawTexture (new Rect (screenPos.x - (TargetLockedTexture.width / 2), Screen.height - screenPos.y - (TargetLockedTexture.height / 2), TargetLockedTexture.width, TargetLockedTexture.height), TargetLockedTexture);
+						GUI.DrawTexture (new Rect (screenPos.x - (TargetLockedTexture.width/2 ), Screen.height - screenPos.y - (TargetLockedTexture.height/2), TargetLockedTexture.width, TargetLockedTexture.height), TargetLockedTexture);
 					GUI.Label (new Rect (screenPos.x + 40, Screen.height - screenPos.y, 200, 30), aimtarget.name + " " + Mathf.Floor (distance) + "m.");
 				} else {
 					if (TargetLockOnTexture)
-						GUI.DrawTexture (new Rect (screenPos.x - TargetLockOnTexture.width / 2, Screen.height - screenPos.y - TargetLockOnTexture.height / 2, TargetLockOnTexture.width, TargetLockOnTexture.height), TargetLockOnTexture);
+						GUI.DrawTexture (new Rect (screenPos.x - TargetLockOnTexture.width / 2f, Screen.height - screenPos.y - TargetLockOnTexture.height / 2f, TargetLockOnTexture.width, TargetLockOnTexture.height), TargetLockOnTexture);
 				}
 				
             	
@@ -239,6 +239,7 @@ public class WeaponLauncher : WeaponBase
            
 				if (target) {
 					DrawTargetLockon (target.transform, true);
+					Debug.Log(target);
 				}
             
 				for (int t=0; t<TargetTag.Length; t++) {

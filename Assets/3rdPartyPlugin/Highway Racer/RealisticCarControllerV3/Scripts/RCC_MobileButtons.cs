@@ -333,14 +333,21 @@ public class RCC_MobileButtons : RCC_Core {
 	}
 	public void Fire(int index)
 	{
-		weaponcontroller.weaponch(index);
+		if(weaponcontroller)
+        {
+			weaponcontroller.weaponch(index);
+		}
 	}
 	public void wstart(bool val)
 	{
-		weaponcontroller.WStart(val);
+		if(weaponcontroller)
+			weaponcontroller.WStart(val);
 	}
 	public void wexit(bool val)
 	{
-		weaponcontroller.WExit(val);
+		if(weaponcontroller)
+        {
+			weaponcontroller.WExit(val);
+		}
 	}
 }

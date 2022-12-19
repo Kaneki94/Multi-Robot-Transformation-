@@ -69,9 +69,8 @@ public class HR_TrafficPooling : MonoBehaviour {
 				go.SetActive(false);
 
 			}
-
 		}
-		
+			trafficCars[5].trafficCar.gameObject.transform.rotation = Quaternion.Euler(0, 90, 0);
 	}
 
 	void AnimateTraffic () {

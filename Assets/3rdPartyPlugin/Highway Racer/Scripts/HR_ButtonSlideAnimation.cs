@@ -22,7 +22,7 @@ public class HR_ButtonSlideAnimation : MonoBehaviour {
 	public bool actNow = false;
 	public bool endedAnimation = false;
 	public HR_ButtonSlideAnimation playWhenThisEnds;
-
+	
 	private AudioSource slidingAudioSource;
 
 	void Awake () {
@@ -91,9 +91,9 @@ public class HR_ButtonSlideAnimation : MonoBehaviour {
 			slidingAudioSource.Play();
 
 		getRect.anchoredPosition = Vector2.MoveTowards(getRect.anchoredPosition, originalPosition, Time.unscaledDeltaTime * 4000f);
-
-		if(Vector2.Distance(GetComponent<RectTransform>().anchoredPosition, originalPosition) < .05f){
-
+		
+		if (Vector2.Distance(GetComponent<RectTransform>().anchoredPosition, originalPosition) < 0.05f){
+			
 			if(slidingAudioSource && slidingAudioSource.isPlaying && playSound)
 				slidingAudioSource.Stop();
 

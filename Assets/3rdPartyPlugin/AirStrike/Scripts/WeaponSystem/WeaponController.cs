@@ -5,49 +5,55 @@ using UnityEngine.UI;
 
 public class WeaponController : MonoBehaviour
 {
-	public string[] TargetTag = new string[1]{"Enemy"};
-	public WeaponLauncher[] WeaponLists;
-	public int CurrentWeapon = 0;
-	public bool ShowCrosshair, shootchk=false;
+    public string[] TargetTag = new string[1] { "Enemy" };
+    public WeaponLauncher[] WeaponLists;
+    public int CurrentWeapon = 0;
+    public bool ShowCrosshair, shootchk = false;
     int totalguns, totalbtns;
     public Animator[] guntorotate;
     public Animator mechwing;
 
 
-    void Awake ()
-	{
-        
+    void Awake()
+    {
+
         // find all attached weapons.
-        if (this.transform.GetComponentsInChildren (typeof(WeaponLauncher)).Length > 0) {
-			var weas = this.transform.GetComponentsInChildren (typeof(WeaponLauncher));
-			WeaponLists = new WeaponLauncher[weas.Length];
-			for (int i=0; i<weas.Length; i++) {
-				WeaponLists [i] = weas [i].GetComponent<WeaponLauncher> ();
-				WeaponLists [i].TargetTag = TargetTag;
-			}
-		}
-	}
-	public WeaponLauncher GetCurrentWeapon(){
-		if (CurrentWeapon < WeaponLists.Length && WeaponLists [CurrentWeapon] != null) {
-			return WeaponLists [CurrentWeapon];
-		}
-		return null;
-	}
-	
-	private void Start ()
-	{
+        if (this.transform.GetComponentsInChildren(typeof(WeaponLauncher)).Length > 0)
+        {
+            var weas = this.transform.GetComponentsInChildren(typeof(WeaponLauncher));
+            WeaponLists = new WeaponLauncher[weas.Length];
+            for (int i = 0; i < weas.Length; i++)
+            {
+                WeaponLists[i] = weas[i].GetComponent<WeaponLauncher>();
+                WeaponLists[i].TargetTag = TargetTag;
+            }
+        }
+    }
+    public WeaponLauncher GetCurrentWeapon()
+    {
+        if (CurrentWeapon < WeaponLists.Length && WeaponLists[CurrentWeapon] != null)
+        {
+            return WeaponLists[CurrentWeapon];
+        }
+        return null;
+    }
+
+    private void Start()
+    {
         if (GetComponent<weapons>())
         {
             totalguns = GetComponent<weapons>().guns.Length;
             totalbtns = GetComponent<weapons>().firebuttons.Length;
         }
 
-        for (int i=0; i<WeaponLists.Length; i++) {
-			if (WeaponLists [i] != null) {
-				WeaponLists [i].TargetTag = TargetTag;
-				WeaponLists [i].ShowCrosshair = ShowCrosshair;
-			}
-		}
+        for (int i = 0; i < WeaponLists.Length; i++)
+        {
+            if (WeaponLists[i] != null)
+            {
+                WeaponLists[i].TargetTag = TargetTag;
+                WeaponLists[i].ShowCrosshair = ShowCrosshair;
+            }
+        }
         //for (int i = 0; i < WeaponLists.Length; i++)
         //{
 
@@ -55,17 +61,20 @@ public class WeaponController : MonoBehaviour
         //}
     }
 
-	private void Update ()
-	{
-		
-		for (int i=0; i<WeaponLists.Length; i++) {
-			if (WeaponLists [i] != null) {
-				WeaponLists [i].OnActive = false;
-			}
-		}
-		if (CurrentWeapon < WeaponLists.Length && WeaponLists [CurrentWeapon] != null) {
-			WeaponLists [CurrentWeapon].OnActive = true;
-		}
+    private void Update()
+    {
+
+        for (int i = 0; i < WeaponLists.Length; i++)
+        {
+            if (WeaponLists[i] != null)
+            {
+                WeaponLists[i].OnActive = false;
+            }
+        }
+        if (CurrentWeapon < WeaponLists.Length && WeaponLists[CurrentWeapon] != null)
+        {
+            WeaponLists[CurrentWeapon].OnActive = true;
+        }
 
         if (shootchk)
         {
@@ -104,16 +113,17 @@ public class WeaponController : MonoBehaviour
         Invoke("offdelay", 0.5f);
     }
 
-    public void SwitchWeapon ()
-	{
-		CurrentWeapon += 1;
-		if (CurrentWeapon >= WeaponLists.Length) {
-			CurrentWeapon = 0;	
-		}
-	}
-	
-	public void WeaponStart ()
-	{
+    public void SwitchWeapon()
+    {
+        CurrentWeapon += 1;
+        if (CurrentWeapon >= WeaponLists.Length)
+        {
+            CurrentWeapon = 0;
+        }
+    }
+
+    public void WeaponStart()
+    {
         //if (this.gameObject.tag == "Player")
         for (int i = 0; i < totalbtns; i++)
         {
@@ -129,13 +139,13 @@ public class WeaponController : MonoBehaviour
         // GetComponent<weapons>().firebuttons[1].GetComponent<Button>().interactable = false;
         WeaponLists[0].gameObject.SetActive(true);
         GetComponent<weapons>().guns[0].SetActive(true);
-        
+
         WeaponLists[0].GetComponent<AudioSource>().PlayOneShot(WeaponLists[0].GetComponent<WeaponLauncher>().SoundReloading);
         GetComponent<Animator>().Play("shoot");
-        
+
         //shootchk = chk;
-		
-	}
+
+    }
     public void Weapon2Start()
     {
         //if (this.gameObject.tag == "Player")
@@ -153,7 +163,11 @@ public class WeaponController : MonoBehaviour
         //  GetComponent<weapons>().firebuttons[1].GetComponent<Button>().interactable = false;
         WeaponLists[1].gameObject.SetActive(true);
         GetComponent<weapons>().guns[1].SetActive(true);
-       
+        for (int i = 0; i < totalbtns; i++)
+        {
+            GetComponent<weapons>().firebuttons[i].SetActive(true);
+
+        }
         WeaponLists[1].GetComponent<AudioSource>().PlayOneShot(WeaponLists[1].GetComponent<WeaponLauncher>().SoundReloading);
         GetComponent<Animator>().Play("shoot1");
         //shootchk = chk;
@@ -165,17 +179,17 @@ public class WeaponController : MonoBehaviour
     {
         //if (this.gameObject.tag == "Player")
         // GetComponent<Animator>().Play("shoot");
-        
+
         if (chk == "true")
             if (CurrentWeapon < WeaponLists.Length && WeaponLists[CurrentWeapon] != null)
             {
                 WeaponLists[0].Shoot();
             }
-        Invoke("weaponoff",1f);
-      //  WeaponLists[0].GetComponent<AudioSource>().PlayOneShot(WeaponLists[0].GetComponent<WeaponLauncher>().SoundReloading);
+        Invoke("weaponoff", 1f);
+        //  WeaponLists[0].GetComponent<AudioSource>().PlayOneShot(WeaponLists[0].GetComponent<WeaponLauncher>().SoundReloading);
 
     }
-    
+
     public void Weaponanim1(string chk)
     {
         //if (this.gameObject.tag == "Player")
@@ -193,8 +207,9 @@ public class WeaponController : MonoBehaviour
     void weaponoff()
     {
 
-   
-        for (int i = 0; i < totalguns; i++) {
+
+        for (int i = 0; i < totalguns; i++)
+        {
 
             GetComponent<weapons>().guns[i].SetActive(false);
         }
@@ -207,7 +222,7 @@ public class WeaponController : MonoBehaviour
         for (int i = 0; i < totalbtns; i++)
         {
             GetComponent<weapons>().firebuttons[i].SetActive(true);
-            
+
         }
 
     }
@@ -217,12 +232,15 @@ public class WeaponController : MonoBehaviour
         {
             mechwing.enabled = true;
             mechwing.Play("firewingson");
-           
+
         }
         shootchk = chk;
         //if(WeaponLists.Length == 3)
         //WeaponLists[2].gameObject.SetActive(true);
-        WeaponLists[CurrentWeapon].gameObject.SetActive(true);
+        if(WeaponLists[CurrentWeapon])
+        {
+            WeaponLists[CurrentWeapon].gameObject.SetActive(true);
+        }
         for (int i = 0; i < guntorotate.Length; i++)
         {
             if (guntorotate[i] != null)
@@ -236,7 +254,7 @@ public class WeaponController : MonoBehaviour
 
     //void Wwingstart() {
 
-       
+
     //    for (int i = 0; i < guntorotate.Length; i++)
     //    {
     //        if (guntorotate[i] != null)
@@ -253,13 +271,13 @@ public class WeaponController : MonoBehaviour
         {
             mechwing.enabled = true;
             mechwing.Play("firewingsoff");
-          
+
         }
 
         shootchk = chk;
         //if (WeaponLists.Length == 3)
         //    WeaponLists[2].gameObject.SetActive(false);
-       
+
         for (int i = 0; i < guntorotate.Length; i++)
         {
             if (guntorotate[i] != null)
@@ -268,13 +286,14 @@ public class WeaponController : MonoBehaviour
 
             }
         }
-        Invoke("offdelay",0.5f);
-       
+        Invoke("offdelay", 0.5f);
+
     }
 
-    void offdelay() {
-
-        WeaponLists[CurrentWeapon].gameObject.SetActive(false);
+    void offdelay()
+    {
+        if (WeaponLists[CurrentWeapon])
+            WeaponLists[CurrentWeapon].gameObject.SetActive(false);
     }
 
     //void Wwingend()

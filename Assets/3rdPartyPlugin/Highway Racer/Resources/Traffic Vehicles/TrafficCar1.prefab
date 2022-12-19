@@ -481,6 +481,7 @@ Transform:
   - {fileID: 488924}
   - {fileID: 497608}
   - {fileID: 4840500272298567052}
+  - {fileID: 3289280465538367621}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -719,8 +720,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9282434, y: 1.9396033, z: 5.5633326}
-  m_Center: {x: 0, y: 0.011084586, z: -0.06564486}
+  m_Size: {x: 1.9282434, y: 1.9396033, z: 5.774047}
+  m_Center: {x: 0, y: 0.011084557, z: 0.03971231}
 --- !u!1 &2523230462522788571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,3 +1614,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b5fa621acb7a649b9f2eba0d802f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &9196045744943972162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3289280465538367621}
+  - component: {fileID: 8920212385038868339}
+  m_Layer: 8
+  m_Name: Hitter (1)
+  m_TagString: TrafficCar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3289280465538367621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196045744943972162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 6.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 484294}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8920212385038868339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196045744943972162}
+  m_Material: {fileID: 13400000, guid: 2f0051c0816aede488419a92df674d2d, type: 2}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5495057, y: 1.9396033, z: 4.1356463}
+  m_Center: {x: 0.048224926, y: 1.3, z: -2.8244793}

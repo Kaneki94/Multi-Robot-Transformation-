@@ -39607,8 +39607,8 @@ MonoBehaviour:
   TorqueSpeedAxis: {x: 0, y: 0, z: 0}
   TorqueObject: {fileID: 0}
   Damping: 6
-  Speed: 1000
-  SpeedMax: 3000
+  Speed: 4000
+  SpeedMax: 6000
   SpeedMult: 1000
   Noise: {x: 0, y: 0, z: 0}
   TargetLockDirection: 0.5
