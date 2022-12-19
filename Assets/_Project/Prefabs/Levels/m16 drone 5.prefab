@@ -760,6 +760,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &7822692481228995950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3472,6 +3473,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &7822692482058774795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5369,6 +5371,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &7822692482833985271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6640,6 +6643,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &7822692483098449788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7534,6 +7538,7 @@ MonoBehaviour:
   trafficspawner: 0
   rewardcoins: 500
   coinsimage: {fileID: 0}
+  pets: []
 --- !u!114 &7822692483208719453
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,32 +5,40 @@ using UnityEngine.SceneManagement;
 
 public class mygamemanager : MonoBehaviour
 {
-    public GameObject mapcanvas , successpanel, failpanel, pausedpanel, missionpanel, gameplaycontrols, timeuppanel, loading;
+    MediationHandler mediation;
+    public GameObject mapcanvas , successpanel, failpanel, pausedpanel, missionpanel, gameplaycontrols, timeuppanel, loading, interstitialPanel;
     public AudioClip buttonSound;
     public bool soundchk = true;
     void Start()
     {
         Time.timeScale = 1f;
+        mediation = FindObjectOfType<MediationHandler>();
     }
 
     public void Success()
     {
-        if (PlayerPrefs.GetInt("unlockedlevels") < 40 && PlayerPrefs.GetInt("selectedlevel") == PlayerPrefs.GetInt("unlockedlevels"))
+        ShowInterstialAd();
+        if (PlayerPrefs.GetInt("unlockedlevels") < 45 && PlayerPrefs.GetInt("selectedlevel") == PlayerPrefs.GetInt("unlockedlevels"))
         {
             PlayerPrefs.SetInt("unlockedlevels", PlayerPrefs.GetInt("unlockedlevels") + 1);
             //Debug.Log(" Selected Level is " + PlayerPrefs.GetInt("selectedlevel"));
             //Debug.Log(" Unlocked Levels is " + PlayerPrefs.GetInt("unlockedlevels"));
             //Debug.Log("Unlocked level!!!");
         }
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Success_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
+
         PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 1000);
         successpanel.SetActive(true);
+        Debug.Log("Success_Mission_Mode_Before_Next_Level_" + PlayerPrefs.GetInt("selectedlevel"));
         Invoke("delays", 4f);
     }
 
     public void Failed()
     {
+        ShowInterstialAd();
         failpanel.SetActive(true);
         Invoke("delays", 4f);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Fail_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
     }
 
     void delays()
@@ -50,6 +58,19 @@ public class mygamemanager : MonoBehaviour
         Time.timeScale = 0f;
 
         pausedpanel.SetActive(true);
+        if(levelmanager.instance.currentplayer)
+        {
+            if(levelmanager.instance.currentplayer.GetComponent<WeaponController>())
+            {
+                foreach(var x in levelmanager.instance.currentplayer.GetComponent<WeaponController>().WeaponLists)
+                {
+                    x.GetComponent<WeaponLauncher>().Seeker = false;
+                    x.GetComponent<WeaponLauncher>().ShowCrosshair = false;
+                }
+            }
+        }
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Pause_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
+
     }
 
     public void Mission()
@@ -71,11 +92,13 @@ public class mygamemanager : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         MainMenu.gameplayback = true;
 
-        if (PlayerPrefs.GetInt("selectedlevel") < 40)
+        if (PlayerPrefs.GetInt("selectedlevel") < 45)
             PlayerPrefs.SetInt("selectedlevel", PlayerPrefs.GetInt("selectedlevel") + 1);
 
         loading.SetActive(true);
         StartCoroutine(LoadYourAsyncScene());
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Success_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
+
     }
 
     public void Restart()
@@ -83,6 +106,8 @@ public class mygamemanager : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         loading.SetActive(true);
         StartCoroutine(LoadYourAsyncScene());
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Restart_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
+
     }
 
     IEnumerator LoadYourAsyncScene()
@@ -107,6 +132,7 @@ public class mygamemanager : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         MainMenu.gameplayback = false;
         StartCoroutine(LoadYourAsyncScene1());
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Back_To_Home_From_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
     }
 
     IEnumerator LoadYourAsyncScene1()
@@ -131,10 +157,23 @@ public class mygamemanager : MonoBehaviour
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         pausedpanel.SetActive(false);
         Time.timeScale = 1f;
+        if (levelmanager.instance.currentplayer)
+        {
+            if (levelmanager.instance.currentplayer.GetComponent<WeaponController>())
+            {
+                foreach (var x in levelmanager.instance.currentplayer.GetComponent<WeaponController>().WeaponLists)
+                {
+                    x.GetComponent<WeaponLauncher>().Seeker = true;
+                    x.GetComponent<WeaponLauncher>().ShowCrosshair = true;
+                }
+            }
+        }
     }
 
     public void Startmission()
     {
+        levelmanager.instance.currentlevelz = Instantiate(levelmanager.instance.levels[levelmanager.instance.selectedlevel - 1].gameObject, transform.position, transform.rotation);
+
         soundchk = false;
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         Time.timeScale = 1f;
@@ -154,5 +193,12 @@ public class mygamemanager : MonoBehaviour
     public void statusgameplaycanvas(int val)
     {
         mapcanvas.GetComponent<CanvasGroup>().alpha = val;
+    }
+    public void ShowInterstialAd()
+    {
+        if (mediation != null && Application.internetReachability != NetworkReachability.NotReachable && (PlayerPrefs.GetInt("RemoveAds") != 1))
+        {
+            interstitialPanel.SetActive(true);
+        }
     }
 }

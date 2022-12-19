@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static MainMenu instance;
+
     public static bool gameplayback = false;
     Camera maincamera;
     [Header("UI Panels")]
@@ -31,10 +33,26 @@ public class MainMenu : MonoBehaviour
 
     private AsyncOperation async;
 
+    public GameObject interstitialPanel;
+    MediationHandler mediation;
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
 
     void Start()
     {
+        mediation = FindObjectOfType<MediationHandler>();
+
+        if(AdmobAdsManager.Instance && PlayerPrefs.GetInt("RemoveAds") != 1)
+        {
+            AdmobAdsManager.Instance.ShowSmallBanner(GoogleMobileAds.Api.AdPosition.TopRight);
+        }
+        PlayerPrefs.SetInt("StoryPref", 0);
         Time.timeScale = 1f;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         maincamera = this.gameObject.GetComponent<Camera>();
@@ -73,15 +91,24 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         totalcash = PlayerPrefs.GetInt("Cash");
-        cashtext.text = totalcash.ToString();
+        cashtext.text = totalcash.ToString() + " $";
     }
 
     public void UpdateCash()
     {
+        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 500);
         totalcash = PlayerPrefs.GetInt("Cash");
-        cashtext.text = totalcash.ToString();
+        cashtext.text = totalcash.ToString() + " $";
     }
 
+
+    public void ShowInterstialAd()
+    {
+        if (mediation != null && Application.internetReachability != NetworkReachability.NotReachable && (PlayerPrefs.GetInt("RemoveAds") != 1))
+        {
+            interstitialPanel.SetActive(true);
+        }
+    }
 
     public void Play()
     {
@@ -94,6 +121,8 @@ public class MainMenu : MonoBehaviour
         {
             dino.SetActive(false);
         }
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Play_Button_Click_");
+
     }
 
     public void OnView()
@@ -218,29 +247,29 @@ public class MainMenu : MonoBehaviour
         StartCoroutine("LoadYourAsyncScene", 3f);
     }
 
-    public void bonusarea()
+    public void bonusarea(int Mode)
     {
+        PlayerPrefs.SetInt("SuicideModeChap", Mode);
         levelselection.SetActive(false);
         GetComponent<AudioSource>().PlayOneShot(buttonSound);
         loadingpanel.SetActive(true);
         //SceneManager.LoadScene("LifeGame");
         StartCoroutine("LoadLifeScene", 3f);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Suicide_Mode_Click_");
     }
 
 
     public void SelectScene(int levelIndex)
     {
-
+        PlayerPrefs.SetInt("HighwayScene", levelIndex);
         async = SceneManager.LoadSceneAsync(levelIndex+3);
-
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Highway_Scene_Selected_" + levelIndex);
     }
 
     public void SelectMode(int _modeIndex)
     {
-
         PlayerPrefs.SetInt("SelectedModeIndex", _modeIndex);
-        
-
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Highway_Mode_" +  PlayerPrefs.GetInt("SelectedModeIndex"));
     }
 
     IEnumerator LoadLifeScene()
@@ -312,6 +341,10 @@ public class MainMenu : MonoBehaviour
             Application.OpenURL(privacyLink);
         }
 
+    }
+    public void Opencp( string cp)
+    {
+        Application.OpenURL(cp);
     }
 
 }

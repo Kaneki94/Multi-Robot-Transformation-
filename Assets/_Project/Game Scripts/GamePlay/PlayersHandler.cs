@@ -9,7 +9,9 @@ public class PlayersHandler : MonoBehaviour
     public RCC_MobileButtons Mobilebutton;
     #endregion
     public static int currentplayerindex = 0;
-    public GameObject Effect;
+    public GameObject Effect, Trigger;
+    //public int levelno = 1;
+    //float leveltimeRange;
 
     // Start is called before the first frame update
     private void Awake()
@@ -19,6 +21,9 @@ public class PlayersHandler : MonoBehaviour
     }
     private void Start()
     {
+        //leveltimeRange = Random.Range(30f, 50f);
+        //Invoke("TrigOn", leveltimeRange);
+        PlayerPrefs.SetInt("PlayerCarOne", 0);
 
     }
     public void switchplayer(GameObject currentplayer)
@@ -41,7 +46,11 @@ public class PlayersHandler : MonoBehaviour
             Players[currentplayerindex].GetComponent<Rigidbody>().velocity = currentplayer.GetComponent<Rigidbody>().velocity;
             Players[currentplayerindex].GetComponent<Rigidbody>().angularVelocity = currentplayer.GetComponent<Rigidbody>().angularVelocity;
             Players[currentplayerindex].GetComponent<RCC_CarControllerV3>().speed = currentplayer.GetComponent<RCC_CarControllerV3>().speed;
-
+            Players[currentplayerindex].GetComponent<HR_PlayerHandler>().speed = currentplayer.GetComponent<HR_PlayerHandler>().speed;
+            Players[currentplayerindex].GetComponent<HR_PlayerHandler>().score = currentplayer.GetComponent<HR_PlayerHandler>().score;
+            Players[currentplayerindex].GetComponent<HR_PlayerHandler>().distance = currentplayer.GetComponent<HR_PlayerHandler>().distance;
+            Players[currentplayerindex].GetComponent<HR_PlayerHandler>().highSpeedCurrent = currentplayer.GetComponent<HR_PlayerHandler>().highSpeedCurrent;
+            Players[currentplayerindex].GetComponent<HR_PlayerHandler>().highSpeedTotal = currentplayer.GetComponent<HR_PlayerHandler>().highSpeedTotal;
             Players[currentplayerindex].GetComponent<RCC_CarControllerV3>().canControl =/* true*/currentplayer.GetComponent<RCC_CarControllerV3>().canControl;
             Players[currentplayerindex].GetComponent<RCC_CarControllerV3>().engineRunning = /*true*/currentplayer.GetComponent<RCC_CarControllerV3>().engineRunning;
           // sounds value copy 
@@ -62,4 +71,9 @@ public class PlayersHandler : MonoBehaviour
                 currentplayerindex = 0;
         }
     }
+    //public void TrigOn()
+    //{
+    //    Trigger.SetActive(true);
+    //    Trigger.transform.position = HR_GamePlayHandler._instance.player.transform.position + new Vector3(-HR_GamePlayHandler._instance.player.transform.position.x, 0, 150);
+    //}
 }

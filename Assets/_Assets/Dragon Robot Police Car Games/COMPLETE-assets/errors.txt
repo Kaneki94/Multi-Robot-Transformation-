@@ -1,0 +1,11 @@
+[2022-5-31 09:46:32] layer "BACK.PNG": Duplicate path: BACK.PNG
+[2022-5-31 09:46:32] layer "RESTART.PNG": Duplicate path: RESTART.PNG
+[2022-5-31 09:46:32] layer "2X.PNG": Duplicate path: 2X.PNG
+[2022-5-31 09:46:32] layer "WATCH  VIDEO.PNG": Duplicate path: WATCH  VIDEO.PNG
+[2022-5-31 09:46:32] layer "wallpapersden.com_abstract-octagon-vector_3840x2160": Expected end of input but "_" found.
+[2022-5-31 09:46:32] layer "wallpapersden.com_abstract-octagon-vector_3840x2160": Expected end of input but "_" found.
+[2022-5-31 09:46:32] layer "pngwing.com (6)": Expected end of input but "(" found.
+[2022-5-31 09:46:32] layer "FILL BAR.PNG": Duplicate path: FILL BAR.PNG
+[2022-5-31 09:46:32] layer "Rectangle.PNG": Duplicate path: Rectangle.PNG
+[2022-5-31 09:46:38] layer "UNLOCKEVERYTHING.PN": Unsupported extension: pn
+[2022-5-31 09:46:50] layer "UNLOCKEVERYTHING1.p": Unsupported extension: p

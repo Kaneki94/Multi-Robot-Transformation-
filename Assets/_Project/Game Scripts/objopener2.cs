@@ -27,7 +27,7 @@ public class objopener2 : MonoBehaviour
             if (cars[i] != null)
             {
                 dist = Vector3.Distance(player.transform.position, paths[i].transform.position);
-                if (dist < 80 && cars[i].GetComponent<DamageManager>().trafficspawner == false)
+                if (dist < 100 && cars[i].GetComponent<DamageManager>().trafficspawner == false)
                 {
                     cars[i].SetActive(true);
 

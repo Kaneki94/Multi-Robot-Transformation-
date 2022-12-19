@@ -7,7 +7,7 @@ using DG.Tweening;
 public class levelselection : MonoBehaviour
 {
     public GameObject[] levels;
-    //public Sprite/* levelImg,*/ selectImg;
+    public Sprite selectImage;
     public int selectedlevel;
     public AudioClip buttonSound;
     public GameObject lvlselection, seasonselection/*, mainmode*/;
@@ -31,6 +31,7 @@ public class levelselection : MonoBehaviour
 
     public void CheckLevels()
     {
+
         if (PlayerPrefs.GetInt("unlockedlevels") < 1)
         {
             PlayerPrefs.SetInt("unlockedlevels", 1);
@@ -41,24 +42,28 @@ public class levelselection : MonoBehaviour
         }
 
         modes[0].GetComponent<TweenScale>().enabled = true;
-
-        if (PlayerPrefs.GetInt("unlockedlevels") > 10)
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Mission_Mode_Chapter_1_Level_" + PlayerPrefs.GetInt("unlockedlevels"));
+        if (PlayerPrefs.GetInt("unlockedlevels") > 15)
         {
             modes[1].GetComponent<Button>().interactable = true;
             modelocks[1].SetActive(false);
             modes[1].GetComponent<TweenScale>().enabled = true;
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Mission_Mode_Chapter_2_Level_" + (PlayerPrefs.GetInt("unlockedlevels")-15));
+
         }
-        if (PlayerPrefs.GetInt("unlockedlevels") > 20)
+        if (PlayerPrefs.GetInt("unlockedlevels") > 25)
         {
             modes[2].GetComponent<Button>().interactable = true;
             modelocks[2].SetActive(false);
             modes[2].GetComponent<TweenScale>().enabled = true;
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Mission_Mode_Chapter_3_Level_" + (PlayerPrefs.GetInt("unlockedlevels") - 25));
         }
-        if (PlayerPrefs.GetInt("unlockedlevels") > 30)
+        if (PlayerPrefs.GetInt("unlockedlevels") > 35)
         {
             modes[3].GetComponent<Button>().interactable = true;
             modelocks[3].SetActive(false);
             modes[3].GetComponent<TweenScale>().enabled = true;
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("Mission_Mode_Chapter_4_Level_" + (PlayerPrefs.GetInt("unlockedlevels") - 35));
         }
 
         selectedlevel = PlayerPrefs.GetInt("unlockedlevels");
@@ -85,42 +90,42 @@ public class levelselection : MonoBehaviour
             {
                 levels[i].GetComponent<Button>().interactable = true;
                 //levels[i].GetComponent<Image>().sprite = levelImg;
-                levels[i].transform.GetChild(0).gameObject.SetActive(false);
+                levels[i].transform.GetChild(1).gameObject.SetActive(false);
             }
            else if (i == selectedlevel)
             {
-               // levels[i].GetComponent<Image>().sprite = selectImg;
+                levels[i].GetComponent<Image>().sprite = selectImage;
             }
             else
             {
                 levels[i].GetComponent<Button>().interactable = false;
                 //levels[i].GetComponent<Image>().sprite = levelImg;
-                levels[i].transform.GetChild(0).gameObject.SetActive(true);
+                levels[i].transform.GetChild(1).gameObject.SetActive(true);
             }
             levels[i].gameObject.GetComponent<TweenScale>().enabled = false;
            // levels[i].transform.GetChild(0).gameObject.SetActive(true);
         }
         levels[n].gameObject.GetComponent<TweenScale>().enabled = true;
-     //  levels[n].GetComponent<Image>().sprite = selectImg;
-        levels[n].transform.GetChild(0).gameObject.SetActive(false);
+       levels[n].GetComponent<Image>().sprite = selectImage;
+        levels[n].transform.GetChild(1).gameObject.SetActive(false);
 
-        if (PlayerPrefs.GetInt("unlockedlevels") >= 10)
+        if (PlayerPrefs.GetInt("unlockedlevels") >= 15)
         {
-            levels[9].gameObject.GetComponent<TweenScale>().enabled = true;
-          //  levels[9].GetComponent<Image>().sprite = selectImg;
-            levels[9].transform.GetChild(0).gameObject.SetActive(false);
+            levels[14].gameObject.GetComponent<TweenScale>().enabled = true;
+            levels[14].GetComponent<Image>().sprite = selectImage;
+            levels[14].transform.GetChild(1).gameObject.SetActive(false);
         }
-        if (PlayerPrefs.GetInt("unlockedlevels") >= 20)
+        if (PlayerPrefs.GetInt("unlockedlevels") >= 25)
         {
-            levels[19].gameObject.GetComponent<TweenScale>().enabled = true;
-         //   levels[19].GetComponent<Image>().sprite = selectImg;
-            levels[19].transform.GetChild(0).gameObject.SetActive(false);
+            levels[24].gameObject.GetComponent<TweenScale>().enabled = true;
+            levels[24].GetComponent<Image>().sprite = selectImage;
+            levels[24].transform.GetChild(1).gameObject.SetActive(false);
         }
-        if (PlayerPrefs.GetInt("unlockedlevels") >= 30)
+        if (PlayerPrefs.GetInt("unlockedlevels") >= 35)
         {
-            levels[29].gameObject.GetComponent<TweenScale>().enabled = true;
-           // levels[29].GetComponent<Image>().sprite = selectImg;
-            levels[29].transform.GetChild(0).gameObject.SetActive(false);
+            levels[34].gameObject.GetComponent<TweenScale>().enabled = true;
+            levels[34].GetComponent<Image>().sprite = selectImage;
+            levels[34].transform.GetChild(1).gameObject.SetActive(false);
         }
     }
 
@@ -143,6 +148,7 @@ public class levelselection : MonoBehaviour
 
         levels[selectedlevel - 1].gameObject.GetComponent<TweenScale>().enabled = true;
         n = selectedlevel - 1;
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Level_Selected_Mission_Mode_Level_" + PlayerPrefs.GetInt("selectedlevel"));
 
     }
 

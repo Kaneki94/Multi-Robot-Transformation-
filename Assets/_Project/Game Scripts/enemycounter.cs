@@ -10,9 +10,12 @@ public class enemycounter : MonoBehaviour
     void Start()
     {
         instance = this;
-
-        if(enemies[counter])
-        enemies[counter].SetActive(true);
+        //for(int i =0; i<enemies.Length;i++)
+        //{
+        //    enemies[i].SetActive(true);
+        //}
+        if (enemies[counter])
+            enemies[counter].SetActive(true);
 
         if (extras.Length!=0 && extras[extracounter]!=null)
             extras[extracounter].SetActive(true);

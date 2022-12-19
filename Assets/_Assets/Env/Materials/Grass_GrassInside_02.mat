@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grass_GrassInside_02
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: c5dc64499c09db947ade2eef19cb2a1a, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -36,11 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: e847a706d089ad84dbd02e7a42b77bca, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: f7db1697125b4af42a573b71fb0552c4, type: 3}
+        m_Scale: {x: 50, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e847a706d089ad84dbd02e7a42b77bca, type: 3}
+        m_Texture: {fileID: 2800000, guid: 46ee4a5aa0b816e4686814a3bdcb4bf7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -63,7 +63,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.93
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -73,6 +73,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.024712062, g: 0.3679245, b: 0.0017354971, a: 1}
+    - _EmissionColor: {r: 0.07222963, g: 0.5943396, b: 0, a: 1}
   m_BuildTextureStacks: []

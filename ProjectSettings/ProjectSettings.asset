@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Transform Dino Robot Car Games
+  companyName: Play Xee Studio
+  productName: Dino Car Transform Robot Game
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -40,7 +40,8 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 9eea6c03f69f33b4f8a92702f05017d5,
+    type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -91,7 +92,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 0
+  gpuSkinning: 1
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -134,7 +135,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.11
+  bundleVersion: 1.10
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -153,16 +154,16 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.real.train.trans.robot.games
+    Android: com.grand.monkey.transfrom.robot.game
   buildNumber:
     Standalone: 0
     iPhone: 0
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 12
+  AndroidBundleVersionCode: 11
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 1
+  AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 0
   iPhoneStrippingLevel: 0
@@ -246,8 +247,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Desktop/GameGiant.keystore'
-  AndroidKeyaliasName: gamegiant
+  AndroidKeystoreName: F:/ahmaddata/Ahmad/Ahmad/Keystore/180 Games/APK TOOLS.keystore
+  AndroidKeyaliasName: 180 games
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -260,7 +261,7 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  chromeosInputEmulation: 1
+  chromeosInputEmulation: 0
   AndroidMinifyWithR8: 0
   AndroidMinifyRelease: 0
   AndroidMinifyDebug: 0
@@ -270,7 +271,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b06765dd92a8f38419ec1d4e8e17a934, type: 3}
+      m_Icon: {fileID: 2800000, guid: ec9f905a2e123e64c93172c55ca87b52, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -705,8 +706,9 @@ PlayerSettings:
   scriptingBackend:
     Android: 1
   il2cppCompilerConfiguration:
-    Android: 1
-  managedStrippingLevel: {}
+    Android: 2
+  managedStrippingLevel:
+    Android: 2
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
@@ -799,11 +801,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: cb9da95a-3586-489b-ab5e-2caf20c7e3ec
+  cloudProjectId: cbf0932b-7278-4617-998a-546106d2ba9e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 'Army Tank Robot Car Games: Robot Transforming Game'
-  organizationId: mehmoodumar
+  projectName: Dino Car Transform Robot Game (3)
+  organizationId: playzeestudio
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0

@@ -56,15 +56,16 @@ public class PlayerPrefManager : MonoBehaviour
 
     public void RemoveAds()
     {
-        if (AdsManager.Instance)
+        if (FindObjectOfType<MediationHandler>())
         {
-            AdsManager.Instance.HideBannerAd();
-            AdsManager.Instance.HideMediumRectangleAd();
+            AdmobAdsManager.Instance.hideSmallBanner();
+            AdmobAdsManager.Instance.hideMediumBanner();
+
         }
         PlayerPrefs.SetInt("RemoveAds", 1);
 
         //..........................................
-        if(InAppSettings.instance)
+        if (InAppSettings.instance)
         {
             InAppSettings.instance.SetupInApp();
         }
@@ -72,7 +73,7 @@ public class PlayerPrefManager : MonoBehaviour
 
     public void unlocklevels()
     {
-        PlayerPrefs.SetInt("unlockedlevels", 40);
+        PlayerPrefs.SetInt("unlockedlevels", 45);
 
         //....................................................
         PlayerPrefs.SetInt("LevelsUnlock", 1);
@@ -102,35 +103,35 @@ public class PlayerPrefManager : MonoBehaviour
 
     }
 
-    public void MegaPack()
-    {
-        if (AdsManager.Instance)
-        {
-            AdsManager.Instance.HideBannerAd();
-            AdsManager.Instance.HideMediumRectangleAd();
-        }
-        PlayerPrefs.SetInt("RemoveAds", 1);
+    //public void MegaPack()
+    //{
+    //    if (AdsManager.Instance)
+    //    {
+    //        AdsManager.Instance.HideBannerAd();
+    //        AdsManager.Instance.HideMediumRectangleAd();
+    //    }
+    //    PlayerPrefs.SetInt("RemoveAds", 1);
 
-        //............................................
-        PlayerPrefs.SetInt("unlockedlevels", 40);
-        PlayerPrefs.SetInt("LevelsUnlock", 1);
+    //    //............................................
+    //    PlayerPrefs.SetInt("unlockedlevels", 40);
+    //    PlayerPrefs.SetInt("LevelsUnlock", 1);
 
-        for (int i = 0; i <= 9; i++)
-        {
-            PlayerPrefs.SetInt("costgun" + i.ToString(), 0);
-        }
+    //    for (int i = 0; i <= 9; i++)
+    //    {
+    //        PlayerPrefs.SetInt("costgun" + i.ToString(), 0);
+    //    }
 
-        PlayerPrefs.SetInt("ArmyModes", 1);
-        PlayerPrefs.SetInt("PlayersInApp", 1);
+    //    PlayerPrefs.SetInt("ArmyModes", 1);
+    //    PlayerPrefs.SetInt("PlayersInApp", 1);
 
 
-        //.................................................
-        PlayerPrefs.SetInt("AllInApp", 1);
-        if (InAppSettings.instance)
-        {
-            InAppSettings.instance.SetupInApp();
-        }
-    }
+    //    //.................................................
+    //    PlayerPrefs.SetInt("AllInApp", 1);
+    //    if (InAppSettings.instance)
+    //    {
+    //        InAppSettings.instance.SetupInApp();
+    //    }
+    //}
 
     public bool IsAdsRemoved()
     {

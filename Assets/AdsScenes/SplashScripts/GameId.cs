@@ -11,8 +11,5 @@ public class GameId : MonoBehaviour {
 		PlayerPrefs.SetString ("GameId",gameid);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 }

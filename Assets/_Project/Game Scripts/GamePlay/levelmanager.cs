@@ -12,15 +12,15 @@ public class levelmanager : MonoBehaviour
     public int selectedlevel = 0, selectedgun = 0;
     public int remaintargets, seasonnum = 0, coinsearned;
     public int[] targets, targetcoins;
-    public GameObject[] players, controls, cameras, Trans, playerpos, pickups;
-    public GameObject minimap, currentplayer, env, buildings1, buildings2, trees,Poles, windance, currentpickup, videobtn;
+    public GameObject[] players, controls, cameras, Trans, playerpos, pickups, stories, FirstPlayers;
+    public GameObject minimap, currentplayer, env, buildings1, buildings2, trees,Poles, windance, currentpickup, videobtn, starcam;
     public Text enemies_remain, coinstext, novideotext;
-    public GameObject currentlevelz, othercanvas, story;
+    public GameObject currentlevelz, othercanvas, BGMusic;
     public GameObject enemycoinsprefab, enemycoins;
     public GameObject[] Animals, Animalfortrans;
     public Avatar[] animalavatars;
     public RuntimeAnimatorController[] animalanims;
-    int counter = 0;
+    int counter = 0/*, firstTrans = 0*/;
     public Animator animaltrans, toytrans, tankanim;
     //public RuntimeAnimatorController[] transanim;
 
@@ -28,8 +28,9 @@ public class levelmanager : MonoBehaviour
     public bool picked = false;
     public Material robobodymat, carbodymat, wingmat, toymat, tankmat;
     public Texture[] roboskins, carskins, wingskins, toyskins, tankskins;
-    public Animator rcolourmenu, ccolourmenu, tcolourmenu, tkcolormenu;
-
+    public Animator rcolourmenu, ccolourmenu, tcolourmenu, tkcolormenu, fccolormenu;
+    public Animator RobotTransform, UltraPower;
+    public GameObject RobotTransformBtn, PowerBtn;
     //  int targetframes = 30;
 
     // Use this for initialization
@@ -55,15 +56,34 @@ public class levelmanager : MonoBehaviour
 
         env.SetActive(true);
 
-        story.SetActive(true);
         Invoke("soundstory", 3f);
         coinsearned = 0;
-        DamageManager.playerHP = 3000;
+        DamageManager.playerHP = 6000;
         selectedlevel = PlayerPrefs.GetInt("selectedlevel");
 
         coinstext.text = "<size=18><color=#00FF0D>" + coinsearned.ToString() + "</color></size><size=20><color=#F2FF00>/" + targetcoins[selectedlevel - 1].ToString() + "</color></size>";
 
         selectedgun = PlayerPrefs.GetInt("Gun");
+        if (selectedlevel == 1)
+        {
+            stories[0].SetActive(true);
+
+        }
+        else if (selectedlevel == 2)
+        {
+            stories[1].SetActive(true);
+        }
+        else
+        {
+            if(PlayerPrefs.GetInt("StoryPref") == 0)
+            {
+                stories[2].SetActive(true);
+            }
+            else
+            {
+                Invoke(nameof(StartGamePlay), 1f);
+            }
+        }
         for (int i = 0; i < players.Length; i++)
         {
 
@@ -73,14 +93,16 @@ public class levelmanager : MonoBehaviour
         }
         remaintargets = targets[selectedlevel - 1];
 
-        currentlevelz = Instantiate(levels[selectedlevel - 1].gameObject, transform.position, transform.rotation);
+        //currentlevelz = Instantiate(levels[selectedlevel - 1].gameObject, transform.position, transform.rotation);
         Animals[selectedgun].SetActive(true);
         Animalfortrans[selectedgun].SetActive(true);
 
         players[1].GetComponent<Animator>().avatar = animalavatars[selectedgun];
         players[1].GetComponent<Animator>().runtimeAnimatorController = animalanims[selectedgun];
         players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.2f;
-        players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 4.5f;
+        players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 1.5f;
+        counter = selectedgun;
+
 
     }
 
@@ -114,18 +136,51 @@ public class levelmanager : MonoBehaviour
             tkcolormenu.Play("close");
 
     }
-
-    public void AnimalchangerReward(string rewardtype)
+    public void transformmenustart(string name)
     {
-        if (AdsManager.Instance)
-            AdsManager.Instance.ShowRewardedInterstitialAd(rewardtype, 100);
+        if(name == "RobotTransform")
+        {
+            RobotTransformBtn.SetActive(true);
+            if (RobotTransform.gameObject.activeInHierarchy)
+                RobotTransform.Play("open");
+            Invoke("transformmenuoff", 3f);
+        }
+        else if(name == "UltraPower")
+        {
+            PowerBtn.SetActive(true);
+            if (UltraPower.gameObject.activeInHierarchy)
+                UltraPower.Play("open");
+            Invoke("transformmenuPoweroff", 3f);
+        }
+
     }
 
-    public void ToychangerReward(string rewardtype)
+    public void transformmenuoff()
     {
-        if (AdsManager.Instance)
-            AdsManager.Instance.ShowRewardedInterstitialAd(rewardtype, 100);
+        CancelInvoke("transformmenuoff");
+        RobotTransformBtn.SetActive(false);
+        if (RobotTransform.gameObject.activeInHierarchy)
+            RobotTransform.Play("close");
+
     }
+    public void transformmenuPoweroff()
+    {
+        CancelInvoke("transformmenuPoweroff");
+        PowerBtn.SetActive(false);
+        if (UltraPower.gameObject.activeInHierarchy)
+            UltraPower.Play("close");
+    }
+    //public void AnimalchangerReward(string rewardtype)
+    //{
+    //    if (AdmobAdsManager.Instance)
+    //        AdmobAdsManager.Instance.ShowRewardedInterstitialAd(rewardtype);
+    //}
+
+    //public void ToychangerReward(string rewardtype)
+    //{
+    //    if (AdmobAdsManager.Instance)
+    //        AdmobAdsManager.Instance.ShowRewardedInterstitialAd(rewardtype);
+    //}
 
     public void novideopopup()
     {
@@ -144,7 +199,11 @@ public class levelmanager : MonoBehaviour
 
     public void AnimalChanger()
     {
-
+        //if(firstTrans == 0)
+        //{
+        //    Animals[9].SetActive(false);
+        //    firstTrans = 1;
+        //}
         Animals[counter].SetActive(false);
         Animalfortrans[counter].SetActive(false);
 
@@ -166,36 +225,38 @@ public class levelmanager : MonoBehaviour
 
         switch (counter)
         {
+            case 2:
 
-            case 0:
+                players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.2f;
+                players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 1.5f;
+                break;
             case 1:
-            case 5:
-            case 6:
+            case 3:
+            case 4:
             case 8:
+            case 9:
+
                 players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.2f;
                 players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 4.5f;
                 break;
+            case 5:
 
-            case 4:
                 players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.4f; // for tiger for sea horse
                 players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 4.5f;
                 break;
 
-            case 2:
-            case 3:
+            case 6:
+            case 7:
                 players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.35f; // for horse
                 players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 4.5f;
                 break;
 
-            case 7:
+            case 0:
                 players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.35f;
                 players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 1f;
                 break;
 
-            case 9:
-                players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.2f;
-                players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 1.5f;
-                break;
+
 
         }
 
@@ -248,76 +309,122 @@ public class levelmanager : MonoBehaviour
 
     void soundstory()
     {
-        story.GetComponent<AudioSource>().enabled = true;
+        for(int i=0;i<3;i++)
+        {
+            stories[i].GetComponent<AudioSource>().enabled = true;
+        }
 
-        Invoke("StartGamePlay", 40f);
+        if(selectedlevel == 1)
+        {
+            //Invoke("StartGamePlay", 71f);
+        }
+        else if (selectedlevel == 2)
+        {
+            //Invoke("StartGamePlay", 120f);
+            //Invoke("StartGamePlay", 60f);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("StoryPref") == 0)
+            {
+                Invoke("StartGamePlay", 30f);
+                PlayerPrefs.SetInt("StoryPref", 1);
+            }
+        }
     }
 
     public void StartGamePlay()
     {
-        if (story.activeInHierarchy)
-        {
+        
             delaystartup();
-        }
     }
 
     public void delaystartup()
     {
-        story.SetActive(false);
+        CancelInvoke();
+        StopAllCoroutines();
+        for (int i = 0; i < 3; i++)
+        {
+            stories[i].SetActive(false);
+        }
+        if (AdmobAdsManager.Instance)
+            AdmobAdsManager.Instance.ShowSmallBanner(GoogleMobileAds.Api.AdPosition.TopRight);
         if (GetComponent<mygamemanager>())
         {
             GetComponent<mygamemanager>().missionpanel.SetActive(true);
             GetComponent<mygamemanager>().statusgameplaycanvas(1);
         }
+        BGMusic.SetActive(true);
 
         switch (selectedlevel)
         {
-            case 1:
+            //case 1:
+            //    Animals[0].SetActive(false);
+            //    Animals[9].SetActive(true);
+            //    Animalfortrans[9].SetActive(true);
+
+            //    players[1].GetComponent<Animator>().avatar = animalavatars[9];
+            //    players[1].GetComponent<Animator>().runtimeAnimatorController = animalanims[9];
+            //    players[1].GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = 0.2f;
+            //    players[1].GetComponent<ThirdPersonCharacter>().m_AnimSpeedMultiplier = 1.5f;
+            //    minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[1].transform;
+            //    controls[1].SetActive(true);
+            //    cameras[1].SetActive(true);
+            //    players[1].SetActive(true);
+
+            //    currentplayer = players[1].gameObject;
+            //    Debug.Log("!st animal");
+            //    break;
+            case 4:
+            case 9:
                 minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[5].transform;
                 controls[5].SetActive(true);
                 cameras[5].SetActive(true);
                 players[5].SetActive(true);
                 currentplayer = players[5].gameObject;
                 break;
-            case 4:
-            case 9:
+            //case 2:
+            case 5:
+            case 14:
             case 16:
+            case 19:
             case 22:
-            case 25:
-            case 31:
-            case 34:
-            case 37:
+            case 28:
+            case 38:
+            case 41:
+            case 42:
                 minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
                 controls[0].SetActive(true);
                 cameras[0].SetActive(true);
                 players[0].SetActive(true);
                 currentplayer = players[0].gameObject;
                 break;
-
+            case 1:
             case 2:
-            case 5:
-            case 11:
-            case 14:
-            case 17:
-            case 23:
+            case 3:
+            case 13:
+            case 21:
             case 27:
-            case 33:
+            case 30:
+            case 36:
             case 39:
+            case 44:
                 minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[1].transform;
                 controls[1].SetActive(true);
                 cameras[1].SetActive(true);
                 players[1].SetActive(true);
+
                 currentplayer = players[1].gameObject;
+                Debug.Log("!st animal");
                 break;
 
-            case 3:
-            case 7:
-            case 13:
-            case 19:
-            case 21:
+            case 12:
+            case 18:
+            case 15:
             case 24:
+            case 26:
             case 29:
-            case 36:
+            
                 minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[2].transform;
                 controls[2].SetActive(true);
                 cameras[2].SetActive(true);
@@ -326,19 +433,23 @@ public class levelmanager : MonoBehaviour
                 break;
 
             case 6:
+            case 7:
             case 8:
             case 10:
-            case 12:
-            case 15:
-            case 18:
+            case 11:
+            case 17:
             case 20:
-            case 26:
-            case 28:
-            case 30:
+            case 23:
+            case 25:
+            case 31:
             case 32:
+            case 33:
+            case 34:
             case 35:
-            case 38:
+            case 37:
             case 40:
+            case 43:
+            case 45:
                 minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[3].transform;
                 controls[3].SetActive(true);
                 cameras[3].SetActive(true);
@@ -397,7 +508,12 @@ public class levelmanager : MonoBehaviour
         {
             PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + coinsearned);
             GetComponent<mygamemanager>().gameplaycontrols.SetActive(false);
+            foreach(var x in controls)
+            {
+                x.SetActive(false);
+            }
             Invoke("victorydance", 2f);
+
 
         }
     }
@@ -412,7 +528,9 @@ public class levelmanager : MonoBehaviour
             tcolourmenu.Play("open");
         else if (tkcolormenu.gameObject.activeInHierarchy)
             tkcolormenu.Play("open");
-
+        else if (fccolormenu.gameObject.activeInHierarchy)
+            fccolormenu.Play("open");
+        Invoke("delaymenuoff", 3f);
     }
 
     public void rccolours(int colno)
@@ -450,7 +568,8 @@ public class levelmanager : MonoBehaviour
             tcolourmenu.Play("close");
         else if (tkcolormenu.gameObject.activeInHierarchy)
             tkcolormenu.Play("close");
-
+        else if (fccolormenu.gameObject.activeInHierarchy)
+            fccolormenu.Play("open");
 
         // Debug.Log("close");
 
@@ -461,13 +580,14 @@ public class levelmanager : MonoBehaviour
     {
 
         windance.SetActive(true);
-
+        minimap.SetActive(false);
         for (int i = 0; i < players.Length; i++)
         {
 
             players[i].SetActive(false);
             controls[i].SetActive(false);
             cameras[i].SetActive(false);
+           
         }
 
         Invoke("waitsuccess", 8f);
@@ -489,8 +609,8 @@ public class levelmanager : MonoBehaviour
 
     public void waitsuccess()
     {
-
-        //  windance.SetActive(false);
+        starcam.SetActive(true);
+          windance.SetActive(false);
         this.gameObject.GetComponent<mygamemanager>().Success();
     }
 
@@ -568,6 +688,7 @@ public class levelmanager : MonoBehaviour
         controls[0].SetActive(true);
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
+        transformmenuoff();
 
         minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
@@ -645,6 +766,7 @@ public class levelmanager : MonoBehaviour
         controls[0].SetActive(true);
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
+        transformmenuoff();
 
         minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
@@ -758,7 +880,7 @@ public class levelmanager : MonoBehaviour
         Trans[3].SetActive(true);
 
         players[0].transform.localPosition = players[2].transform.localPosition;
-        players[0].transform.localRotation = players[2].transform.localRotation;
+        players[0].transform.localRotation = Quaternion.Euler(players[2].transform.localRotation.x, players[2].transform.localRotation.y, 0);
 
         players[0].transform.localPosition = new Vector3(players[0].transform.localPosition.x, players[0].transform.localPosition.y - 1.8f, players[0].transform.localPosition.z);
 
@@ -779,6 +901,7 @@ public class levelmanager : MonoBehaviour
         controls[0].SetActive(true);
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
+        transformmenuoff();
 
         minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
@@ -858,6 +981,7 @@ public class levelmanager : MonoBehaviour
         controls[0].SetActive(true);
         players[0].SetActive(true);
         currentplayer = players[0].gameObject;
+        transformmenuoff();
 
         minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[0].transform;
     }
@@ -892,7 +1016,7 @@ public class levelmanager : MonoBehaviour
     {
         controls[3].SetActive(false);
         players[3].SetActive(false);
-        players[2].transform.localPosition = players[3].transform.localPosition;
+        players[2].transform.localPosition = players[3].transform.localPosition + new Vector3(0, 2, 0);
         players[2].transform.localRotation = players[3].transform.localRotation;
 
         //players[0].transform.localPosition = new Vector3(players[0].transform.localPosition.x, players[0].transform.localPosition.y - 1.8f, players[0].transform.localPosition.z);
@@ -907,5 +1031,9 @@ public class levelmanager : MonoBehaviour
 
         minimap.GetComponentInChildren<MapCanvasController>().playerTransform = players[2].transform;
 
+    }
+    public void OpenCp(string cp)
+    {
+        Application.OpenURL(cp);
     }
 }

@@ -51,8 +51,8 @@ public class missions : MonoBehaviour {
         
             foreach (char c in s)
             {
-
-                yield return new WaitForSeconds(0.08f);
+			missionbottom.GetComponent<AudioSource>().enabled = true;
+			yield return new WaitForSeconds(0.08f);
 
 
             if (this.gameObject.GetComponent<mygamemanager>().soundchk == true && !GetComponent<AudioSource>().isPlaying)
@@ -66,8 +66,10 @@ public class missions : MonoBehaviour {
 
 
             }
-        
-        //GameObject.Find ("TypingSound").GetComponent<AudioSource> ().Stop ();
 
-    }
+		//GameObject.Find ("TypingSound").GetComponent<AudioSource> ().Stop ();
+		missionbottom.GetComponent<AudioSource>().enabled = false;
+
+
+	}
 }

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class inappcaller : MonoBehaviour
 {
+    MediationHandler mediation;
+    string _RewardType;
+
+
+    private void Start()
+    {
+        mediation = FindObjectOfType<MediationHandler>();
+    }
 
     public void Buyall()
     {
@@ -11,6 +19,7 @@ public class inappcaller : MonoBehaviour
         {
             InApp_Manager.instance.Buy_UnlockAll_All();
         }
+        Debug.Log("Buy All");
     }
 
     public void Unlockplayers()
@@ -40,8 +49,62 @@ public class inappcaller : MonoBehaviour
 
     public void rewardedinterstitialcoins(string rewardtype)
     {
-        if (AdsManager.Instance)
-            AdsManager.Instance.ShowRewardedInterstitialAd(rewardtype, 1000);
+        //if (AdmobAdsManager.Instance)
+        //    AdmobAdsManager.Instance.ShowRewardedInterstitialAd(rewardtype, 1000);
+
+        if (mediation != null && Application.internetReachability != NetworkReachability.NotReachable)
+        {
+            if(rewardtype!= null)
+            {
+                _RewardType = rewardtype;
+                mediation.ShowRewardedVideo(GiveCoins);
+            }
+
+        }
+    }
+
+    void GiveCoins()
+    {
+        if (_RewardType == "coins")
+        {
+            if (MainMenu.instance)
+            {
+                MainMenu.instance.UpdateCash();
+            }
+        }
+        else if (_RewardType == "player")
+        {
+            if (gunselection.ins)
+            {
+                gunselection.ins.freecar();
+            }
+        }
+        else if (_RewardType == "monster")
+        {
+
+            if (levelmanager.instance)
+            {
+                levelmanager.instance.AnimalChanger();
+            }
+        }
+        else if (_RewardType == "toy")
+        {
+
+            if (levelmanager.instance)
+            {
+
+                levelmanager.instance.RobotoToy();
+            }
+        }
+        else if (_RewardType == "HighwayCar")
+        {
+
+            if (HR_GamePlayHandler.ins)
+            {
+
+                HR_GamePlayHandler.ins.SaveButton();
+            }
+        }
     }
 
 }

@@ -1,0 +1,6 @@
+[2022-5-31 10:19:00] layer "pngwing.com (3)": Expected end of input but "(" found.
+[2022-5-31 10:19:00] layer "pngwing.com copy": Expected end of input but "c" found.
+[2022-5-31 10:19:00] layer "pngwing.com copy 2": Expected end of input but "c" found.
+[2022-5-31 10:19:00] layer "pngwing.com (1)": Expected end of input but "(" found.
+[2022-5-31 10:19:11] layer "2.PN": Unsupported extension: pn
+[2022-5-31 10:19:24] layer "1.PN": Unsupported extension: pn

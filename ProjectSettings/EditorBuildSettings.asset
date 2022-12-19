@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/_Project/Game Scenes/gameplay.unity
     guid: a62fbd6e88ed77648b6ef9e0cb1b5b4b
   - enabled: 1
-    path: Assets/_Assets/A gamez/Scenes/LifeGame.unity
+    path: Assets/_Assets/AR gamez/Scenes/LifeGame.unity
     guid: c6bb61da30dfb7244ac9b2ac6cd5dc92
   - enabled: 1
     path: Assets/3rdPartyPlugin/Highway Racer/Scenes/HighwaySunny.unity

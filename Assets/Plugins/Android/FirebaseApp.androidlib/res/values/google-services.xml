@@ -1,11 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
-  <string name="firebase_database_url" translatable="false">https://game-gaint.firebaseio.com</string>
-  <string name="gcm_defaultSenderId" translatable="false">795932116018</string>
-  <string name="google_storage_bucket" translatable="false">game-gaint.appspot.com</string>
-  <string name="project_id" translatable="false">game-gaint</string>
-  <string name="google_api_key" translatable="false">AIzaSyA5cTt1z8bgg8tz39q-0xyJTqolPRasam0</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA5cTt1z8bgg8tz39q-0xyJTqolPRasam0</string>
-  <string name="google_app_id" translatable="false">1:795932116018:android:296d6bab1fc37a60df282b</string>
-  <string name="default_web_client_id" translatable="false">795932116018-jdfeprd4pumen9jaudse16r49a7ot976.apps.googleusercontent.com</string>
+<resources tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="gcm_defaultSenderId" translatable="false">141662890014</string>
+  <string name="google_storage_bucket" translatable="false">play-zee-studio.appspot.com</string>
+  <string name="project_id" translatable="false">play-zee-studio</string>
+  <string name="google_api_key" translatable="false">AIzaSyA_bNzWdTDUOajaKXJ486zzotI4Nxlwcy8</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA_bNzWdTDUOajaKXJ486zzotI4Nxlwcy8</string>
+  <string name="google_app_id" translatable="false">1:141662890014:android:4238fc6535a2e2f3c7260f</string>
+  <string name="default_web_client_id" translatable="false">141662890014-1ljqntvbkp94ioh8abqndgv0hp5t60u4.apps.googleusercontent.com</string>
 </resources>

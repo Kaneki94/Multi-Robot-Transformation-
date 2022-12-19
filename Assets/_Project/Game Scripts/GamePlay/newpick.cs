@@ -13,16 +13,18 @@ public class newpick : MonoBehaviour
     {
         if (other.gameObject.tag == "coin")
         {
+            Debug.Log(gameObject.name);
+
             coinimg.SetActive(true);
             //coins.transform.position = other.gameObject.transform.position;
             //coins.transform.rotation = other.gameObject.transform.rotation;
             coins.SetActive(true);
-          //  PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 100);
+            //  PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 100);
             levelmanager.instance.coinscount(100);
-            other.gameObject.SetActive(false);
+            other.gameObject.transform.parent.gameObject.SetActive(false);
             Invoke("waitoff", 3f);
-          
-                levelmanager.instance.picked = true;
+
+            levelmanager.instance.picked = true;
         }
         else if (other.gameObject.tag == "health")
         {
@@ -34,10 +36,10 @@ public class newpick : MonoBehaviour
 
             }
 
-            other.gameObject.SetActive(false);
+            other.gameObject.transform.parent.gameObject.SetActive(false);
             Invoke("waitoff", 3f);
-           
-                levelmanager.instance.picked = true;
+
+            levelmanager.instance.picked = true;
         }
         else if (other.gameObject.tag == "monster")
         {
@@ -45,13 +47,13 @@ public class newpick : MonoBehaviour
             if (levelmanager.instance)
                 levelmanager.instance.AnimalChanger();
 
-            other.gameObject.SetActive(false);
-           
-                levelmanager.instance.picked = true;
+            other.gameObject.transform.parent.gameObject.SetActive(false);
+
+            levelmanager.instance.picked = true;
 
         }
 
-      
+
     }
 
 
@@ -63,9 +65,10 @@ public class newpick : MonoBehaviour
         coins.SetActive(false);
     }
 
-    public void coinseffect() {
+    public void coinseffect()
+    {
 
         coins.SetActive(true);
         Invoke("waitoff", 3f);
-    } 
+    }
 }

@@ -14,46 +14,46 @@ public class Story : MonoBehaviour
     public GameObject players;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        StoryCutscene();
-    }
+    //void Start()
+    //{
+    //    StoryCutscene();
+    //}
 
-    public void StoryCutscene()
-    {
-        flyObject.DOLocalMoveX(-82.4f, 15f).OnComplete(() =>
-        {
-            flyObject.DOLocalMoveY(-35f, 7f).OnComplete(() =>
-            {
-                foreach (var a in animals)
-                {
-                    a.SetActive(true);
-                    a.transform.DOLocalMoveX(-90f, 6.5f).OnComplete(() =>
-                    {
-                        a.SetActive(false);
-                    });
-                }
+    //public void StoryCutscene()
+    //{
+    //    flyObject.DOLocalMoveX(-82.4f, 15f).OnComplete(() =>
+    //    {
+    //        flyObject.DOLocalMoveY(-35f, 7f).OnComplete(() =>
+    //        {
+    //            foreach (var a in animals)
+    //            {
+    //                a.SetActive(true);
+    //                a.transform.DOLocalMoveX(-90f, 6.5f).OnComplete(() =>
+    //                {
+    //                    a.SetActive(false);
+    //                });
+    //            }
 
-                Invoke("ActivatePlayer", 7f);
-            });
-        });
-    }
+    //            Invoke("ActivatePlayer", 7f);
+    //        });
+    //    });
+    //}
 
-    public void ActivatePlayer()
-    {
-        storyPanel.SetActive(false);
-        skipPanel.SetActive(true);
-        storyCamera.DOLocalMoveY(33f,0.1f);
-        storyCamera.DOLocalMoveX(3.38f, 0.1f);
-        storyCamera.DOLocalRotate(cameraRot, 2f).OnComplete(() =>
-        {
-            foreach (var r in staticRobots)
-            {
-                r.SetActive(false);
-            }
-            players.SetActive(true);
-        });
-    }
+    //public void ActivatePlayer()
+    //{
+    //    storyPanel.SetActive(false);
+    //    skipPanel.SetActive(true);
+    //    storyCamera.DOLocalMoveY(33f,0.1f);
+    //    storyCamera.DOLocalMoveX(3.38f, 0.1f);
+    //    storyCamera.DOLocalRotate(cameraRot, 2f).OnComplete(() =>
+    //    {
+    //        foreach (var r in staticRobots)
+    //        {
+    //            r.SetActive(false);
+    //        }
+    //        players.SetActive(true);
+    //    });
+    //}
 
     private void OnDisable()
     {

@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class gunselection : MonoBehaviour
 {
     public GameObject playerParent;
-
-    public GameObject[] Guns;
+    public static gunselection ins;
+    public GameObject[] Guns, Gunsimg;
     public int[] cost;
     public Text guncost;
     public GameObject selectedgun;
-    public GameObject buybutton,selectbutton, nocash;
+    public GameObject buybutton,selectbutton, watchvideo, nocash;
     public AudioClip buttonSound;
     int i;
 
@@ -19,6 +19,7 @@ public class gunselection : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        ins = this;
         i = 0;
         selectedgun = Guns[i].gameObject;
         if (cost[i] != 0)
@@ -60,6 +61,7 @@ public class gunselection : MonoBehaviour
         }
         buybutton.SetActive(false);
         selectbutton.SetActive(true);
+        watchvideo.SetActive(false);
     }
 
     void OnEnable()
@@ -105,12 +107,14 @@ public class gunselection : MonoBehaviour
             PlayerPrefs.SetInt("Gun", index);
             guncost.text = "";
             buybutton.SetActive(false);
+            watchvideo.SetActive(false);
             selectbutton.SetActive(true);
         }
         else
         {
-            guncost.text = "" + cost[index].ToString();
+            guncost.text = "" + cost[index].ToString() + "$";
             buybutton.SetActive(true);
+            watchvideo.SetActive(true);
             selectbutton.SetActive(false);
 
         }
@@ -120,9 +124,13 @@ public class gunselection : MonoBehaviour
         {
 
             Guns[j].SetActive(false);
+            Gunsimg[j].SetActive(false);
         }
 
         selectedgun.SetActive(true);
+        Gunsimg[index].SetActive(true);
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("Player_selected_" +  + PlayerPrefs.GetInt("Gun"));
+
     }
 
     public void buygun()
@@ -147,5 +155,9 @@ public class gunselection : MonoBehaviour
     {
         nocash.SetActive(false);
     }
-
+    public void freecar()
+    {
+        PlayerPrefs.SetInt("costgun" + i.ToString(), 0);
+        gunselected(i);
+    }
 }

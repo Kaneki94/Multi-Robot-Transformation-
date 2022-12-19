@@ -1,32 +1,32 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ShowMediumRectangle : MonoBehaviour
 {
-    
-  //  Destroy MediumRectangle Ads whan player go to Next Scene
+
+     MediationHandler mediation;
+
+    private void Awake()
+    {
+        mediation = FindObjectOfType<MediationHandler>();
+    }
 
     private void OnEnable()
     {
-        // Show  Admob Interstitial ads.............................
-        if (AdsManager.Instance)
-        {
-            AdsManager.Instance.ShowMediumRectangle();
-            //..........................................
-            //AdsManager.Instance.HideBannerAd();
-        }
+        // Show  Banner Ads.............................
+        if (mediation != null && Application.internetReachability != NetworkReachability.NotReachable && (PlayerPrefs.GetInt("RemoveAds") != 1))        {            if(!mediation.IsMediumBannerReady())
+            {
+                mediation.LoadMediumBanner();
+            }            mediation.ShowMediumBanner(GoogleMobileAds.Api.AdPosition.BottomLeft);            mediation.hideSmallBanner();        }
     }
-
 
     private void OnDisable()
     {
-        if (AdsManager.Instance)
-        {
-            AdsManager.Instance.HideMediumRectangleAd();
-            //.................................................
-            //AdsManager.Instance.ShowBanner("Default");
-        }
-
+        if (mediation != null)        {            mediation.hideMediumBanner();            if(!mediation.IsSmallBannerReady())
+            {
+                mediation.LoadSmallBanner();
+            }            mediation.ShowSmallBanner(GoogleMobileAds.Api.AdPosition.TopRight);        }
     }
+
 }

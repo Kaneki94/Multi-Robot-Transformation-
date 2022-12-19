@@ -1,25 +1,28 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Show_Admob_InterstitialAd : MonoBehaviour
 {
-    [Space]
-    [Space]
-    [Header(" Destroy Interstitial Ads whan player go to Next Scene")]
-    public bool DestroyAds;
+
+    MediationHandler mediation;
+
+    private void Awake()
+    {
+        mediation = FindObjectOfType<MediationHandler>();
+    }
+
     private void OnEnable()
     {
         // Show  Admob Interstitial ads.............................
-        if (AdsManager.Instance)
-            AdsManager.Instance.ShowInterstitialAd();
+        if (mediation != null && Application.internetReachability != NetworkReachability.NotReachable && (PlayerPrefs.GetInt("RemoveAds") != 1))        {            mediation.ShowInterstitial();        }
     }
+
     private void OnDisable()
     {
-        if (AdsManager.Instance && DestroyAds)
-        {
-            AdsManager.Instance.DestroyInterstitialAd();
+
+        if (mediation != null && Application.internetReachability != NetworkReachability.NotReachable && (PlayerPrefs.GetInt("RemoveAds") != 1))        {            mediation.LoadInterstitial();
         }
-       
     }
+
 }
